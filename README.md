@@ -152,7 +152,7 @@
 - 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](CODE_OF_CONDUCT.md)。
 - 使用 [Issue Templates](.github/ISSUE_TEMPLATE) 与 [Pull Request Template](.github/pull_request_template.md) 保持讨论高效。
 
-![Star history](https://api.star-history.com/svg?repos=bmorelli25/Become-A-Full-Stack-Web-Developer&type=Date)
+![Star history](https://api.star-history.com/svg?repos=Phil-Fan/Awesome-full-stack&type=Date)
 
 ## Acknowledgments
 
