@@ -17,23 +17,23 @@
   - [信息源](#信息源)
   - [AI 相关](#ai-相关)
     - [MCP](#mcp)
-  - [Template](#template)
   - [IDE](#ide)
-  - [语言\&框架](#语言框架)
+  - [Template](#template)
   - [前端](#前端)
   - [后端](#后端)
-    - [API 服务](#api-服务)
     - [用户管理与认证](#用户管理与认证)
     - [数据库](#数据库)
+    - [中间件](#中间件)
+    - [应用部署](#应用部署)
+    - [CI/CD](#cicd)
+    - [运维与监控](#运维与监控)
   - [网络](#网络)
     - [抓包](#抓包)
-  - [CI/CD](#cicd)
+  - [文档工具](#文档工具)
   - [云服务](#云服务)
     - [厂商](#厂商)
     - [域名](#域名)
     - [CDN 服务](#cdn-服务)
-  - [可观测](#可观测)
-  - [文档工具](#文档工具)
   - [运营](#运营)
     - [宣传](#宣传)
     - [产品介绍](#产品介绍)
@@ -63,10 +63,6 @@
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 - [shadcn MCP](https://ui.shadcn.com/)
 
-## Template
-
-> 好用的开发模版
-
 ## IDE
 
 - [Vim](https://www.vim.org/)
@@ -74,19 +70,21 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Trae CN](https://www.trae.cn)
 
-## 语言&框架
+## Template
 
-- [Flutter](https://flutter.dev/)：多平台应用开发框架
-- [Dart](https://dart.dev/)
-- [Python](https://www.python.org/)
+> 好用的开发模版
 
 ## 前端
 
 - [Next.js](https://nextjs.org/)
   - [TypeScript](https://github.com/microsoft/TypeScript)
   - [biome](https://github.com/biomejs/biome): 配置更简单、更快速的 linter/formater
-  - [shadcn/ui](https://ui.shadcn.com/)
+  - [tailwindcss](https://github.com/tailwindlabs/tailwindcss)+[shadcn/ui](https://ui.shadcn.com/)
     - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
+  - [motion](https://github.com/motiondivision/motion): 动画库
+  - [zustand](https://zustand.docs.pmnd.rs/getting-started/introduction): 前端状态管理库
+  - [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview): 数据查询库
+  - [react-hook-form](https://react-hook-form.com/get-started): 表单库
 
 ```shell
 npx create-next-app@latest my-app
@@ -96,9 +94,16 @@ npx create-next-app@latest my-app
 
 ## 后端
 
-### API 服务
-
-- [FastAPI](https://github.com/fastapi/fastapi)
+- [Python](https://www.python.org/)
+  - [fastapi](https://github.com/tiangolo/fastapi)
+- [Go](https://go.dev/)
+  - [gin](https://github.com/gin-gonic/gin)
+  - [gorm](https://github.com/go-gorm/gorm)
+- Java
+  - [Spring Boot](https://spring.io/projects/spring-boot)
+- [nestjs](https://github.com/nestjs/nest)
+  - [Vitest](https://vitest.dev/): 单元测试
+  - [Playwright](https://playwright.dev/): 端到端测试
 
 ### 用户管理与认证
 
@@ -108,6 +113,29 @@ npx create-next-app@latest my-app
 ### 数据库
 
 - [Supabase](https://github.com/supabase/supabase)
+
+### 中间件
+
+### 应用部署
+
+- [Docker](https://www.docker.com/)
+- [Kubernetes](https://kubernetes.io/)
+
+### CI/CD
+
+- [GitHub Actions](https://github.com/features/actions)
+- [dokploy](https://dokploy.com)
+- [coolify](https://coolify.io)
+- [jenkins](https://www.jenkins.io)
+- [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
+- [Drone CI](https://github.com/harness/drone)
+
+### 运维与监控
+
+- [Logfire](https://logfire.pydantic.dev/)：Python 日志分析与可视化
+- [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)：指标与日志可视化
 
 ## 网络
 
@@ -121,14 +149,16 @@ npx create-next-app@latest my-app
 - [Stream](https://apps.apple.com/app/stream/id1312141691) iOS 抓包
 - [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12，Mac 不可用
 
-## CI/CD
+## 文档工具
 
-- [GitHub Actions](https://github.com/features/actions)
-- [dokploy](https://dokploy.com)
-- [coolify](https://coolify.io)
-- [jenkins](https://www.jenkins.io)
-- [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
-- [Drone CI](https://github.com/harness/drone)
+- [MkDocs](https://www.mkdocs.org/)
+- [VuePress](https://vuepress.vuejs.org)
+- [fumadocs](https://github.com/fuma-nama/fumadocs)
+- [Jekyll](https://jekyllrb.com)
+  - [minima](https://github.com/jekyll/minima)
+
+- [reveal-md](https://github.com/webpro/reveal-md)
+- [Slidev](https://sli.dev/)
 
 ## 云服务
 
@@ -145,24 +175,6 @@ npx create-next-app@latest my-app
 ### CDN 服务
 
 - [Atlassian Statuspage](https://www.atlassian.com/software/statuspage/pricing)
-
-## 可观测
-
-- [Logfire](https://logfire.pydantic.dev/)：Python 日志分析与可视化
-- [Uptime Kuma](https://github.com/louislam/uptime-kuma)
-- [Prometheus](https://prometheus.io/)
-- [Grafana](https://grafana.com/)：指标与日志可视化
-
-## 文档工具
-
-- [MkDocs](https://www.mkdocs.org/)
-- [VuePress](https://vuepress.vuejs.org)
-- [fumadocs](https://github.com/fuma-nama/fumadocs)
-- [Jekyll](https://jekyllrb.com)
-  - [minima](https://github.com/jekyll/minima)
-
-- [reveal-md](https://github.com/webpro/reveal-md)
-- [Slidev](https://sli.dev/)
 
 ## 运营
 
