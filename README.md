@@ -31,7 +31,6 @@
   - [云服务](#云服务)
     - [厂商](#厂商)
     - [域名](#域名)
-    - [境内备案](#境内备案)
     - [CDN 服务](#cdn-服务)
   - [可观测](#可观测)
   - [文档工具](#文档工具)
@@ -53,8 +52,8 @@
 
 ## AI 相关
 
-- [OpenAI Codex Pricing](https://openai.com/api/pricing/)
-
+- codex
+- claude code
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
 - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
 
@@ -143,20 +142,16 @@ npx create-next-app@latest my-app
 
 - [阿里云域名](https://wanwang.aliyun.com/domain/)
 
-### 境内备案
-
-- [ICP 信息备案管理系统](https://beiancx.miit.gov.cn)
-
 ### CDN 服务
 
 - [Atlassian Statuspage](https://www.atlassian.com/software/statuspage/pricing)
 
 ## 可观测
 
+- [Logfire](https://logfire.pydantic.dev/)：Python 日志分析与可视化
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
-- [Logfire](https://logfire.pydantic.dev/)：日志分析与可视化
 
 ## 文档工具
 
@@ -181,7 +176,7 @@ npx create-next-app@latest my-app
 - [Figma](https://www.figma.com/): 产品设计与原型设计
 - [iMockup](https://www.imockup.app/zh): 模型机动画
 - [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
-- [FocuSee](https://focusee.imobie.com/): 演示视频
+- [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具
 - [OBS Studio](https://github.com/obsproject/obs-studio): 免费开源的直播和屏幕录制软件
 
 ### 用户洞察
