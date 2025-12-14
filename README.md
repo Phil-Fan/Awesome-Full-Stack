@@ -88,7 +88,7 @@ npx create-next-app@latest my-app
 - [Docker](https://www.docker.com/)
 - [Kubernetes](https://kubernetes.io/)
 
-**网络**
+### 网络
 
 - [Caddy](https://github.com/caddyserver/caddy)：非常简单的反向代理工具
 - [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
@@ -109,9 +109,7 @@ npx create-next-app@latest my-app
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
 
-### 其他
-
-**抓包**
+### 抓包
 
 - [Wireshark](https://www.wireshark.org/)
 - [Reqable](https://github.com/reqable/reqable-app) 小黄鸟，可抓包小程序
@@ -180,7 +178,7 @@ npx create-next-app@latest my-app
 ## Contributing
 
 - 阅读并遵循 [Contributing Guide](CONTRIBUTING.md)。
-- 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](CODE_OF_CONDUCT.md)。
+- 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](.github/CODE_OF_CONDUCT.md)。
 - 使用 [Issue Templates](.github/ISSUE_TEMPLATE) 与 [Pull Request Template](.github/pull_request_template.md) 保持讨论高效。
 
 ![Star history](https://api.star-history.com/svg?repos=Phil-Fan/Awesome-full-stack&type=Date)
