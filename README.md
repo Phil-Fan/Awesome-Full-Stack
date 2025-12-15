@@ -19,10 +19,16 @@
 
 ## AI 相关
 
-- codex
-- claude code
-- [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
-- [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
+- CLI 工具
+  - Codex
+  - Claude Code
+  - Gemini CLI
+- IDE
+  - Cursor
+  - Windsurf
+- Spec Tools
+  - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
+  - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
 
 ### MCP
 
@@ -40,6 +46,10 @@
 ## Template
 
 > 好用的开发模版
+
+- [Next.js & shadcn/ui Admin Dashboard](https://github.com/arhamkhnz/next-shadcn-admin-dashboard)
+- [next‑shadcn‑dashboard‑starter](https://github.com/Kiranism/next-shadcn-dashboard-starter)
+- [shadcn-admin-starter-template](https://github.com/MinPyaeKyaw/shadcn-admin-starter-template)
 
 ## 前端
 
