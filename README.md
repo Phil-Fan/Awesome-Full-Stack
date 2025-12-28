@@ -42,6 +42,7 @@
 ### MCP
 
 - [Context7 MCP](https://github.com/upstash/context7)
+- [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 - [shadcn MCP](https://ui.shadcn.com/)
 - [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
@@ -65,6 +66,7 @@
 
 ## 前端
 
+- [electron](https://github.com/electron/electron): Build cross-platform desktop apps with JavaScript, HTML, and CSS
 - [Next.js](https://nextjs.org/)
   - [TypeScript](https://github.com/microsoft/TypeScript)
   - [biome](https://github.com/biomejs/biome): 配置更简单、更快速的 linter/formater
