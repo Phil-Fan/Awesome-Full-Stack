@@ -20,6 +20,11 @@
 ## AI 相关
 
 - [cherry-studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
+- [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
+
+- 知识库
+  - [腾讯 AI 工作台](https://ima.qq.com/)
+
 - CLI 工具
   - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
   - [Codex](https://github.com/openai/codex)
@@ -38,6 +43,7 @@
 - Spec Tools
   - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
   - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
+  - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin - Battery included ASYNC SUBAGENTS, curated agents with proper models, crafted tools like LSP/AST, curated MCPs, and Claude Code Compatible Layer
 
 ### MCP
 
