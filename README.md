@@ -22,13 +22,13 @@
 - [cherry-studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
 - [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
 
-- 知识库
-  - [腾讯 AI 工作台](https://ima.qq.com/)
-
 - CLI 工具
+  - [OpenCode](https://opencode.ai/)
+    - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
   - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
   - [Codex](https://github.com/openai/codex)
   - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew)
+    - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
   - [Gemini CLI](https://github.com/google/gemini-cli)
 
     ```shell
@@ -40,27 +40,31 @@
 - IDE
   - [Cursor](https://cursor.com/home)
   - [Windsurf](https://windsurf.com/download/editor)
+  - [Google Antigravity](https://antigravity.google/)
+  - [Trae CN](https://www.trae.cn)
+  - [Visual Studio Code](https://code.visualstudio.com/)
 - Spec Tools
   - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
   - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
-  - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin - Battery included ASYNC SUBAGENTS, curated agents with proper models, crafted tools like LSP/AST, curated MCPs, and Claude Code Compatible Layer
+  
+- 知识库
+  - [腾讯 AI 工作台](https://ima.qq.com/)
 
 ### MCP
 
 - [Context7 MCP](https://github.com/upstash/context7)
-- [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 - [shadcn MCP](https://ui.shadcn.com/)
 - [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
+- [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
 
-## IDE
+## 工具
 
 - [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
-
+- [Hyprland](https://github.com/hyprwm/Hyprland): Linux 动态平铺 Wayland 合成器
 - [Vim](https://www.vim.org/)
-- [lazyvim](https://www.lazyvim.org)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Trae CN](https://www.trae.cn)
+  - [lazyvim](https://www.lazyvim.org)
+  - [Neovim](https://neovim.io/doc/install/)
 
 ## Template
 
