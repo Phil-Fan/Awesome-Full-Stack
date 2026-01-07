@@ -30,7 +30,7 @@
 > - 任务不要太长，记得 /compact
 > - 睡前可以挂一个免费的模型跑任务 😆
 
-- [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client. 
+- [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
   - 可以当做 API key 管理器
   - AI app all in one
   - 知识库、agent 都可以放在一起用
