@@ -80,7 +80,20 @@ read this @SPEC.md and interview me in detail using the AskUserQuestionTool abou
 
 be very in-depth and continue interviewing me continually until it's complete, then write the spec to the file
 ```
-  
+
+### Skills
+
+```shell
+/plugin marketplace add anthropics/skills
+```
+
+```shell
+/plugin
+```
+
+- [planning-with-files](https://github.com/OthmanAdi/planning-with-files): Manus 风格持久化 Markdown 规划
+- [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): 多平台专业 UI/UX 设计智能
+
 ### 知识库
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
@@ -129,7 +142,7 @@ npx create-next-app@latest my-app
 - [Python](https://www.python.org/)
   - [uv](https://github.com/astral-sh/uv): package and project manager
   - [ruff](https://github.com/astral-sh/ruff): linter and code formatter
-  - [ty](https://github.com/astral-sh/ty): type checker and language server
+  - [pyrefly](https://github.com/jakevandenburg/pyrefly): 快速的 Python LSP 和 linter
   - [fastapi](https://github.com/tiangolo/fastapi)
 - [Go](https://go.dev/)
   - [gin](https://github.com/gin-gonic/gin)
@@ -150,6 +163,8 @@ npx create-next-app@latest my-app
 - [Supabase](https://github.com/supabase/supabase)
 
 ### 中间件
+
+- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统
 
 ### 应用部署
 
