@@ -559,23 +559,23 @@ screen -wipe #清理那些dead的会话
 
 [Pycharm 远程连接服务器并运行代码（详细！）\_pycharm 将代码同步到远程服务器-CSDN 博客](https://blog.csdn.net/cutefery/article/details/113918510)
 
-**1. 设置 Connection**
+#### 1. 设置 Connection
 
 Tools->Deployment->Configuration
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__fac49e9753f2ab5a3c262724b13ace42.webp)
 
-**2. 建立 Mapping**
+#### 2. 建立 Mapping
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__5ada3773c2ea98000fdf257681baa67f.webp)
 
-**3. 实现代码自动上传**
+#### 3. 实现代码自动上传
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__642e7fe6b4c620483aed45e51615ca92.webp)
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__eba75696543b972e5fc6289fe9648940.webp)
 
-**4. 设置 Python Interpreter**
+#### 4. 设置 Python Interpreter
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__1e5ffb013eb5acda4148f924aafe9f3b.webp)
 

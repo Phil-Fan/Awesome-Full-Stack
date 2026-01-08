@@ -9,5 +9,3 @@ brew install cocoapods
 ```shell title="verify"
 pod
 ```
-
-## Dart

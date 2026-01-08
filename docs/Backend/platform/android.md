@@ -84,7 +84,7 @@
 
 ### 创建模拟器
 
-**1. 确认环境变量**
+#### 1. 确认环境变量
 
 假设 Android SDK 路径在 `~/Library/Android/sdk`（macOS/Linux）或 `C:\Users\<username>\AppData\Local\Android\Sdk`（Windows）：
 
@@ -95,7 +95,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools
 
 > Windows 使用 `setx` 或在系统环境变量里添加相同路径。
 
-**2. 查看可用系统镜像**
+#### 2. 查看可用系统镜像
 
 Android 系统镜像是创建 AVD 的基础：
 
@@ -112,13 +112,13 @@ system-images;android-33;google_apis_playstore;x86_64
 
 > 选择一个适合的镜像，比如 `android-33;google_apis;x86_64`
 
-**3. 安装系统镜像**
+#### 3. 安装系统镜像
 
 ```bash
 sdkmanager "system-images;android-33;google_apis;x86_64"
 ```
 
-**4. 创建 AVD**
+#### 4. 创建 AVD
 
 ```bash
 avdmanager create avd -n Pixel6_API33 -k "system-images;android-33;google_apis;x86_64" --device "pixel_6"
@@ -132,7 +132,7 @@ avdmanager create avd -n Pixel6_API33 -k "system-images;android-33;google_apis;x
 
 创建完成后，会生成一个模拟器配置。
 
-**5. 启动模拟器**
+#### 5. 启动模拟器
 
 ```bash
 emulator -avd Pixel6_ARM33

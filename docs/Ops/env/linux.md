@@ -867,7 +867,7 @@ vim /etc/ssh/sshd_config
 service ssh restart
 ```
 
-**验证安装**
+#### 验证安装
 
 ```shell
 service ssh status
@@ -875,13 +875,13 @@ service ssh status
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20240711175232.webp)
 
-**开机自启动**
+#### 开机自启动
 
 ```shell
 update-rc.d ssh enable
 ```
 
-**配置免密登陆**
+#### 配置免密登陆
 
 ```shell
 ssh-keygen -t rsa

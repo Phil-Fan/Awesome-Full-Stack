@@ -352,17 +352,16 @@ npm run build
 | Nx        | monorepo 工具     | [https://github.com/nrwl/nx](https://github.com/nrwl/nx)               |
 | Turborepo | 高性能 monorepo 构建 | [https://github.com/vercel/turbo](https://github.com/vercel/turbo)     |
 
-
 ## 历史
 
 JavaScript（简称 JS）是由 Netscape 公司的 Brendan Eich 在 1995 年十天内开发出来的一种脚本语言。最初设计用于浏览器端的动态网页内容生成，JavaScript 迅速成为 Web 开发的核心技术之一，与 HTML 和 CSS 并列为前端开发的三大支柱。
 
-- **诞生背景**：JavaScript 诞生于 Web 1.0 时代，最初被称为 Mocha，后改名为 LiveScript，最后才成为 JavaScript。
-- **发展历程**：从最初的客户端脚本语言，JavaScript 逐步演变成一门强大的编程语言，现今不仅用于浏览器端，还在服务器端广泛应用。
+* **诞生背景**：JavaScript 诞生于 Web 1.0 时代，最初被称为 Mocha，后改名为 LiveScript，最后才成为 JavaScript。
+* **发展历程**：从最初的客户端脚本语言，JavaScript 逐步演变成一门强大的编程语言，现今不仅用于浏览器端，还在服务器端广泛应用。
 
-- 是编程语言，Web 的核心技术之一
-- JavaScript 是遵循 ECMAScript 标准的脚本语言，与 Java 没有任何关系
-- 现在也可用于通用编程：Node.js
+* 是编程语言，Web 的核心技术之一
+* JavaScript 是遵循 ECMAScript 标准的脚本语言，与 Java 没有任何关系
+* 现在也可用于通用编程：Node.js
 
 ## 语法
 
@@ -417,12 +416,12 @@ document.getElementById("myButton").addEventListener("click", function() {
 
 ## Beyond
 
-- JavaScript 的缺点：性能不足（解释型）、弱类型
-- WebAssembly（WASM）：在浏览器中运行的跨平台字节码格式
-  - 由 C、C++、Rust 等编译型语言编译生成
-  - 可以直接在浏览器中运行，性能接近原生代码
-  - 可以与 JavaScript 互操作
-  - 适合于需要高性能的应用，如游戏、图像、视频处理等
+* JavaScript 的缺点：性能不足（解释型）、弱类型
+* WebAssembly（WASM）：在浏览器中运行的跨平台字节码格式
+  * 由 C、C++、Rust 等编译型语言编译生成
+  * 可以直接在浏览器中运行，性能接近原生代码
+  * 可以与 JavaScript 互操作
+  * 适合于需要高性能的应用，如游戏、图像、视频处理等
 
 ### TS | TypeScript
 

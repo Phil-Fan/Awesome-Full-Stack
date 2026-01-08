@@ -167,7 +167,7 @@ squash commit2
 squash commit3
 ```
 
-**规则：第一个必须是 pick，后面才能 squash**
+#### 规则：第一个必须是 pick，后面才能 squash
 
 ### 操作流程
 

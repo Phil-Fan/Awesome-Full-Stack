@@ -110,7 +110,7 @@
 
 ## edge/chorme 插件
 
-**更好体验**
+### 更好体验
 
 - global speed：最好用的倍速
 - Vimium C：使用 vim 全键盘操作浏览器; tutorial:[vimium 成神之路 - 键盘党的胜利 - 知乎](https://zhuanlan.zhihu.com/p/64533566)
@@ -119,7 +119,7 @@
 - 油猴/篡改猴：更多脚本/插件
 - Octotree
 
-**资源类**
+#### 资源类
 
 - Copy as Markdown: 复制成为 markdown 格式的链接
 - Simple Allow Copy: 解除网站的禁用复制
@@ -127,12 +127,12 @@
 - Zotero Connector: 链接 Zotero
 - 哔哔君：b 站字幕下载
 
-**翻译**
+#### 翻译
 
 - 沉浸式翻译：好用的网页翻译
 - Grammarly：AI writing and grammar checker
 
-**其他**
+#### 其他
 
 - HackBar
 - Cookie-Editor
@@ -189,8 +189,6 @@
 #### project manager
 
 #### copy as markdown
-
-**copy as markdown**
 
 [chorme 下载地址](https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/cbbdkefgbfifiljnnklfhnhcnlmpglpd)
 

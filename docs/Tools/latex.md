@@ -117,7 +117,7 @@
 - 如图，`folder location`请放在`figures`这个文件夹下，你可以在左侧的列表中看到。
 - 请在`\begin{figure}`后边加上`[htbp]`!
 
-**如何插入并排的图片**
+#### 如何插入并排的图片
 
 使用下面的代码，把`example`位置替换为想插入的图片的路径即可。
 
@@ -139,7 +139,7 @@
 \end{figure}
 ```
 
-**如何插入 2x2，3 个并排或者其他类型**
+#### 如何插入 2x2，3 个并排或者其他类型
 
 在`pic.tex`文件中，由多种图片展示形式，选择你想要的形式，将代码复制到主文件下，把`\includegraphics[width=0.5\linewidth]{figures/example.png}`这一行改成你想要的图片的路径。
 
@@ -418,7 +418,7 @@ If you can see this document with the title, sections, and the equation above, t
 编译后显示下面的页面，说明编译成功
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904110244.webp)
 
-**参考文献编译**
+#### 参考文献编译
 
 在设置页面，选择 bibtex 为默认
 
@@ -677,7 +677,7 @@ F1  输入`Open Keyboard Shortcuts`
 
 [IguanaTex - A Free Latex Add-In for PowerPoint on Windows and Mac (jonathanleroux.org)](https://www.jonathanleroux.org/software/iguanatex/)
 
-**注意设置好路径**
+#### 注意设置好路径
 
 #### [`GhostScript`](https://ghostscript.com/releases/gsdnld.html) and [`ImageMagick`](https://www.imagemagick.org/script/download.php#windows)
 
@@ -837,7 +837,7 @@ bin/up
 \clearpage
 ```
 
-**解决英文断字重排的问题**
+#### 解决英文断字重排的问题
 
 ```latex
 \hyphenpenalty=5000
@@ -856,7 +856,7 @@ bin/up
 
 !!! attention "本章节记录一些老忘记的公式和用法，如果需要速查，推荐使用[这个网站](https://latex.emoryhuang.cn/posts/)或[这个网站](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)"
 
-**大括号最重要的代码段是**
+### 大括号最重要的代码段是
 
 ```tex
 \left\{

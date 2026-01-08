@@ -399,7 +399,7 @@ rm go1.22.5.linux-amd64.tar.gz
 mv ./go /usr/local
 ```
 
-**配置环境变量**
+#### 配置环境变量
 
 在`/home`目录下新建 go 目录（文件名随意），然后在 go 目录下分别新建三个目录：
 
@@ -420,7 +420,7 @@ export GOPATH=/home/go                // 设置GOPATH环境变量
 source ~/.zshrc
 ```
 
-**验证安装**
+#### 验证安装
 
 ```shell
 $ go version
@@ -455,7 +455,7 @@ mv geth /usr/local/geth
 vim ~/.zshrc
 ```
 
-**示例**
+#### 示例
 
 下载学长给到的范例
 
@@ -490,7 +490,7 @@ conda activate vol
 
 #### 安装依赖
 
-**crypto**
+#### crypto
 
 ```shell
 pip install pycryptodome
@@ -515,7 +515,7 @@ cd volatility
 python setup.py install
 ```
 
-**验证**
+#### 验证
 
 ```shell
 vol.py

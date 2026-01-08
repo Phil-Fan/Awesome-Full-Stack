@@ -79,7 +79,7 @@ SELECT column1, column2, ... FROM table_name;
 
 - `table_name`：要查询的表名称。
 
-**SELECT DISITINCT 选出不同的值**
+#### SELECT DISITINCT 选出不同的值
 
 ```sql
 SELECT DISTINCT column1, column2, ...
@@ -112,7 +112,7 @@ select 返回的数据结构就是表头，从下面这个例子可以看出
     1 row in set (0.00 sec)
     ```
 
-**WHERE 子句 | 条件查询**
+#### WHERE 子句 | 条件查询
 
 |运算符 | 描述|
 |---|---|
@@ -126,7 +126,7 @@ select 返回的数据结构就是表头，从下面这个例子可以看出
 |`LIKE`| 搜索某种模式|
 |`IN`| 指定针对某个列的多个可能值|
 
-**AND OR 条件**
+#### AND OR 条件
 
 ```sql
 SELECT * FROM Websites WHERE country='USA' OR country='CN';
@@ -134,7 +134,7 @@ SELECT * FROM Websites WHERE country='USA' OR country='CN';
 SELECT * FROM Websites WHERE country='CN' AND alexa > 50;
 ```
 
-**ORDER BY**
+#### ORDER BY
 
 ```sql
 SELECT * FROM Websites ORDER BY alexa;
@@ -146,14 +146,14 @@ SELECT * FROM Websites
 ORDER BY country,alexa;//多列
 ```
 
-**limit**
+#### limit
 
 ```sql
 SELECT col_name1, col_name2… FROM table_name LIMIT N, M  /*从第 N(从 0 开始) 条开始返回 M 条数据*/
 SELECT col_name1, col_name2… FROM table_name LIMIT M OFFSET N  /*也可以这么写*/
 ```
 
-**concat**
+#### concat
 
 ```sql
 mysql> select concat(id,name) from chars;
@@ -178,7 +178,7 @@ SELECT group_concat(col_name1, col_name2…) FROM table_name /*整合行、
 
 ### 增
 
-**INSERT**
+#### INSERT
 
 id 字段自动更新，不需要插入
 
@@ -321,7 +321,7 @@ kali 自带 sqlmap
 
 #### 其他参数
 
-**–batch**
+#### –batch
 
 使用方法：`sqlmap -u URL --batch`
 

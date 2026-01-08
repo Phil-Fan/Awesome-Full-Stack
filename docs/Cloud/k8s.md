@@ -377,7 +377,7 @@ redis-1.redis.default.svc.cluster.local
 
 分布式系统（如 Etcd、Zookeeper、Redis Sentinel）都要用它。
 
-**有序滚动更新**
+#### 有序滚动更新
 
 StatefulSet 必须按顺序更新：
 
