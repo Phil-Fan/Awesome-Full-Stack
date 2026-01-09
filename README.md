@@ -4,7 +4,7 @@
 
 收藏一些全栈开发相关的工具、资源、教程、最佳实践。
 
-[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/network/members) [![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/issues) [![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/LICENSE)
+[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/network/members) [![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/issues) [![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/blob/main/LICENSE)
 
 ## 信息源
 
@@ -103,7 +103,38 @@ be very in-depth and continue interviewing me continually until it's complete, t
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
   - [Veo - Google DeepMind](https://deepmind.google/models/veo/)
 - Audio
-  - TTS: [ElevenLabs](https://elevenlabs.io)
+
+### TTS 服务对比
+
+#### 接口调用类
+
+| 服务名称 | 官方链接 | 特点 |
+|---------|---------|------|
+| ElevenLabs | https://elevenlabs.io | 行业领先，高质量语音合成 |
+| Fish Audio | https://fishspeech.net/zh | 免费专业AI配音与声音克隆 |
+| OpenAI TTS | https://platform.openai.com/docs/guides/text-to-speech | GPT 模型驱动，支持多音色 |
+| SiliconFlow | https://siliconflow.cn/ | 硅基流动，CosyVoice 等多模型 |
+| 302.AI | https://302.ai/ | API 聚合平台，支持 TTS-Flash |
+| 扣子 Coze | https://www.coze.cn/ | 字节跳动 AI 智能体平台 |
+| MiniMax | https://www.minimaxi.com/audio/text-to-speech | 高质量中文语音合成 |
+| 灵犀智能 | https://lingxi.apifox.cn/ | 多模态 AI 客服，流式 TTS |
+| EdgeTTS | 微软 Edge 浏览器内置 | 免费本地调用，多语言支持 |
+| 科大讯飞 | 官网待补充 | 国内领先语音技术 |
+| 火山引擎 | 字节跳动云服务 | 企业级语音解决方案 |
+| 腾讯云 | https://cloud.tencent.com/product/tts | 腾讯云语音合成 |
+| 阿里云百炼 | https://www.aliyun.com/product/ai/nls | 阿里云语音服务 |
+| 机智云 | https://www.gizwits.com/ | AI 离线语音识别方案 |
+| ACGN TTS | https://github.com/annacode747/AcgTTS | 开源 TTS 实现 |
+
+#### 本地部署类
+
+| 服务名称 | GitHub/官网 | 特点 |
+|---------|------------|------|
+| Fish Speech | https://github.com/fishaudio/fish-speech | SOTA 开源 TTS，支持 13 种语言 |
+| GPT-SoVITS V2 | https://github.com/v3ucn/GPT-SoVITS-V2 | 1 分钟训练数据，少样本语音克隆 |
+| GPT-SoVITS V3 | https://github.com/RVC-Boss/GPT-SoVITS | 53.8k+ star，跨语言支持 |
+| Index-TTS | https://github.com/index-tts/index-tts | 工业级可控零样本 TTS |
+| PaddleSpeech | https://github.com/PaddlePaddle/PaddleSpeech | 飞桨语音工具包，全流程支持 |
 
 ## 工具
 
@@ -139,6 +170,7 @@ npx create-next-app@latest my-app
 ```
 
 - [Taro](https://docs.taro.zone/docs/): 使用 React/Vue 开发多平台小程序应用
+- [uni-app](https://uniapp.dcloud.net.cn/): 使用 Vue 开发多平台应用（小程序、H5、App）
 
 ## 后端
 
@@ -259,15 +291,15 @@ npx create-next-app@latest my-app
 
 ## License
 
-- 本项目采用 [CC0 1.0 Universal](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/LICENSE)，你可以自由复制、分享与改编。
+- 本项目采用 [CC0 1.0 Universal](https://github.com/Phil-Fan/Dev-Notes/blob/main/LICENSE)，你可以自由复制、分享与改编。
 
 ## Contributing
 
-- 阅读并遵循 [Contributing Guide](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/.github/CONTRIBUTING.md)。
-- 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/.github/CODE_OF_CONDUCT.md)。
-- 使用 [Issue Templates](https://github.com/Phil-Fan/Awesome-full-stack/issues/new/choose) 与 [Pull Request Template](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/.github/pull_request_template.md) 保持讨论高效。
+- 阅读并遵循 [Contributing Guide](https://github.com/Phil-Fan/Dev-Notes/blob/main/.github/CONTRIBUTING.md)。
+- 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](https://github.com/Phil-Fan/Dev-Notes/blob/main/.github/CODE_OF_CONDUCT.md)。
+- 使用 [Issue Templates](https://github.com/Phil-Fan/Dev-Notes/issues/new/choose) 与 [Pull Request Template](https://github.com/Phil-Fan/Dev-Notes/blob/main/.github/pull_request_template.md) 保持讨论高效。
 
-![Star history](https://api.star-history.com/svg?repos=Phil-Fan/Awesome-full-stack&type=Date)
+![Star history](https://api.star-history.com/svg?repos=Phil-Fan/Dev-Notes&type=Date)
 
 ## Acknowledgments
 
@@ -275,4 +307,4 @@ npx create-next-app@latest my-app
 - 使用 [Shields.io](https://shields.io) 和 [Simple Icons](https://simpleicons.org) 生成项目 Badges。
 - 感谢所有 **Contributors**!
 
-[![Contributors](https://stg.contrib.rocks/image?repo=Phil-Fan/Awesome-full-stack)](https://github.com/Phil-Fan/Awesome-full-stack/graphs/contributors)
+[![Contributors](https://stg.contrib.rocks/image?repo=Phil-Fan/Dev-Notes)](https://github.com/Phil-Fan/Dev-Notes/graphs/contributors)

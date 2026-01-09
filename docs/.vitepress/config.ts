@@ -26,7 +26,7 @@ export default defineConfig({
           { text: '产品&运营', link: '/PM/' },
         ]
       },
-      { text: 'GitHub', link: 'https://github.com/Phil-Fan/Awesome-full-stack' }
+      { text: 'GitHub', link: 'https://github.com/Phil-Fan/Dev-Notes' }
     ],
 
     // 侧边栏 - 按目录分类
@@ -169,7 +169,7 @@ export default defineConfig({
 
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Phil-Fan/Awesome-full-stack' }
+      { icon: 'github', link: 'https://github.com/Phil-Fan/Dev-Notes' }
     ],
 
     // 页脚
@@ -180,7 +180,7 @@ export default defineConfig({
 
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/Phil-Fan/Awesome-full-stack/edit/main/docs/:path',
+      pattern: 'https://github.com/Phil-Fan/Dev-Notes/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
 

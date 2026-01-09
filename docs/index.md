@@ -48,10 +48,10 @@ features:
 
 ## 许可
 
-本项目采用 [CC0 1.0 Universal](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/LICENSE)，你可以自由复制、分享与改编。
+本项目采用 [CC0 1.0 Universal](https://github.com/Phil-Fan/Dev-Notes/blob/main/LICENSE)，你可以自由复制、分享与改编。
 
 ## 贡献
 
 欢迎提交 PR 或 Issue 来完善这个资源列表！
 
-[查看贡献指南](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/CONTRIBUTING.md)
+[查看贡献指南](https://github.com/Phil-Fan/Dev-Notes/blob/main/CONTRIBUTING.md)

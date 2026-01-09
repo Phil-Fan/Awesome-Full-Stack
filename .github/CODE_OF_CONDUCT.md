@@ -6,7 +6,7 @@ _English follows Chinese summary._
 
 - 尊重每一位贡献者与使用者，避免任何形式的骚扰或歧视。
 - 在互动中保持合作、公开、透明，积极寻求共识。
-- 违反行为请通过 [Issues](https://github.com/Phil-Fan/Awesome-full-stack/issues/new/choose) 或联系维护者反馈。
+- 违反行为请通过 [Issues](https://github.com/Phil-Fan/Dev-Notes/issues/new/choose) 或联系维护者反馈。
 
 ---
 
@@ -46,7 +46,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening a confidential issue via <https://github.com/Phil-Fan/Awesome-full-stack/issues/new/choose> or by emailing the maintainers listed in the project README. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening a confidential issue via <https://github.com/Phil-Fan/Dev-Notes/issues/new/choose> or by emailing the maintainers listed in the project README. All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
