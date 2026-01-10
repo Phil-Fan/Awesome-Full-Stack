@@ -256,7 +256,7 @@ SayHello
 
   `alias rm='rm -i'`
 
-  ## Shell 运算符
+## Shell 运算符
 
 - bc 数学运算
 

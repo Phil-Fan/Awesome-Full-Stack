@@ -735,7 +735,6 @@ vim /etc/apt/sources.list
     deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
     deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
     ```
-    
 
 ```shell
 sudo apt-get update
