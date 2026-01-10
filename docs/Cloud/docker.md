@@ -47,7 +47,7 @@ sudo vim /etc/docker/daemon.json
 
 ```json
 {
-    "registry-mirrors": ["https://dockerhub.icu"]
+  "registry-mirrors": ["https://dockerhub.icu"]
 }
 ```
 
@@ -59,9 +59,9 @@ sudo vim /etc/docker/daemon.json
 2. 安装
 3. 重启一下电脑，这步可能会遇到什么用户组的问题，先重启。我重启以后问题消失
 
-    ```shell title="查看是否安装成功"
-    docker --version
-    ```
+   ```shell title="查看是否安装成功"
+   docker --version
+   ```
 
 4. 修改镜像源
 

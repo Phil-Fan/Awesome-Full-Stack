@@ -61,13 +61,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0    # for mkdocs-git-revision-date-localized-plugin
+          fetch-depth: 0 # for mkdocs-git-revision-date-localized-plugin
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
       - run: pip install -r requirements.txt
       - name: Create CNAME file
-        run: echo "www.philfan.cn" > docs/CNAME   # Adjust the path if your configuration is different
+        run: echo "www.philfan.cn" > docs/CNAME # Adjust the path if your configuration is different
       - run: mkdocs gh-deploy --force
 ```
 
@@ -89,23 +89,23 @@ jobs:
 ### 提示块
 
 !!! failure "这是 failure 类型的提示框"
- 注意`extension`不要拼成`extention`！！
+注意`extension`不要拼成`extention`！！
 
 !!! bug "这是 bug 类型的提示框"
-    发现一个 bug，请尽快修复！
+发现一个 bug，请尽快修复！
 
 !!! tip "tip"
 
 !!! note "note"
 
 !!! question "这是 question 类型的提示框"
-    这是一个问题，请回答！
+这是一个问题，请回答！
 
 !!! warning "这是 warning 类型的提示框"
-    注意！注意！注意！
+注意！注意！注意！
 
 !!! success "这是 success 类型的提示框"
-    恭喜你，完成了一个任务！
+恭喜你，完成了一个任务！
 
 !!! example "这是 example 类型的提示框"
 
@@ -146,15 +146,24 @@ jobs:
 
 ### 嵌入 b 站/youtube 视频
 
-1.打开 B 站的视频
-2.点击“分享”按钮，获取“嵌入代码”：B 站视频的下一行，点击“分享”按钮，下方弹出分享页面。
+1.打开 B 站的视频 2.点击“分享”按钮，获取“嵌入代码”：B 站视频的下一行，点击“分享”按钮，下方弹出分享页面。
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__Mkdocs.assets__20241031230641.webp)
 
 禁用方法很简单，就是在视频 url 链接最后加上 autoplay=0。例如：
 
 ```html title="禁止自动播放"
-<iframe src="//player.bilibili.com/player.html?aid=951910057&bvid=BV1zs4y177sv&cid=1078968085&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="500" height="300"> </iframe>
+<iframe
+  src="//player.bilibili.com/player.html?aid=951910057&bvid=BV1zs4y177sv&cid=1078968085&page=1&autoplay=0"
+  scrolling="no"
+  border="0"
+  frameborder="no"
+  framespacing="0"
+  allowfullscreen="true"
+  width="500"
+  height="300"
+>
+</iframe>
 ```
 
 ??? info "参数用途"
@@ -188,18 +197,22 @@ pip install mdx_truly_sane_lists
 
 ```html
 <iframe src="xxx.pdf" width="100%" height="600px" style="border: none;">
-This browser does not support PDFs
+  This browser does not support PDFs
 </iframe>
 ```
 
 ```html
 <div class="card file-block" markdown="1">
-<div class="file-icon"><img src="/style/images/xmind.svg" style="height: 3em;"></div>
-<div class="file-body">
-<div class="file-title">思维导图</div>
-<div class="file-meta">xxxxKB / 2024-01-10</div>
-</div>
-<a class="down-button" target="_blank" href="xxx.xmind" markdown="1">:fontawesome-solid-download: 下载</a>
+  <div class="file-icon">
+    <img src="/style/images/xmind.svg" style="height: 3em;" />
+  </div>
+  <div class="file-body">
+    <div class="file-title">思维导图</div>
+    <div class="file-meta">xxxxKB / 2024-01-10</div>
+  </div>
+  <a class="down-button" target="_blank" href="xxx.xmind" markdown="1"
+    >:fontawesome-solid-download: 下载</a
+  >
 </div>
 ```
 
@@ -216,14 +229,14 @@ This browser does not support PDFs
 
 ??? note "安装代码"
 
- ```Shell
-    pip install mkdocs
-    pip install mkdocs-material
-    pip install mkdocs-material-extensions
-    pip install mkdocs-git-revision-date-localized-plugin
-    pip install mkdocs-statistics-plugin
-    pip install mkdocs-heti-plugin
- ```
+```Shell
+   pip install mkdocs
+   pip install mkdocs-material
+   pip install mkdocs-material-extensions
+   pip install mkdocs-git-revision-date-localized-plugin
+   pip install mkdocs-statistics-plugin
+   pip install mkdocs-heti-plugin
+```
 
 ### 页面组织
 
@@ -261,23 +274,26 @@ Create mathjax.js:
 
 ```js title="mathjax.js"
 window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
+  tex: {
+    inlineMath: [
+      ["$", "$"],
+      ["\\(", "\\)"],
+    ],
     //   displayMath: [ ['$$', '$$'], ['\[', '\]'] ],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
+    processEscapes: true,
+    processEnvironments: true,
+  },
+  options: {
     //   ignoreHtmlClass: ".*|",
     //   processHtmlClass: "arithmatex"
-    }
-  };
-  document$.subscribe(() => { 
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
+  },
+};
+document$.subscribe(() => {
+  MathJax.startup.output.clearCache();
+  MathJax.typesetClear();
+  MathJax.texReset();
+  MathJax.typesetPromise();
+});
 ```
 
 Adapt nbconvert:, removing implicit load of Mathjax (see here)
@@ -297,8 +313,8 @@ Adjust mkdocs.yml:
 
 ```yml title="mkdocs.yml"
 plugins:
-    - privacy
-    - mkdocs-jupyter
+  - privacy
+  - mkdocs-jupyter
 
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -317,17 +333,17 @@ blog 功能 下面这个仓库有[template](https://github.com/mkdocs-material/c
 
 1. 首先在 docs 文件夹下放一个 blog 目录，下面是一个目录的样例
 
-    ```shell
-    docs/blog
-    ├── author
-    │   └── team.md
-    ├── posts ---------------------------------- 放所有的博文
-    │   ├── drafts ----------------------------- drafts 目录下是所有的草稿
-    │   │   └── draft.md
-    │   └── helloworld.md
-    ├── index.md
-    └── tags.md
-    ```
+   ```shell
+   docs/blog
+   ├── author
+   │   └── team.md
+   ├── posts ---------------------------------- 放所有的博文
+   │   ├── drafts ----------------------------- drafts 目录下是所有的草稿
+   │   │   └── draft.md
+   │   └── helloworld.md
+   ├── index.md
+   └── tags.md
+   ```
 
 2. 配置一下`mkdocs.yml`，具体的配置可以看这个[Basic blogs - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/tutorials/blogs/basic/)
 
@@ -342,7 +358,7 @@ blog 功能 下面这个仓库有[template](https://github.com/mkdocs-material/c
 ### RSS
 
 **RSS (Really Simple Syndication / RDF Site Summary / Rich Site Summary)**
- 是一种基于 XML 的内容分发格式，常用于网站内容的聚合与订阅。
+是一种基于 XML 的内容分发格式，常用于网站内容的聚合与订阅。
 
 简单来说：
 
@@ -430,10 +446,7 @@ plugins:
         custom_mathjax_url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
 ```
 
-!!! bug "遇到的问题"
-    1. 无法显示数学公式（解决方法：加上了 js 文件）
-    2. toc 配置与之前的逻辑不同，导致自动配置 123 的时候出现错误
-    3. 奇怪的路径问题
+!!! bug "遇到的问题" 1. 无法显示数学公式（解决方法：加上了 js 文件）2. toc 配置与之前的逻辑不同，导致自动配置 123 的时候出现错误 3. 奇怪的路径问题
 
     ```
       DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
@@ -442,26 +455,31 @@ plugins:
       `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
       The use of platformdirs will be the default in `jupyter_core` v6
     ```
-    
+
     [DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs · Issue #148 · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/issues/148)
 
 如果想要实现 material 中的某些功能，需要自己写 html 代码
 
 ```html
 <details class="tip">
-    <summary>Extra: What are latent variables?</summary>
-    <p><br>
-    If you go about exploring any paper talking about Variational Inference, then most certainly, the papers mention about latent variables instead of parameters. The parameters are fixed quantities for the model whereas latent variables are  <strong>unobserved</strong> quantities of the model conditioned on parameters. Also, we model parameters by probability distributions. For simplicity, let's consider the running terminology of  <strong>parameters </strong> only.
-    </p>
+  <summary>Extra: What are latent variables?</summary>
+  <p>
+    <br />
+    If you go about exploring any paper talking about Variational Inference,
+    then most certainly, the papers mention about latent variables instead of
+    parameters. The parameters are fixed quantities for the model whereas latent
+    variables are <strong>unobserved</strong> quantities of the model
+    conditioned on parameters. Also, we model parameters by probability
+    distributions. For simplicity, let's consider the running terminology of
+    <strong>parameters </strong> only.
+  </p>
 </details>
 ```
 
 ```html
 <div class="admonition success">
-    <p class="admonition-title">Success</p>
-    <p>
-        The above ELBO equation is the final one which needs to be optimized.
-    </p>
+  <p class="admonition-title">Success</p>
+  <p>The above ELBO equation is the final one which needs to be optimized.</p>
 </div>
 ```
 
@@ -483,71 +501,70 @@ plugins:
 ```yml linenums="1" hl_lines="3"
 theme:
   name: material
-  custom_dir: overrides  #主要是这一行
+  custom_dir: overrides #主要是这一行
 ```
 
 访问[giscus](https://giscus.app/)网站，并通过网站上的配置工具生成代码段。复制此代码段，下面的步骤要用
 复制如下面格式的代码到`overrides/comments.html`文件中
 
 ```html
-<script src="https://giscus.app/client.js"
-        data-repo="Phil-Fan/Phil-Fan.github.io"
-        data-repo-id=""
-        data-category="General"
-        data-category-id=""
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
-        data-lang="zh-CN"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Phil-Fan/Phil-Fan.github.io"
+  data-repo-id=""
+  data-category="General"
+  data-category-id=""
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="dark"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
 ```
 
 ```html hl_line="5"
-
 {% if page.meta.comments %}
-  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+<h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 
-  <!-- Insert generated snippet here -->
-  <!-- 在这里粘贴刚才获得代码段 -->
-  <!-- ... -->
+<!-- Insert generated snippet here -->
+<!-- 在这里粘贴刚才获得代码段 -->
+<!-- ... -->
 
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
 
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
+  /* Set palette on initial load */
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
 
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light";
 
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app",
+        );
+      }
+    });
+  });
+</script>
 {% endif %}
-
 ```
 
 #### 一个页面单独添加
@@ -580,7 +597,7 @@ plugins:
 
 ```yml
 plugins:
-    - changelog
+  - changelog
 ```
 
 changelog 从外部的 yaml 文件读取，默认在 docs/changelog.yml 中，可以通过 file 选项来选择其他位置：
@@ -606,19 +623,19 @@ changelog: True
 
 ```yml title="changelog.yml格式"
 - "placeholder1":
-  - "time1":
-    - "type": text
-    - "type": text
+    - "time1":
+        - "type": text
+        - "type": text
 - "placeholder":
-  - "time2":
-    - "type":
-        text: text
-        href: /link/to/page/
-    - "type":
-        text: text
-        href: /link/to/page/
-  - "time3":
-    - "type": text
+    - "time2":
+        - "type":
+            text: text
+            href: /link/to/page/
+        - "type":
+            text: text
+            href: /link/to/page/
+    - "time3":
+        - "type": text
 ```
 
 示范
@@ -657,8 +674,8 @@ changelog: True
 
 [查询资料](https://blog.csdn.net/qq_45173404/article/details/123759688)后发现是 Gitee 防盗链的原因
 
->发现图片请求的过程与上面不同，请求头中多了一个`Referer`字段，也就是我自己的 gitee 地址。
->应该是 Gitee 添加了防盗链机制，当我们通过直接访问存储在 Gitee 上的图片时，Http 请求头没有 Referer 字段，所以被 Gitee 服务器当作黑名单而拒绝响应。而前面我们通过 Gitee Page 部署的 Hexo 博客请求时，由于代码都托管在 Gitee 上，在加载所有图片的时候都附加了 Referer 字段指向 Gitee，相当于被 Gitee 服务器看作白名单因而可以访问。
+> 发现图片请求的过程与上面不同，请求头中多了一个`Referer`字段，也就是我自己的 gitee 地址。
+> 应该是 Gitee 添加了防盗链机制，当我们通过直接访问存储在 Gitee 上的图片时，Http 请求头没有 Referer 字段，所以被 Gitee 服务器当作黑名单而拒绝响应。而前面我们通过 Gitee Page 部署的 Hexo 博客请求时，由于代码都托管在 Gitee 上，在加载所有图片的时候都附加了 Referer 字段指向 Gitee，相当于被 Gitee 服务器看作白名单因而可以访问。
 
 #### 解决办法
 

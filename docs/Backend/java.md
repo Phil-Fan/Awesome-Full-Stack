@@ -43,9 +43,9 @@ brew install --cask corretto11
 
 安装完成后，JDK 会放在：
 
-* Homebrew 默认目录：
+- Homebrew 默认目录：
   `/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home`
-* Amazon Corretto:
+- Amazon Corretto:
   `/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home`
 
 ```bash title="系统自带查询（确认 JDK 安装情况）"
@@ -89,13 +89,13 @@ jenv versions
 
 5️⃣ 切换 JDK 版本
 
-* **全局切换（对所有项目生效）**
+- **全局切换（对所有项目生效）**
 
   ```bash
   jenv global 17
   ```
 
-* **本地切换（只对当前项目生效）**
+- **本地切换（只对当前项目生效）**
   进入项目目录后执行：
 
   ```bash
@@ -104,7 +104,7 @@ jenv versions
 
   会生成 `.java-version` 文件。
 
-* **临时切换（只在当前终端会话生效）**
+- **临时切换（只在当前终端会话生效）**
 
   ```bash
   jenv shell 17
@@ -135,8 +135,8 @@ java -jar xxx.jar &
 ```
 
 ```shell title="不挂断执行"
-nohup java -jar test_jar-1.0-SNAPSHOT.jar &   
-```  
+nohup java -jar test_jar-1.0-SNAPSHOT.jar &
+```
 
 nohup 意思是不挂断运行命令，当账户退出或终端关闭时，程序仍然运行。
 

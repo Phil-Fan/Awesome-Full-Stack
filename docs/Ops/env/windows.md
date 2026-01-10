@@ -1,9 +1,8 @@
-
 # Windows
 
 !!! note "前言"
-    这一篇的目的是记录一些常用的软件的安装与使用，以及一些常见的问题的解决方案。遇到重复的问题不至于反复搜索。
-    另外也是为了在特殊环境下，可以迅速的切换到另一台设备进行工作，不至于项目停滞。
+这一篇的目的是记录一些常用的软件的安装与使用，以及一些常见的问题的解决方案。遇到重复的问题不至于反复搜索。
+另外也是为了在特殊环境下，可以迅速的切换到另一台设备进行工作，不至于项目停滞。
 
 ## 终端 & Powershell
 
@@ -16,29 +15,23 @@
 
 1. 删除文件：`del` 文件名
 2. 查看 ip 命令：`ipconfig`
-3. 清屏：  `clear`    (cmd 窗口清屏用 cls)
-4. 查看列表 (list)：`ls`  （cmd 窗口用 dir）
-5. 切换目录：`cd xxx`    直接切换到 xxx 文件夹
-6. 切换盘符：`d:`    切换到 D 盘；`cd /d D:\Code`直接切换到 D 盘下的 Code 文件夹；但要注意，如果是在 C 盘下，直接输入`cd /d`是无法切换的
+3. 清屏： `clear` (cmd 窗口清屏用 cls)
+4. 查看列表 (list)：`ls` （cmd 窗口用 dir）
+5. 切换目录：`cd xxx` 直接切换到 xxx 文件夹
+6. 切换盘符：`d:` 切换到 D 盘；`cd /d D:\Code`直接切换到 D 盘下的 Code 文件夹；但要注意，如果是在 C 盘下，直接输入`cd /d`是无法切换的
 
 ??? failure "无法加载 WindowsPowerShell\profile.ps1"
-    [完美解决无法加载文件 WindowsPowerShell\profile.ps1系统编译问题-CSDN博客](https://blog.csdn.net/weixin_41194129/article/details/140538410)
-    1. 按`Win + X` 键,`Windows PowerShell (Admin)`
-    2. 使用命令 `Get-ExecutionPolicy -List`
-    3. 更改执行策略：为了允许运行脚本，你可以将执行策略更改为 RemoteSigned 或 Unrestricted。
-    ```shell
+[完美解决无法加载文件 WindowsPowerShell\profile.ps1 系统编译问题-CSDN 博客](https://blog.csdn.net/weixin_41194129/article/details/140538410) 1. 按`Win + X` 键，`Windows PowerShell (Admin)` 2. 使用命令 `Get-ExecutionPolicy -List` 3. 更改执行策略：为了允许运行脚本，你可以将执行策略更改为 RemoteSigned 或 Unrestricted。
+`shell
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-    ```
-    如果你需要为所有用户设置执行策略，可以使用 -Scope LocalMachine 参数：
-    ```shell
+    `
+如果你需要为所有用户设置执行策略，可以使用 -Scope LocalMachine 参数：
+`shell
     Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-    ```
-    4. 选择`Y`确认更改
-    5. 重新打开终端
-    6. 验证执行策略是否更改成功
-    ```shell title="路径改为本地报错时候显示的路径"
+    ` 4. 选择`Y`确认更改 5. 重新打开终端 6. 验证执行策略是否更改成功
+`shell title="路径改为本地报错时候显示的路径"
     Get-Item "C:\Users\Administrator\Documents\WindowsPowerShell\profile.ps1" | Format-List * -Force
-    ```
+    `
 
 ### 修改、查看、清除文件信息
 
@@ -160,14 +153,14 @@ xGameBar 对我来说没什么用，但是虚拟机中需要使用到这个快�
 专业词典选项会被大部分人忽略——因为它看起来默认开启，但没有完全启用。
 
 - **「V 模式」**
-  
+
 颇有意思，v 键进入后，可快速输入中文年月日时间以及公式运算等。
 
 例如，你输入“`v123`”，在按 a 选择，呈现的结果就是“一百二十三”
 
 `v12:55`，对应：十二时五十五分/ 12 时 55 分 / 十二分五十五秒 等
 
-`v1989.08.12`，对应：1989 年 08 月 12/  一九八九年八月十二日 等
+`v1989.08.12`，对应：1989 年 08 月 12/ 一九八九年八月十二日 等
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-windows.assets__20240816114019.webp)
 
 - **「U 模式」**
@@ -175,19 +168,19 @@ xGameBar 对我来说没什么用，但是虚拟机中需要使用到这个快�
 则方便用户输入一些特殊符号。如 win 笔记本键盘上并不存在的「」，就可以在输入 uubd 后找到。
 
 - **其他**
-  
+
 输入 sjx，可以得到三角形 △ ▲
 输入 slh，可以得到省略号
 输入 pzh，可以得到中文破折号
 
 - **emoji、颜文字与符号面板**
-  
+
 微软内置了 emoji 方案、颜文字、符号面板，使用 `Ctrl + Shift + B` 即可唤出。
 [一些小技巧，让你的 Win 10 内置输入法更好用 - 少数派](https://sspai.com/post/52101#!)
 
 ### 如何让你的 win11 不再智障
 
-- 驯化 windows 的软件**dism++** ，内置了很多小功能  [Releases · Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language/releases)
+- 驯化 windows 的软件**dism++** ，内置了很多小功能 [Releases · Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language/releases)
 
 #### 右键菜单调整
 
@@ -258,13 +251,13 @@ start explorer.exe
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-windows.assets__20240720005606.webp)
 
 !!! tip "打开第二个 DMP 文件"
-    如果在打开第二个DMP文件时，可能因为上一个分析记录未清除，导致无法直接分析下一个dmp文件，可以使用快捷键`Shift+F5`来关闭上一个DMP的分析记录。
+如果在打开第二个 DMP 文件时，可能因为上一个分析记录未清除，导致无法直接分析下一个 dmp 文件，可以使用快捷键`Shift+F5`来关闭上一个 DMP 的分析记录。
 
 打开之后首先查看两点
 
 - 第一个关键信息：`Probably caused by:`
 - 第二个关键信息：找到并点击`！analyze –v`，从弹出的内容中查找 `BUGCHECK_STR:`
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-windows.assets__20240720010134.webp)
+  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-windows.assets__20240720010134.webp)
 
 [Windows Bug Check Code Reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2)
 
@@ -272,7 +265,7 @@ start explorer.exe
 
 [只要看直播或者 b 站视频就容易蓝屏 NGA 玩家社区](https://ngabbs.com/read.php?tid=36810975&rand=354)
 
-[在看 B 站时突然蓝屏，报错 VIDEO\_xxx，蓝屏上面还有 B 站横幅。 - Microsoft Community](https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%9C%A8%E7%9C%8Bb%E7%AB%99%E6%97%B6%E7%AA%81/1c6e5719-545b-4f6e-9f39-5dfa49e218dc)
+[在看 B 站时突然蓝屏，报错 VIDEO_xxx，蓝屏上面还有 B 站横幅。 - Microsoft Community](https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%9C%A8%E7%9C%8Bb%E7%AB%99%E6%97%B6%E7%AA%81/1c6e5719-545b-4f6e-9f39-5dfa49e218dc)
 
 ### 显示器相关
 
@@ -343,15 +336,12 @@ start explorer.exe
 - 依次点击：此电脑，右键 C 盘，属性，清理磁盘，清理系统文件（有时候电脑更新了，旧的安装包不会自动删除，就可能占用十几 G）；
 - 清空回收站
 - **geek 卸载软件** 下载 geek（[Geek Uninstaller - Download](https://geekuninstaller.com/download)
-），找到不用的软件，删除卸载，它能很干净得删除软件，包括所有有关文件夹和注册表，very nice，强推，注意：geek 会删除该软件的所有文件夹，如果个人文件保存在这些文件夹里面，需要提前转移，否则将造成资料丢失！！；
+  ），找到不用的软件，删除卸载，它能很干净得删除软件，包括所有有关文件夹和注册表，very nice，强推，注意：geek 会删除该软件的所有文件夹，如果个人文件保存在这些文件夹里面，需要提前转移，否则将造成资料丢失！！；
 - **ccleaner** 下载 ccleaner（认准官网，免费版就行），里面的清理注册表，扫描，修复，再扫描，修复，再扫描，修复，重复三次（无须备份）；然后自定义清理，运行清理程序（注意，该操作会导致你在浏览器里面登入的如哔哩哔哩账号这种，会给你下线从而需要重新登入，为了避免，可以仔细看看自定义清理里面勾选了哪些，然后选择性清理就行）；geek 卸载不了的软件如 VS，SW 等，用 cc 卸载；
 - 找到**电脑管家**（无论是啥都行），找到里面的清理垃圾功能，扫描，清理；如果有系统修复啥的，漏洞修复啥的，全部来一遍；
 - 下载**treesize**（一定要认准免费版，下载过程中会多次引诱你下载专业版，不要上当，下载的时候看仔细），每次用管理员身份运行，一个一个目录点开看看，是哪个文件夹占了空间，不知道是什么的就去百度一遍看看是什么，怎么删；
 
-!!! note "常见占用内存"
-    - wechat 聊天记录及缓存文件及下载的文件
-    - 飞书缓存文件
-    - conda 库文件
+!!! note "常见占用内存" - wechat 聊天记录及缓存文件及下载的文件 - 飞书缓存文件 - conda 库文件
 
 #### 移动各种文件（找补）
 
@@ -498,7 +488,7 @@ course_id 是课程 id
 sub_id 是章节 id
 tenant_code 是租户 id
 
-sub_id  貌似是根据一定规则进行生成的，不清楚后台的 hash 算法
+sub_id 貌似是根据一定规则进行生成的，不清楚后台的 hash 算法
 
 但观察发现，有连续
 

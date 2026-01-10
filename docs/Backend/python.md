@@ -23,7 +23,7 @@ pip install <package>==<version>
 ### pip 换源
 
 ```shell title="临时换源"
-pip install package_name -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install package_name -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ```shell title="清华源 永久换源"
@@ -31,24 +31,24 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 !!! bug "WARNING: The repository located at mirrors.aliyun.com is not a trusted or secure host and is being ignored. If this repository is available via HTTPS we recommend you use HTTPS instead, otherwise you may silence this warning and allow it anyway with '--trusted-host mirrors.aliyun.com'."
-    在大多数情况下，这个警告表示pip无法验证镜像源的SSL证书。可能的原因包括：
+在大多数情况下，这个警告表示 pip 无法验证镜像源的 SSL 证书。可能的原因包括：
 
     SSL证书问题： 镜像源的SSL证书过期、自签名或存在其他问题。
     网络问题： 在某些网络环境中（特别是公司网络或学校网络），中间人攻击(MITM)防御机制可能会导致证书验证失败。
-    
+
     [已解决WARNING: The repository located at mirrors.aliyun.com is not a trusted or secure host异常的正确解决方法，亲测\_the repository located at mirrors, aliyun, com is -CSDN博客](https://blog.csdn.net/FMC_WBL/article/details/136143632)
 
 ### pip 导出环境
 
 1. 导出结果含有路径
-导出结果会存在路径，生成的 requirements.txt 文件在当前目录下。
+   导出结果会存在路径，生成的 requirements.txt 文件在当前目录下。
 
 ```shell
 pip freeze > requirements.txt
 ```
 
 1. 导出不带路径的
-生成的 requirements.txt 文件在当前目录下。
+   生成的 requirements.txt 文件在当前目录下。
 
 ```shell
 pip list --format=freeze > requirement.txt
@@ -134,15 +134,15 @@ export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
 ```
 
 !!! note "网络环境"
-    ```shell
+`shell
     unset http_proxy && unset https_proxy
-    ```
+    `
 
 ```shell title="换源，修改 pyproject.toml"
 [[tool.uv.index]]
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 default = true
- 
+
 [tool.uv.pip]
 index-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
@@ -286,7 +286,7 @@ bash Miniconda3-py39_24.7.1-0-Linux-aarch64.sh
 [conda 使用指南](https://blog.csdn.net/miracleoa/article/details/106115730)
 
 !!! note " conda 和 pip 的区别"
-    [Anaconda | Understanding Conda and Pip](https://www.anaconda.com/blog/understanding-conda-and-pip)
+[Anaconda | Understanding Conda and Pip](https://www.anaconda.com/blog/understanding-conda-and-pip)
 
     ||conda|pip|
     |---|---|---|
@@ -331,26 +331,26 @@ conda -V #获取版本号
 
 # 1. 创建虚拟环境
 conda create -n your_env_name(虚拟环境名称) python==xx(想要创建的虚拟环境的python版本号)
- 
+
 # 在指定的位置创建虚拟环境
 conda create -p /PATH/TO/path
-conda env list # 查看所有的 conda 虚拟环境  
+conda env list # 查看所有的 conda 虚拟环境
 conda list # 检查安装
- 
+
 # 2. 激活虚拟环境
 conda activate name
 conda deactivate
 conda env remove -n flowers
- 
+
 # 5. 安装包
 conda install package_name(包名)
 conda install scrapy==1.3 # 安装指定版本的包
 conda install -n 环境名 包名 # 在 conda 指定的某个环境中安装包
- 
+
 # 6. 跳过安装失败的包，继续安装
 # conda 方式
 while read requirement; do conda install --yes $requirement; done < requirements.txt
- 
+
 # pip 方式
 while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
 
@@ -414,7 +414,7 @@ pdb.set_trace()
 ### CUDA
 
 !!! note "什么是 CUDA"
-    通俗地说，CUDA是一种协助“CPU任务分发+GPU并行处理”的编程模型/平台，用于加速GPU和CPU之间的计算。
+通俗地说，CUDA 是一种协助“CPU 任务分发+GPU 并行处理”的编程模型/平台，用于加速 GPU 和 CPU 之间的计算。
 
     也就是说CUDA通过CPU任务分发和GPU并行处理的方式，把计算任务通过CPU分发给GPU进行并行计算加速。而GPU并行计算的能力需要CUDA借助其自带的编程接口和工具，比如C/C++语言来编写并行计算程序，并通过CUDA编译器将程序转化为可以在英NVIDIA GPU上执行的机器码快速运行。
 
@@ -443,9 +443,9 @@ CUDA 是向前和向后兼容的：这意味着，安装较新版本的 CUDA 驱
 
 1. cmd 中输入`nvcc -V`，有信息说明成功
 2. 安装路径下`\extras\demo_suite\deviceQuery.exe`，运行这个文件，有`PASS`说明成功（查询一下本机的 gpu 设备
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829200019.webp)
+   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829200019.webp)
 3. 安装路径下`\extras\demo_suite\bandwidthTest.exe`，运行这个文件，有`PASS`说明成功
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829200006.webp)
+   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829200006.webp)
 
 [Installation Guide Windows :: CUDA Toolkit Documentation](https://docs.nvidia.com/cuda/archive/11.6.0/cuda-installation-guide-microsoft-windows/index.html#system-requirements)
 
@@ -477,7 +477,7 @@ pip install torch==1.10.1+cu102 torchvision==0.11.2+cu102 torchaudio==0.10.1 -f 
 ```
 
 !!! failure "numpy 报错"
-    安装好torch之后，numpy会报错
+安装好 torch 之后，numpy 会报错
 
     ```
     UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at  ..\torch\csrc\utils\tensor_numpy.cpp:68.)
@@ -513,13 +513,13 @@ setting-plugin-chinese
 ssh -p 15821 root@connect.westb.seetacloud.com
 ```
 
-[pycharm 打开远程项目_手把手教你 Pycharm 远程连接服务器端项目进行本地开发调试！...-CSDN 博客](https://blog.csdn.net/weixin_34345947/article/details/114909727)
+[pycharm 打开远程项目\_手把手教你 Pycharm 远程连接服务器端项目进行本地开发调试！...-CSDN 博客](https://blog.csdn.net/weixin_34345947/article/details/114909727)
 
 ## 报错与问题解决
 
 ### 'GLIBCXX_3.4.30' not found
 
-> 参考文章[「已解决」anaconda 环境 version \`GLIBCXX\_3.4.30‘not found](https://blog.csdn.net/CCCDeric/article/details/129292944)
+> 参考文章[「已解决」anaconda 环境 version \`GLIBCXX_3.4.30‘not found](https://blog.csdn.net/CCCDeric/article/details/129292944)
 
 ```shell title="查找 libstdc++.so.6"
 sudo find / -name libstdc++.so.6
@@ -554,7 +554,7 @@ ln -s /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30 libstdc++.so.6
 ### ImportError: No module named parse
 
 !!! bug "ImportError: No module named parse"
-    python版本问题，在python 2.x中
+python 版本问题，在 python 2.x 中
 
     ```python
     from urlparse import urlparse

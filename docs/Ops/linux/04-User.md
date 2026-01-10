@@ -3,8 +3,7 @@
 ## 用户权限
 
 - UID
-
-  - 500~65535  普通用户
+  - 500~65535 普通用户
   - 0 超级用户
 
 - PID process identification
@@ -12,7 +11,7 @@
 - useradd
 
 - 文件分类
-    p 表示命名管道文件
+  p 表示命名管道文件
 
       d 表示目录文件
 
@@ -28,23 +27,23 @@
 
 - 特殊访问位置
 
-  [linux 一文带你彻底搞懂特殊权限位 suid，sgid，sticky_大雷编程的博客-CSDN 博客_suid 位](https://blog.csdn.net/csdn_leidada/article/details/122223958)
+  [linux 一文带你彻底搞懂特殊权限位 suid，sgid，sticky\_大雷编程的博客-CSDN 博客\_suid 位](https://blog.csdn.net/csdn_leidada/article/details/122223958)
 
   通过有效用户标识实现
 
-  SUID :  set-user-ID
+  SUID : set-user-ID
 
-  ​   拥有用户的权限
+  ​ 拥有用户的权限
 
-  ​   chmod u+s XXX
+  ​ chmod u+s XXX
 
   SGID : set-group-ID
 
-  ​   拥有组权限
+  ​ 拥有组权限
 
-  ​   chmod g+s XXX
+  ​ chmod g+s XXX
 
-  ​   chmod 2777 XXX
+  ​ chmod 2777 XXX
 
   uname 可显示电脑以及操作系统的相关信息。
 
@@ -61,11 +60,11 @@
 
   sticky BIt: 只有所有者可以删除或者重命名、在共享文档中使用
 
-  ​   可以修改、不能删除
+  ​ 可以修改、不能删除
 
-  ​   chmod 1755 XXX
+  ​ chmod 1755 XXX
 
-  ​   chmod +t XXX
+  ​ chmod +t XXX
 
   文件和目录操作权限不同：
 
@@ -81,7 +80,7 @@
 
   others = o = 其他人
 
-  r = read   w = write    x = execute 可执行
+  r = read w = write x = execute 可执行
 
   没有则用‘-’替代
 
@@ -93,7 +92,7 @@
 
 - chmod =
 
-  r = 4 , w  = 2 , x = 1
+  r = 4 , w = 2 , x = 1
 
   rwx = 7, rw = 6
 
@@ -109,54 +108,54 @@
 
 **信号（Signal）**：信号是在软件层次上对中断机制的一种模拟，通过给一个进程发送信号，执行相应的处理函数。
 
-|      |         |      |                                  |
-| ---- | ------- | ---- | -------------------------------- |
-| 2    | SIGINT  | 终止 | 键盘输入中断命令，一般是 CTRL+C   |
-| 9    | SIGKILL | 终止 | 立即停止进程，不能捕获，不能忽略 |
-| 20   | SIGSTP  | 停止 | 停止进程，一般是 CTRL+Z           |
+|     |         |      |                                  |
+| --- | ------- | ---- | -------------------------------- |
+| 2   | SIGINT  | 终止 | 键盘输入中断命令，一般是 CTRL+C  |
+| 9   | SIGKILL | 终止 | 立即停止进程，不能捕获，不能忽略 |
+| 20  | SIGSTP  | 停止 | 停止进程，一般是 CTRL+Z          |
 
 - type 类似于 which 找到执行文件
 
-   显示类型
+  显示类型
 
-   **内部命令、外部命令**：内部命令不创建进程、外部命令创建进程
+  **内部命令、外部命令**：内部命令不创建进程、外部命令创建进程
 
-   [Linux shell 内部命令和外部命令](https://blog.csdn.net/coding_dong/article/details/103576071)
+  [Linux shell 内部命令和外部命令](https://blog.csdn.net/coding_dong/article/details/103576071)
 
 - ps 查看进程属性
 
-   ps -a
+  ps -a
 
 - 前台后台
 
-   加**&**变成后台：大量计算、查找
+  加**&**变成后台：大量计算、查找
 
-   fg  = foreground 后台转到前台
+  fg = foreground 后台转到前台
 
-   ​ bg = background  + "%作业号"
+  ​ bg = background + "%作业号"
 
 - 作业、作业号
 
-   查看作业 jobs
+  查看作业 jobs
 
-   定时执行 at
+  定时执行 at
 
-   分号：顺序进行
-   与号：并发执行
+  分号：顺序进行
+  与号：并发执行
 
 - 终止进程
 
-   <ctrl+C>
+  <ctrl+C>
 
-   kill -9（强制）
+  kill -9（强制）
 
-   -15 +进程号
+  -15 +进程号
 
 - 睡眠 sleep n
 
 - &&成功则运行
 
-   || 失败才运行
+  || 失败才运行
 
 ### 管道
 
@@ -174,7 +173,7 @@
 
 -c 以字符的单位去除
 
-[【Linux 篇】cut 命令详解_linux cut_傻啦猫@_@的博客-CSDN 博客](https://blog.csdn.net/weixin_45842494/article/details/124679008)
+[【Linux 篇】cut 命令详解*linux cut*傻啦猫@\_@的博客-CSDN 博客](https://blog.csdn.net/weixin_45842494/article/details/124679008)
 
 #### xargs
 
@@ -207,7 +206,7 @@ find . -type f -name "*.jpg" -print | xargs tar -czvf images.tar.gz
 $ cat url-list.txt | xargs wget -c
 
 # find -print0 | xargs -0
-分析：第一个 -print0 指定结果集分隔为 null，第二个 -0 指定 xargs 分隔为 null。 
+分析：第一个 -print0 指定结果集分隔为 null，第二个 -0 指定 xargs 分隔为 null。
    find -print0表示在find的每一个结果之后加一个NULL字符，而不是默认加一个换行符。find的默认在每一个结果后加一个'\n'，所以输出结果是一行一行的。当使用了-print0之后，就变成一行了。
    然后xargs -0表示xargs用NULL来作为分隔符。这样前后搭配就不会出现空格和换行符的错误了。选择NULL做分隔符，是因为一般编程语言把NULL作为字符串结束的标志，所以文件名不可能以NULL结尾，这样确保万无一失。
 ```
@@ -216,9 +215,9 @@ $ cat url-list.txt | xargs wget -c
 
 - 输出
 
-  stdout  >>累加 >覆盖
+  stdout >>累加 >覆盖
 
-  stderr  2>> 累加 2>覆盖
+  stderr 2>> 累加 2>覆盖
 
   输出到同一个文件 2>&1
 
@@ -226,7 +225,7 @@ $ cat url-list.txt | xargs wget -c
 
   stdin <
 
-  stdin <<结束输入  ex: <<"eof"
+  stdin <<结束输入 ex: <<"eof"
 
 ## 系统服务
 

@@ -1,6 +1,7 @@
 ---
 comments: true
 ---
+
 # Jekyll
 
 [Jekyll • 简单静态博客网站生成器 - 将纯文本转换为静态博客网站](https://jekyllcn.com/)
@@ -14,7 +15,7 @@ gem install jekyll
 ```
 
 !!! bug "ERROR: Could not find a valid gem 'sass-embedded' (~> 1.54) (required by 'jekyll' (>= 0)) in any repository ERROR: Possible alternatives: sass-embedded"
-    这一步报错了，所以再把镜像源切换回官方的
+这一步报错了，所以再把镜像源切换回官方的
 
     ```shell
     gem sources -a https://rubygems.org/
@@ -26,7 +27,7 @@ gem install jekyll
 gem install jekyll-paginate
 ```
 
-验证 jekyll :  
+验证 jekyll :
 
 ```shell
 jekyll -v
@@ -39,7 +40,7 @@ jekyll -v
 ```shell
 bundle install（这一步不要）
 
-jekyll serve 
+jekyll serve
 ```
 
 ### 查看网站

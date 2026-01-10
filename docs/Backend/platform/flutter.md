@@ -36,13 +36,13 @@ export NO_PROXY=localhost,127.0.0.1,::1,192.168.0.0/16
 ### 项目管理
 
 - 安装项目依赖：
-  
+
   ```bash
   flutter pub get
   ```
 
 - 运行项目（调试模式）：
-  
+
   ```bash
   flutter run
   ```
@@ -63,7 +63,7 @@ export NO_PROXY=localhost,127.0.0.1,::1,192.168.0.0/16
   flutter build appbundle --release
   ```
 
-  *产物路径：`build/app/outputs/bundle/release/app-release.aab`*
+  _产物路径：`build/app/outputs/bundle/release/app-release.aab`_
 
 - **构建 APK (用于直接分发)**:
   为了减小体积，建议为不同 CPU 架构生成独立的 APK。
@@ -72,7 +72,7 @@ export NO_PROXY=localhost,127.0.0.1,::1,192.168.0.0/16
   flutter build apk --split-per-abi
   ```
 
-  *产物路径：`build/app/outputs/apk/release/`*
+  _产物路径：`build/app/outputs/apk/release/`_
 
 - **构建通用 APK (不推荐，体积较大)**:
 
@@ -88,7 +88,7 @@ export NO_PROXY=localhost,127.0.0.1,::1,192.168.0.0/16
   flutter build ipa
   ```
 
-  *构建前需在 Xcode 中配置好证书与签名。*
+  _构建前需在 Xcode 中配置好证书与签名。_
 
 #### Web
 
@@ -98,7 +98,7 @@ export NO_PROXY=localhost,127.0.0.1,::1,192.168.0.0/16
   flutter build web
   ```
 
-  *产物路径：`build/web`*
+  _产物路径：`build/web`_
 
 #### 桌面应用 (Desktop)
 

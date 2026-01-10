@@ -103,7 +103,7 @@ img {
   border-left: 0.5rem solid;
 }
 
-:where(.VPDoc) details.alert>[summary] {
+:where(.VPDoc) details.alert > [summary] {
   font-weight: 600;
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
@@ -113,7 +113,7 @@ img {
   align-items: center;
 }
 
-:where(.VPDoc) details.alert>[summary]::-webkit-details-marker {
+:where(.VPDoc) details.alert > [summary]::-webkit-details-marker {
   display: none;
 }
 

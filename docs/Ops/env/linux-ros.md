@@ -11,7 +11,7 @@ wget http://fishros.com/install -O fishros && . fishros
 [小鱼的一键安装系列 | 鱼香 ROS](https://fishros.org.cn)
 
 !!! note "no directory"
-    切换到`bash`使用 可以把 `. fishros` 替换成 `bash fishros`
+切换到`bash`使用 可以把 `. fishros` 替换成 `bash fishros`
 
 注意安装 desktop 版本而不是 sever 版本
 
@@ -26,12 +26,12 @@ rosrun turtlesmi turtle_teleop_key
 ### PlotJuggler 画图工具
 
 ```shell
-sudo apt-get install ros-noetic-plotjuggler 
+sudo apt-get install ros-noetic-plotjuggler
 ```
 
 ```shell
 roscore
-rosrun plotjuggler plotjuggler  
+rosrun plotjuggler plotjuggler
 ```
 
 然后通过 `File–>Load Data` 导入`CSV`或`rosbags`数据，然后把对应的 topic 数据拖到右侧就可以了。
@@ -62,7 +62,7 @@ cd ~/catkin_ws/src
 catkin_init_workspace
 ```
 
-``` shell title="编译"
+```shell title="编译"
 cd ~/catkin_ws
 catkin_make
 ```
@@ -75,25 +75,25 @@ catkin_make
 
 ### 执行
 
-| 命令       | 重要度 | 详细说明 |
-|------------|--------|----------|
-| `rosrun`   | ★★★    | 运行节点 |
-| `roslaunch`| ★★★    | 运行多个节点及设置运行选项 |
-| `rosclean` | ★★☆    | 检查或删除 ROS 日志文件 |
+| 命令        | 重要度 | 详细说明                   |
+| ----------- | ------ | -------------------------- |
+| `rosrun`    | ★★★    | 运行节点                   |
+| `roslaunch` | ★★★    | 运行多个节点及设置运行选项 |
+| `rosclean`  | ★★☆    | 检查或删除 ROS 日志文件    |
 
 ### topic
 
-| 命令              | 详细说明                         |
-|-------------------|----------------------------------|
-| `rostopic bw`     | 测量消息发布所占用的带宽         |
-| `rostopic delay`  | 显示话题中消息的延迟             |
-| `rostopic echo`   | 查看某个话题上发布的消息         |
-| `rostopic find`   | 按类型查找话题                   |
-| `rostopic hz`     | 测量消息发布的频率               |
-| `rostopic info`   | 获取更多关于话题的信息           |
-| `rostopic list`   | 获取当前活跃的话题               |
-| `rostopic pub`    | 发布数据到话题                   |
-| `rostopic type`   | 打印话题类型                     |
+| 命令             | 详细说明                 |
+| ---------------- | ------------------------ |
+| `rostopic bw`    | 测量消息发布所占用的带宽 |
+| `rostopic delay` | 显示话题中消息的延迟     |
+| `rostopic echo`  | 查看某个话题上发布的消息 |
+| `rostopic find`  | 按类型查找话题           |
+| `rostopic hz`    | 测量消息发布的频率       |
+| `rostopic info`  | 获取更多关于话题的信息   |
+| `rostopic list`  | 获取当前活跃的话题       |
+| `rostopic pub`   | 发布数据到话题           |
+| `rostopic type`  | 打印话题类型             |
 
 ```shell title="查看活动话题"
 rostopic list
@@ -222,7 +222,7 @@ rqt_image_view
 ### 蓝牙
 
 [jetson nano 之 (6):配置蓝牙音响 – 走着的博客 (openpilot.cc)](https://blog.openpilot.cc/archives/2307)
-[英伟达 Jetson Nano 新手必备：连接蓝牙音频_jetson nano 链接音响_许野平的博客-CSDN 博客](https://blog.csdn.net/quicmous/article/details/115174779)
+[英伟达 Jetson Nano 新手必备：连接蓝牙音频*jetson nano 链接音响*许野平的博客-CSDN 博客](https://blog.csdn.net/quicmous/article/details/115174779)
 
 ### 激光雷达
 
@@ -257,9 +257,9 @@ open config "cartographer.rviz"
 ```
 
 ??? note "jetson Nano 小车"
-    ```shell
-    #查看ip地址
-    ifconfig
+
+````shell #查看ip地址
+ifconfig
 
     #底盘
     roslaunch clbrobot bringup.launch
@@ -348,7 +348,7 @@ open config "cartographer.rviz"
 
 
     roslaunch clbrobot_hand_pose clbrobot_hand_pose.launch
-    roslaunch clbrobot_object_detect clbrobot_face_object.launch  
+    roslaunch clbrobot_object_detect clbrobot_face_object.launch
     ```
 
 ## 三方库
@@ -365,12 +365,12 @@ roscd darknet_ros/script
 python ObjectLocation.py
 
 roslaunch clbrobot astra_navigate.launch
-```
+````
 
-[darknet-yolov3 训练自己的数据集，并测试训练结果_dota 数据集在 yolov3 训练结果_pd 很不专业的博客-CSDN 博客](https://blog.csdn.net/qq_42145185/article/details/105816128)
+[darknet-yolov3 训练自己的数据集，并测试训练结果\_dota 数据集在 yolov3 训练结果\_pd 很不专业的博客-CSDN 博客](https://blog.csdn.net/qq_42145185/article/details/105816128)
 
-[Jetson Nano 之 ROS 入门 -- YOLO 目标检测与定位_ros 目标检测_szu_ljm 的博客-CSDN 博客](https://blog.csdn.net/m0_55202222/article/details/132016297)
+[Jetson Nano 之 ROS 入门 -- YOLO 目标检测与定位\_ros 目标检测\_szu_ljm 的博客-CSDN 博客](https://blog.csdn.net/m0_55202222/article/details/132016297)
 
 ### 语音合成
 
-[ROS 实战 ( 三 ) 利用科大讯飞 tts 实现 ROS 下语音合成播报_无驰复逸的博客-CSDN 博客](https://blog.csdn.net/weixin_40522162/article/details/80525758)
+[ROS 实战 ( 三 ) 利用科大讯飞 tts 实现 ROS 下语音合成播报\_无驰复逸的博客-CSDN 博客](https://blog.csdn.net/weixin_40522162/article/details/80525758)

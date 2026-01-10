@@ -2,22 +2,22 @@
 
 下面是一些工具与关系的介绍
 
-* **Ruby** → 编程语言（类似 **Python**）
-* **RubyGems** → Ruby 的包管理系统（类似 **pip**）
-* **Bundler** → 项目依赖管理工具（类似 **requirements.txt + pip-tools/poetry**，比 pip 单独用更接近 poetry/pipenv）
-* **Jekyll 插件**（如 `jekyll-paginate` 等）→ 类似 **Django/Flask 的插件或扩展**
-* **rbenv** → Ruby 版本管理工具（类似 **pyenv**）
-* **ruby-build** → rbenv 的插件，用来编译安装 Ruby（类似 **pyenv 的插件 pyenv-install**）
+- **Ruby** → 编程语言（类似 **Python**）
+- **RubyGems** → Ruby 的包管理系统（类似 **pip**）
+- **Bundler** → 项目依赖管理工具（类似 **requirements.txt + pip-tools/poetry**，比 pip 单独用更接近 poetry/pipenv）
+- **Jekyll 插件**（如 `jekyll-paginate` 等）→ 类似 **Django/Flask 的插件或扩展**
+- **rbenv** → Ruby 版本管理工具（类似 **pyenv**）
+- **ruby-build** → rbenv 的插件，用来编译安装 Ruby（类似 **pyenv 的插件 pyenv-install**）
 
 ```mermaid
 graph TD
     B["Ruby - 编程语言"]
     B --> C["RubyGems包管理系统"]
     C --> D["Bundler依赖管理工具"]
-    
+
     F["rbenv Ruby版本管理"] --> B
     G["ruby-build Ruby构建工具"] --> F
-    
+
     R["镜像源"] --> C
     S["ruby-china.com"] --> R
     T["rubygems.org"] --> R
@@ -33,7 +33,7 @@ ruby -v
 
 === "linux or wsl"
 
-    ```shell 
+    ```shell
     sudo apt update && sudo apt upgrade -y
     sudo apt install ruby-dev ruby-bundler nodejs
     ```
@@ -125,7 +125,7 @@ gem install bundler
 ## 标准安装流程（Ruby ≥ 3.2）
 
 !!! example "完整配置方案"
-    **目标：** 使用 Ruby ≥ 3.2 + 正确的 bundler + 无权限问题
+**目标：** 使用 Ruby ≥ 3.2 + 正确的 bundler + 无权限问题
 
     ### Step 1：更新 ruby-build（核心一步）
 

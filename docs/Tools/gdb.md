@@ -29,10 +29,10 @@ tar -xvzf gdb-10.2.tar.xz
 ```
 
 !!! question "我这里报了`gzip: stdin: not in gzip format tar: Child returned status 1 tar: Error exit delayed`"
-    ```shell title="解压缩换成这个命令"
+`shell title="解压缩换成这个命令"
     tar -vxf gdb-10.2.tar.xz
-    ```
-    tar包压缩的时候用`-cvf`参数，解压的时候用`-xvf`参数（用此命令解决了）
+    `
+tar 包压缩的时候用`-cvf`参数，解压的时候用`-xvf`参数（用此命令解决了）
 
     或压缩的时候用`-czvf`参数，解压的时候用`-xzvf`参数（常用，这次报了这个错）
 
@@ -66,11 +66,11 @@ cd build
 ```
 
 !!! question "可能会提示你没有相关库 `configure: WARNING: no enhanced curses library found; disabling TUI`"
-    查阅官方发现：Build GDB with the text-mode full-screen user interface (TUI).Requires a curses library (ncurses and cursesX are also supported).
+查阅官方发现：Build GDB with the text-mode full-screen user interface (TUI).Requires a curses library (ncurses and cursesX are also supported).
 
     你需要安装ncurses库，才能安装tui。[参考 configure: WARNING: no enhanced curses library found; disabling TUI](https://www.linuxquestions.org/questions/linux-newbie-8/configure-warning-no-enhanced-curses-library-found%3B-disabling-tui-4175443971/)
 
-    
+
     [Index of /pub/gnu/ncurses](https://ftp.gnu.org/pub/gnu/ncurses/)
 
     ```shell title="下载"
@@ -89,9 +89,9 @@ cd build
     ```
 
 !!! question "`‘makeinfo‘ is missing on your system.`"
-    ```shell
+`shell
     sudo apt-get install texinfo
-    ```
+    `
 
 ```shell title="编译"
 make
@@ -132,8 +132,8 @@ cat .gdbinit
 
 ```shell
 cd ~/
-git clone https://github.com/scwuaptx/Pwngdb.git 
-cp ~/Pwngdb/.gdbinit ~/ 
+git clone https://github.com/scwuaptx/Pwngdb.git
+cp ~/Pwngdb/.gdbinit ~/
 ```
 
 [gdb 与 peda、pwngdb、pwndbg 组合安装与使用\_gdb peda-CSDN 博客](https://blog.csdn.net/whbing1471/article/details/112410599)
@@ -191,7 +191,7 @@ b *0x4005a0
 
 `b file_name:func_name`
 
-`b +0x10`  //在程序当前停住的位置下 0x10 的位置下断点，同样可以 -0x10，就是前 0x10
+`b +0x10` //在程序当前停住的位置下 0x10 的位置下断点，同样可以 -0x10，就是前 0x10
 
 `d(delete) + number` —— 删除一个断点【不可以 d + 行号】
 
@@ -232,13 +232,13 @@ undisplay + 变量名编号 —— 取消对先前设置的那些变量的跟踪
 
 ```shell
 # 打印函数名地址
-p fun_name 
+p fun_name
 
 # 计算表达式
 p 0x10-0x08
 
 # 查看变量地址
-p &a 
+p &a
 
 # 查看指定内存地址的值
 p *(0x123456)
@@ -246,7 +246,7 @@ p *(0x123456)
 # 显示寄存器值
 p $rdi
 
-# 显示寄存器指向的值 
+# 显示寄存器指向的值
 p *($rdi)
 ```
 
@@ -305,14 +305,14 @@ set var —— 修改变量的值
 - interactive 界面
 
 ```shell
-(gdb) file test.exe 
-(gdb) source mycmd.gdb 
+(gdb) file test.exe
+(gdb) source mycmd.gdb
 ```
 
 - 在命令行中运行 gdb 的 batch 模式命令
 
 ```shell
-gdb --batch --command=cmd.gdb --args test.exe <add necessary parameters here> 
+gdb --batch --command=cmd.gdb --args test.exe <add necessary parameters here>
 ```
 
 ### `.gdb`脚本
@@ -344,7 +344,7 @@ end
 
 ```shell
 document func_name
-# write documents here 
+# write documents here
 end
 ```
 
@@ -355,7 +355,7 @@ end
 2> 创建调试使用的变量
 
 ```shell
-set $a = i 
+set $a = i
 ```
 
 不带$的变量是被调试程序中的变量，如这里的 i；带$的变量为调试过程中定义的变量，如这里的$a
@@ -405,24 +405,24 @@ printf "a=%d\n", 10
 ```shell
 # e.g. if i == 10
 if <condition>
-    # do something 
-else 
-    # do other things 
-end 
+    # do something
+else
+    # do other things
+end
 ```
 
 循环语句
 
 ```shell
-while <condition> 
-    # do something 
+while <condition>
+    # do something
 end
 ```
 
 ```shell
 set $i = 10
 while $i > 0
-    printf "%d\n", $i 
+    printf "%d\n", $i
     set $i = $i - 1
 end
 ```

@@ -4,15 +4,10 @@
 
 ## 系统烧录
 
-!!! note "准备"
-    - 下载[kali](https://www.kali.org/get-kali/#kali-platforms) 也可以在镜像站上下载[ZJU Mirror](https://mirror.zju.edu.cn/)
-    - 下载烧录工具[Etcher](https://etcher.balena.io/#download-etcher)
-    - 准备 sd 卡
-    - 准备读卡器
-    - 电脑
+!!! note "准备" - 下载[kali](https://www.kali.org/get-kali/#kali-platforms) 也可以在镜像站上下载[ZJU Mirror](https://mirror.zju.edu.cn/) - 下载烧录工具[Etcher](https://etcher.balena.io/#download-etcher) - 准备 sd 卡 - 准备读卡器 - 电脑
 
->[Kali Linux | Penetration Testing and Ethical Hacking Linux Distribution](https://www.kali.org/)
->[Kali 虚拟机安装，设置中文等详细教程，Linux 最新免镜像版_kali 安装中文语言包-CSDN 博客](https://blog.csdn.net/l2872253606/article/details/123592717)
+> [Kali Linux | Penetration Testing and Ethical Hacking Linux Distribution](https://www.kali.org/)
+> [Kali 虚拟机安装，设置中文等详细教程，Linux 最新免镜像版\_kali 安装中文语言包-CSDN 博客](https://blog.csdn.net/l2872253606/article/details/123592717)
 
 ### 换源
 
@@ -66,7 +61,7 @@ startx
 
 ```shell
 sudu su
-apt-get update 
+apt-get update
 apt-get upgrade
 ```
 
@@ -92,7 +87,7 @@ apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-pl
     ```shell
     sudo metacity --replace      #打开窗口管理器
     ```
-    
+
     如果没有metacity这个命令，就下载一下
 
     ```shell
@@ -247,7 +242,7 @@ nmap ip -p 范围
 >
 > 访问本题请通过本地运行 ssh user@10.214.160.13 -p 10802 -D 10899 -N，并输入密码 sbus 来开启在本机 10899 端口的 SOCKS5 服务，以下所有域名均应在 SOCSK5 代理后才可访问 (可以使用 proxychains4 等工具)。对于无法直接将域名传入代理服务、必须事先解析的工具，这里提供题目中域名的 IP: zju.tools(192.168.192.3), attackme.zjupy.trade(192.168.192.8) AAA web5 端口扫描与目录爆破 (part1)
 >
-> Q: 如何拿到 flag? A:  1. 请扫描 zju.tools 服务器，找出这台服务器上 ssh 的端口    ps:显然我没有把 ssh 开在标准端口，以及，为了不给 zjutools 服务器带来太大压力 orz, 请在 9000~11000 之间扫   2. 请访问 `http://192.168.192.8:[part1扫描出来的端口号]`
+> Q: 如何拿到 flag? A: 1. 请扫描 zju.tools 服务器，找出这台服务器上 ssh 的端口 ps:显然我没有把 ssh 开在标准端口，以及，为了不给 zjutools 服务器带来太大压力 orz, 请在 9000~11000 之间扫 2. 请访问 `http://192.168.192.8:[part1扫描出来的端口号]`
 
 Nmap 所识别的 6 个端口状态。
 
@@ -314,13 +309,13 @@ rip-git.pl -s -v -u http://www.example.com/.git/
 [linux 解决 " command not found: shopt "的 "\~/.bashrc" 配置问题-CSDN 博客](https://blog.csdn.net/qq_36148847/article/details/79261067)
 
 1. 安装[java 环境](https://www.oracle.com/java/technologies/downloads/?er=221886)
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux-kali.assets__20240710122150.webp)
+    ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux-kali.assets__20240710122150.webp)
 
-    ```shell
-    tar -xzvf jdk-12_linux-x64_bin.tar.gz
-    mv jdk /opt
-    cd /opt/jdk
-    ```
+        ```shell
+        tar -xzvf jdk-12_linux-x64_bin.tar.gz
+        mv jdk /opt
+        cd /opt/jdk
+        ```
 
 2. 设置环境变量，这里不要用`.bashrc`，而是`.zshrc`
 
@@ -342,10 +337,11 @@ java -version
 ```
 
 出现类似于下面的文字即成功
->Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
->java version "22.0.1" 2024-04-16
->Java(TM) SE Runtime Environment (build 22.0.1+8-16)
->Java HotSpot(TM) 64-Bit Server VM (build 22.0.1+8-16, mixed mode, sharing)
+
+> Picked up \_JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+> java version "22.0.1" 2024-04-16
+> Java(TM) SE Runtime Environment (build 22.0.1+8-16)
+> Java HotSpot(TM) 64-Bit Server VM (build 22.0.1+8-16, mixed mode, sharing)
 
 前往[github 库](https://github.com/Giotino/stegsolve/releases)，下载软件
 
@@ -363,26 +359,26 @@ java -jar StegSolve
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux-kali.assets__20240710122852.webp)
 
 !!! bug "若执行`source ~/.bashrc`会报错"
-    [bash - shopt command not found in .bashrc after shell updation - Stack Overflow](https://stackoverflow.com/questions/26616003/shopt-command-not-found-in-bashrc-after-shell-updation)
+[bash - shopt command not found in .bashrc after shell updation - Stack Overflow](https://stackoverflow.com/questions/26616003/shopt-command-not-found-in-bashrc-after-shell-updation)
 
     ```shell
-    /home/amerrnath/.bashrc:17: command not found: shopt 
-    /home/amerrnath/.bashrc:25: command not found: shopt 
-    /home/amerrnath/.bashrc:109: command not found: shopt 
+    /home/amerrnath/.bashrc:17: command not found: shopt
+    /home/amerrnath/.bashrc:25: command not found: shopt
+    /home/amerrnath/.bashrc:109: command not found: shopt
     /usr/share/bash-completion/bash_completion:35: parse error near `]]'
     ```
 
 ### 其他隐写工具
 
 - steghide
-steghide 不支持 png 格式的隐写，zsteg 支持 png。
+  steghide 不支持 png 格式的隐写，zsteg 支持 png。
 
 ```shell
 apt install steghide
 ```
 
 - zsteg
-[安装](https://blog.csdn.net/Amherstieae/article/details/107512398)
+  [安装](https://blog.csdn.net/Amherstieae/article/details/107512398)
 
 ### go 环境搭建
 
@@ -473,7 +469,7 @@ at block: 345 (Sat Jul 13 2024 08:38:08 GMT-0400 (EDT))
  modules: eth:1.0 net:1.0 personal:1.0 rpc:1.0 web3:1.0
 
 To exit, press ctrl-d or type exit
-> 
+>
 ```
 
 ### volatility
@@ -522,7 +518,7 @@ vol.py
 ```
 
 ```shell
-> └─# vol.py       
+> └─# vol.py
 > Volatility Foundation Volatility Framework 2.6.1
 > ERROR   : volatility.debug    : You must specify something to do (try -h)
 ```

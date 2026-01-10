@@ -93,7 +93,7 @@ ssh-copy-id -p 2222 <user>@<host>
 ```
 
 !!! note "开机自启"
-    如果不配置开机自启动的话，需要手动启动ssh服务
+如果不配置开机自启动的话，需要手动启动 ssh 服务
 
     ```shell title="ssh 开机自启"
     sudo systemctl enable ssh
@@ -102,19 +102,19 @@ ssh-copy-id -p 2222 <user>@<host>
 !!! note "免密登陆"
 
     下面是配置免密登陆的步骤
-    
+
     ```shell title="powershell生成密钥"
     ssh-keygen -t ed25519 -C "wsl-ssh-key"
     ```
-    
+
     ```shell title="ssh 查看密钥"
     cat ~\.ssh\id_ed25519.pub
     ```
-    
+
     复制输出的内容（以 `ssh-ed25519` 开头的一行）
-    
+
     在 WSL2 中粘贴到 `~/.ssh/authorized_keys`：
-    
+
     ```shell title="ssh 粘贴公钥"
     mkdir ~/.ssh
     echo "粘贴的公钥内容" >> ~/.ssh/authorized_keys
@@ -147,8 +147,8 @@ hostAddressLoopback=true
 
 > 💡说明：
 >
-> * `networkingMode=mirrored`：启用网络镜像模式，使 WSL2 与宿主机共用 IP。
-> * `hostAddressLoopback=true`：让宿主机和局域网主机可访问 WSL2 中的服务端口。
+> - `networkingMode=mirrored`：启用网络镜像模式，使 WSL2 与宿主机共用 IP。
+> - `hostAddressLoopback=true`：让宿主机和局域网主机可访问 WSL2 中的服务端口。
 
 2、重启 WSL 服务（在 Windows 上）
 
@@ -169,7 +169,7 @@ wsl --version
 
 确保为 `2.0.0+`，推荐 `2.0.14.0` 以上。
 
-3 在  WSL2 中配置 SSH 服务
+3 在 WSL2 中配置 SSH 服务
 
 1️⃣ 在 WSL2 中打开终端（Ubuntu、Debian 等）：
 
@@ -374,11 +374,11 @@ powershell.exe -ExecutionPolicy Bypass -File .\wsl-portproxy-daemon.ps1
 !!! note "Limitations&Banned Features"
 
     === "Limitations"
-    
+
         ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-wsl.assets__image-20250816204530654.webp)
-    
+
     === "Banned Features"
-    
+
         ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-wsl.assets__image-20250816204600671.webp)
 
 首先查看电脑支持的 CUDA 版本
@@ -410,21 +410,21 @@ export PATH="/usr/local/cuda-12.9/bin:$PATH"
 ```
 
 !!! note "添加路径"
-    [CUDA Installation Guide for Linux — Installation Guide for Linux 13.0 documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions)
+[CUDA Installation Guide for Linux — Installation Guide for Linux 13.0 documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions)
 
     In addition, when using the runfile installation method, the `LD_LIBRARY_PATH` variable needs to contain `/usr/local/cuda-13.0/lib64` on a 64-bit system and `/usr/local/cuda-13.0/lib` for the 32 bit compatibility:
-    
+
     ```shell title="添加路径"
     $ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-13.0/lib64
     ```
-    
+
     Note that the above paths change when using a custom install path with the runfile installation method.
 
 !!! note "V13.0"
-    如果是13.0，则可以安装13.0，参考NVIDIA 官方文档 [CUDA on WSL User Guide — CUDA on WSL 13.0 documentation](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
+如果是 13.0，则可以安装 13.0，参考 NVIDIA 官方文档 [CUDA on WSL User Guide — CUDA on WSL 13.0 documentation](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
 
     可以前往[CUDA Toolkit 13.0 Downloads | NVIDIA Developer](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)这个网页查看具体教程，这里截取使用的命令（2025-8-16）
-    
+
     ```shell title="CUDA Toolkit Installer V13.0"
     wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
     sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -434,9 +434,9 @@ export PATH="/usr/local/cuda-12.9/bin:$PATH"
     sudo apt-get update
     sudo apt-get -y install cuda-toolkit-13-0
     ```
-    
+
     像lz就不小心装错了，在第三步的时候发现，
-    
+
     ```shell title="删除CUDA Toolkit Installer V13.0"
     sudo dpkg -r cuda-repo-wsl-ubuntu-13-0-local
     sudo dpkg --purge cuda-repo-wsl-ubuntu-13-0-local
@@ -456,12 +456,12 @@ export PATH="/opt/nvidia/nsight-systems/2025.5.1/bin/:$PATH"
 ```
 
 !!! attention "这里要注意 PATH 的先后顺序，在前面路径下的文件会优先被调用"
-    比如`/usr/local/cuda-12.9/bin`和`/usr/local/cuda-13.0/bin`，如果`/usr/local/cuda-12.9/bin`在前面，那么`nvcc`会优先使用`/usr/local/cuda-12.9/bin`下的文件，而不是`/usr/local/cuda-13.0/bin`下的文件。
+比如`/usr/local/cuda-12.9/bin`和`/usr/local/cuda-13.0/bin`，如果`/usr/local/cuda-12.9/bin`在前面，那么`nvcc`会优先使用`/usr/local/cuda-12.9/bin`下的文件，而不是`/usr/local/cuda-13.0/bin`下的文件。
 
     比如我有两个版本的Nsight-systems，一个在`/opt/nvidia/nsight-systems/2025.5.1`，一个在`/opt/nvidia/nsight-systems/2025.3.0`，如果`/opt/nvidia/nsight-systems/2025.5.1`的PATH路径`/opt/nvidia/nsight-systems/2025.5.1/bin`在前面，那么`nsight-systems`会优先使用`/opt/nvidia/nsight-systems/2025.5.1/bin`下的文件，而不是`/opt/nvidia/nsight-systems/2025.3.0/bin`下的文件。
 
 !!! attention "注意版本问题"
-    高版本的nsight-system生成的文件，低版本的nsight-system无法打开。
+高版本的 nsight-system 生成的文件，低版本的 nsight-system 无法打开。
 
 ### nsight-compute
 

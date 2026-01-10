@@ -107,15 +107,15 @@ unset http_proxy && unset https_proxy
 [OSError: We couldn‘t connect to‘https://huggingface.co‘to load this file, couldn‘t find it(亲测有效)\_checkout your internet connection or see how to ru-CSDN 博客](https://blog.csdn.net/l8947943/article/details/143099409)
 
 1. 科学上网，访问该网址
-通过全局代理的方式，实现模型的下载。
+   通过全局代理的方式，实现模型的下载。
 
 1. 使用镜像网址
-国内 huggingface 镜像地址：<https://hf-mirror.com/>
-往下翻，直接可看到使用教程。主要有四种解决方式。最直接的方式就是一个个下载使用。
+   国内 huggingface 镜像地址：<https://hf-mirror.com/>
+   往下翻，直接可看到使用教程。主要有四种解决方式。最直接的方式就是一个个下载使用。
 
 1. 在代码中增加设置
-import os
-os.environ['HF_ENDPOINT'] = '<https://hf-mirror.com>'
+   import os
+   os.environ['HF_ENDPOINT'] = '<https://hf-mirror.com>'
 
 ### Llama 模型申请
 
@@ -141,10 +141,10 @@ export HF_TOKEN=your_huggingface_token
 
 === "方法 1 huggingface-cli"
 
-   ```shell title="下载指令 cli"
-   export HF_ENDPOINT=https://hf-mirror.com
-   huggingface-cli download --resume-download <model_name> --local-dir <path>
-   ```
+```shell title="下载指令 cli"
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --resume-download <model_name> --local-dir <path>
+```
 
 === "方法 2 hf download"
 
@@ -166,17 +166,17 @@ export HF_TOKEN=your_huggingface_token
 
 === "方法 4 在代码头部加入"
 
-   ```python title="在代码头部加入"
-   import subprocess
-   import os
+```python title="在代码头部加入"
+import subprocess
+import os
 
-   result = subprocess.run('bash -c "source /etc/network_turbo && env | grep proxy"', shell=True, capture_output=True, text=True)
-   output = result.stdout
-   for line in output.splitlines():
-      if '=' in line:
-         var, value = line.split('=', 1)
-         os.environ[var] = value
-   ```
+result = subprocess.run('bash -c "source /etc/network_turbo && env | grep proxy"', shell=True, capture_output=True, text=True)
+output = result.stdout
+for line in output.splitlines():
+   if '=' in line:
+      var, value = line.split('=', 1)
+      os.environ[var] = value
+```
 
 ### 使用 modelscope 下载
 
@@ -229,7 +229,7 @@ ssh <alias>
 ```
 
 !!! note "免密登录的操作是针对用户的，切换其他用户就不可以了"
-    可以结合公私钥文件进行理解
+可以结合公私钥文件进行理解
 
 ## 任务运行
 
@@ -341,21 +341,21 @@ screen -ls
 
 - 如果只有一个 Screen 进程：
 
-   ```bash title="恢复运行"
-   screen -r -d
-   ```
+  ```bash title="恢复运行"
+  screen -r -d
+  ```
 
 - 如果有多个 Screen 进程，通过 PID 进入：
 
-   ```bash
-   screen -r -d <PID>
-   ```
+  ```bash
+  screen -r -d <PID>
+  ```
 
-   示例：
+  示例：
 
-   ```bash
-   screen -r -d 1805
-   ```
+  ```bash
+  screen -r -d 1805
+  ```
 
 #### 删
 
@@ -434,124 +434,124 @@ screen -wipe #清理那些dead的会话
 
 === "Server 端配置"
 
-   下载安装包
+下载安装包
 
-   ```shell title="解压"
-   tar -zxvf frp_0.61.2_linux_amd64.tar.gz
-   ```
+```shell title="解压"
+tar -zxvf frp_0.61.2_linux_amd64.tar.gz
+```
 
-   ```shell title="进入目录"
-   cd frp_0.61.2_linux_amd64
-   ```
+```shell title="进入目录"
+cd frp_0.61.2_linux_amd64
+```
 
-   ```shell title="编辑 frps.toml"
-   vim frps.toml
-   ```
+```shell title="编辑 frps.toml"
+vim frps.toml
+```
 
-   ```toml title="frps.toml"
-   bindPort = 7000      # 服务端与客户端通信端口
-   # vhostHTTPPort = 80   # 如果客户端需要使用 http 服务，在这里配置代理端口
+```toml title="frps.toml"
+bindPort = 7000      # 服务端与客户端通信端口
+# vhostHTTPPort = 80   # 如果客户端需要使用 http 服务，在这里配置代理端口
 
-   auth.token = "token"                    # 身份验证令牌，frpc 要与 frps 一致
+auth.token = "token"                    # 身份验证令牌，frpc 要与 frps 一致
 
-   # Server Dashboard，可以查看 frp 服务状态以及统计信息
-   webServer.addr = "0.0.0.0"              # 后台管理地址
-   webServer.port = 7500                   # 后台管理端口
-   webServer.user = "admin"                # 后台登录用户名
-   webServer.password = "admin"            # 后台登录密码
-   ```
+# Server Dashboard，可以查看 frp 服务状态以及统计信息
+webServer.addr = "0.0.0.0"              # 后台管理地址
+webServer.port = 7500                   # 后台管理端口
+webServer.user = "admin"                # 后台登录用户名
+webServer.password = "admin"            # 后台登录密码
+```
 
-   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
+![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
 
-   访问公网 ip 的 7500 端口，可以查看 frp 服务状态以及统计信息
+访问公网 ip 的 7500 端口，可以查看 frp 服务状态以及统计信息
 
-   !!! note "注意这里需要在 aliyun 控制台的安全组中添加 7000 和 7500 端口"
-      ```shell title="开放服务端端口"
+!!! note "注意这里需要在 aliyun 控制台的安全组中添加 7000 和 7500 端口"
+`shell title="开放服务端端口"
       sudo ufw allow 7000/tcp    # FRP主端口
       sudo ufw allow 7500/tcp    # 仪表盘
       sudo ufw allow 40443/tcp   # HTTP穿透
       sudo ufw allow 40800/tcp   # HTTPS穿透
-      ```
+      `
 
-   ```shell title="后台运行"
-   #服务器端
-   nohup ./frps -c frps.toml &
-   ```
+```shell title="后台运行"
+#服务器端
+nohup ./frps -c frps.toml &
+```
 
 === "Client 端配置"
 
-   接下来配置客户端侧（frpc = frp client）
+接下来配置客户端侧（frpc = frp client）
 
-   ```shell title="客户端"
-   #客户端
-   nohup ./frpc -c frpc.toml &
-   ```
+```shell title="客户端"
+#客户端
+nohup ./frpc -c frpc.toml &
+```
 
-   ```shell title="开机自启动"
-   sudo vi /etc/rc.local  
+```shell title="开机自启动"
+sudo vi /etc/rc.local
 
-   #自行修改为绝对路径
-   nohup /root/frp/frpc -c /root/frp/frpc.toml &
-   ```
+#自行修改为绝对路径
+nohup /root/frp/frpc -c /root/frp/frpc.toml &
+```
 
-   ```shell title="编辑 frpc.ini"
-   [common]
-   server_addr = <server_ip>
-   server_port = 7000              # 服务端 bind_port
-   auth.token = "your_secure_token_here"
+```shell title="编辑 frpc.ini"
+[common]
+server_addr = <server_ip>
+server_port = 7000              # 服务端 bind_port
+auth.token = "your_secure_token_here"
 
-   # ----------- TCP 穿透示例（SSH 服务）------------
-   [ssh]
-   type = tcp
-   local_ip = 127.0.0.1
-   local_port = 22
-   remote_port = 6000
-   ```
+# ----------- TCP 穿透示例（SSH 服务）------------
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 6000
+```
 
-   !!! note "特别注意，字符串要加双引号，数字和 ip 不要加双引号，尽量不要写注释"
+!!! note "特别注意，字符串要加双引号，数字和 ip 不要加双引号，尽量不要写注释"
 
-   ```shell title="启动"
-   ./frpc -c frpc.ini
-   ```
+```shell title="启动"
+./frpc -c frpc.ini
+```
 
-   这个时候，服务端应该会收到客户端的连接请求，可以看到类似如下信息
+这个时候，服务端应该会收到客户端的连接请求，可以看到类似如下信息
 
-   ```shell title="成功信息"
+```shell title="成功信息"
 
-   ```
+```
 
-   ```shell title="可以使用这个指令查看 server 有没有监测端口，如果没有的话就是配置错误问题"
-   sudo netstat -tulnp | grep ':6000'
-   ```
+```shell title="可以使用这个指令查看 server 有没有监测端口，如果没有的话就是配置错误问题"
+sudo netstat -tulnp | grep ':6000'
+```
 
-   ```shell title="ssh 连接"
-   ssh -p 6000 <client_username>@<server_ip>
-   ```
+```shell title="ssh 连接"
+ssh -p 6000 <client_username>@<server_ip>
+```
 
-   要特别注意这里是 client 的 username，而不是 server 的 username
+要特别注意这里是 client 的 username，而不是 server 的 username
 
-   这个时候应该就可以配置成功了
+这个时候应该就可以配置成功了
 
-   ```shell title="开放端口"
-   sudo firewall-cmd --zone=public --add-port=7000/tcp --permanent
-   sudo firewall-cmd --zone=public --add-port=7500/tcp --permanent
-   sudo firewall-cmd --zone=public --add-port=6000/tcp --permanent
+```shell title="开放端口"
+sudo firewall-cmd --zone=public --add-port=7000/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=7500/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=6000/tcp --permanent
 
-   sudo firewall-cmd --reload
-   ```
+sudo firewall-cmd --reload
+```
 
-   !!! note "如果报错了试着使用 su 权限运行一下，说不定可以"
+!!! note "如果报错了试着使用 su 权限运行一下，说不定可以"
 
-   [error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type v1.ServerConfig · Issue #3657 · fatedier/frp](https://github.com/fatedier/frp/issues/3657)
+[error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type v1.ServerConfig · Issue #3657 · fatedier/frp](https://github.com/fatedier/frp/issues/3657)
 
-   | **场景**                     | **代理类型** | **本地端口** | **远程端口** | **用途** |
-   |------------------------------|-------------|--------------|--------------|----------|
-   | 远程 SSH 访问                | TCP         | 22           | 6000         | 远程 SSH 进内网服务器 |
-   | 内网 Web 服务器访问          | HTTP        | 8080         | 8081         | 访问本地网站 |
-   | 访问家中 NAS / 服务器        | TCP         | 445/5005     | 4445/5055    | 远程访问 SMB 或 WebDAV |
-   | 远程数据库访问               | TCP         | 3306/5432    | 13306/15432  | 远程连接 MySQL / PostgreSQL |
-   | 远程桌面（RDP）              | TCP         | 3389         | 13389        | 远程控制 Windows |
-   | 远程管理 Docker API          | TCP         | 2375         | 12375        | 远程管理 Docker |
+| **场景**              | **代理类型** | **本地端口** | **远程端口** | **用途**                    |
+| --------------------- | ------------ | ------------ | ------------ | --------------------------- |
+| 远程 SSH 访问         | TCP          | 22           | 6000         | 远程 SSH 进内网服务器       |
+| 内网 Web 服务器访问   | HTTP         | 8080         | 8081         | 访问本地网站                |
+| 访问家中 NAS / 服务器 | TCP          | 445/5005     | 4445/5055    | 远程访问 SMB 或 WebDAV      |
+| 远程数据库访问        | TCP          | 3306/5432    | 13306/15432  | 远程连接 MySQL / PostgreSQL |
+| 远程桌面（RDP）       | TCP          | 3389         | 13389        | 远程控制 Windows            |
+| 远程管理 Docker API   | TCP          | 2375         | 12375        | 远程管理 Docker             |
 
 ## 远程连接
 
@@ -587,7 +587,7 @@ Tools->Deployment->Configuration
 
 [我只教一次！vscode remote-ssh 连接失败的基本原理和优雅的解决方案 - 知乎](https://zhuanlan.zhihu.com/p/671718415)
 
-[【VScode 远程连接报错】Failed to parse remote port from server output\_vscode failed to parse remote port from server out-CSDN 博客](https://blog.csdn.net/qq_38667212/article/details/140462083)
+[【VScode 远程连接报错】Failed to parse remote port from server output_vscode failed to parse remote port from server out-CSDN 博客](https://blog.csdn.net/qq_38667212/article/details/140462083)
 
 [VSCode 连不上远程服务器问题及解决办法集合\_vscode 无法连接远程服务器-CSDN 博客](https://blog.csdn.net/White_lies/article/details/124093530)
 
@@ -597,17 +597,17 @@ Tools->Deployment->Configuration
 
 1. 到本地删除.ssh 下 known_hosts
 
-      ```shell
-      C:\Users\username\.ssh\
-      ```
+   ```shell
+   C:\Users\username\.ssh\
+   ```
 
-      补充：如果 known hosts 文件中有其他信息，不要直接删除文件，直接删掉服务器信息即可
+   补充：如果 known hosts 文件中有其他信息，不要直接删除文件，直接删掉服务器信息即可
 
 2. 首先 kill 掉服务器端的 VS code 服务，然后在服务器端删除 vscode 连接的相关记录
 
-      ```text
-      /home/username/.vscode-server/
-      ```
+   ```text
+   /home/username/.vscode-server/
+   ```
 
 3. 重新回到 Vscode 连接
 
@@ -641,7 +641,7 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 使用`1pcl`命令行工具进行管理，[命令行工具 - 1Panel 文档](https://1panel.cn/docs/installation/cli/)
 
 !!! note "如果使用的是云服务器，需要配置安全组规则"
-    在安全组当中，选择添加规则
+在安全组当中，选择添加规则
 
     - 目的：`20410/20410`
     - 源：`0.0.0.0/0`
@@ -694,26 +694,14 @@ nvidia-msi
 nvidia-smi -l
 ```
 
-??? note "各参数含义"
-    - `GPU`：显卡编号，从 0 开始。
-    - `Fan`：风扇转速，在 0~100% 之间变动。这个速度是计算机期望的风扇转速，实际情况下如果风扇堵转，可能就不会显示具体转速值。有的设备不会返回转速，因为它不依赖风扇冷却，而是通过其他外设保持低温，比如我们实验室的服务器是常年放在空掉房间里面的。
-    - `Name`：显卡名，以上都是 Tesla。
-    - `Temp`：显卡内部的温度，以上分别是 54、49、46、50、39 摄氏度。
-    - `Perf`：性能状态，从 P0 到 P12，P0 性能最大，P12 最小。
-    - `Persistence-M`：持续模式的状态开关，持续模式虽然耗能大，但是在新的 GPU 应用启动时，花费的时间更少。以上都是 Off 的状态。
-    - `Pwr`：能耗表示。
-    - `Bus-Id`：涉及 GPU 总线的相关信息。
-    - `Disp.A`：是 Display Active 的意思，表示 GPU 的显示是否初始化。
-    - `Memory-Usage`：显存的使用率。
-    - `GPU-Util`：GPU 的利用率。
-    - `Compute M.`：计算模式。
+??? note "各参数含义" - `GPU`：显卡编号，从 0 开始。- `Fan`：风扇转速，在 0~100% 之间变动。这个速度是计算机期望的风扇转速，实际情况下如果风扇堵转，可能就不会显示具体转速值。有的设备不会返回转速，因为它不依赖风扇冷却，而是通过其他外设保持低温，比如我们实验室的服务器是常年放在空掉房间里面的。- `Name`：显卡名，以上都是 Tesla。- `Temp`：显卡内部的温度，以上分别是 54、49、46、50、39 摄氏度。- `Perf`：性能状态，从 P0 到 P12，P0 性能最大，P12 最小。- `Persistence-M`：持续模式的状态开关，持续模式虽然耗能大，但是在新的 GPU 应用启动时，花费的时间更少。以上都是 Off 的状态。- `Pwr`：能耗表示。- `Bus-Id`：涉及 GPU 总线的相关信息。- `Disp.A`：是 Display Active 的意思，表示 GPU 的显示是否初始化。- `Memory-Usage`：显存的使用率。- `GPU-Util`：GPU 的利用率。- `Compute M.`：计算模式。
 
 为什么`Volatile GPU-Util`列显示第二个卡占用为 0，明明这个卡的内存已经用了。这个深度学习调用有关，实际上这时 GPU 正在等待 CPU 的处理，而 CPU 的处理结果有时候很慢，所以 GPU 在等。可以将`num_workers=4`或 8 或 16（再多不推荐可能变慢，因为通信需要成本），分配多个子线程，且设置`pin_memory=True`，直接映射数据到 GPU 的专用内存，减少数据传输时间，提高 GPU 利用率。
 
 ### 查看内存
 
 ```shell title="查看内存"
-free -m 
+free -m
 ```
 
 ```shell title="windows 查看内存占用情况"
@@ -790,7 +778,7 @@ session = tf.Session(config=config)
   强制终止指定 PID 的进程。
 
 ```shell title="windows 杀死无效进程"
-taskkill /PID 进程号 -F -T  
+taskkill /PID 进程号 -F -T
 ```
 
 但是感觉任务管理器更方便一点... :laughing:

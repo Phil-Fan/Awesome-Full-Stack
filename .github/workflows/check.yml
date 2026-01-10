@@ -2,9 +2,9 @@ name: Markdown Quality Check
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   markdown-check:
@@ -18,7 +18,7 @@ jobs:
       - name: Markdown Lint
         uses: DavidAnson/markdownlint-cli2-action@v20
         with:
-          config: '.github/.markdownlint.yaml'
+          config: ".github/.markdownlint.yaml"
           globs: |
             docs/**/*.md
             docs/*.md

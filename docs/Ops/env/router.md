@@ -76,14 +76,14 @@ Breed 是一个适用于多种路由器的 Bootloader（引导加载程序）：
   - 支持多种固件格式
 
 !!! note "路由器坏块"
-    路由器就像一台小电脑，它的存储器（类似于硬盘）有时会出现坏掉的区域，这些坏掉的区域叫做"坏块"。坏块主要是由于频繁更新系统、电压不稳定或者硬件本身老化等原因造成的。
+路由器就像一台小电脑，它的存储器（类似于硬盘）有时会出现坏掉的区域，这些坏掉的区域叫做"坏块"。坏块主要是由于频繁更新系统、电压不稳定或者硬件本身老化等原因造成的。
 
     如果路由器出现坏块，可能会导致路由器无法正常开机、系统不稳定等问题。遇到这种情况，我们可以先用检测工具看看坏块的数量，如果坏块太多的话就需要考虑换新路由器了。平时使用时，尽量不要频繁更新系统，并且要使用稳定的电源，这样可以减少坏块产生的机会。
-    
+
     ```html title="NAND坏块检查"
     http://192.168.31.1/cgi-bin/luci/;stok=CCCCCCCCCCC/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=%0A%5B%20-z%20%22%24(dmesg%20%7C%20grep%20ESMT)%22%20%5D%20%26%26%20B%3D%22Toshiba%22%20%7C%7C%20B%3D%22ESMT%22%0Auci%20set%20wireless.%24(uci%20show%20wireless%20%7C%20awk%20-F%20'.'%20'%2Fwl1%2F%20%7Bprint%20%242%7D').ssid%3D%22%24B%20%24(dmesg%20%7C%20awk%20'%2FBad%2F%20%7Bprint%20%245%7D')%22%0A%2Fetc%2Finit.d%2Fnetwork%20restart%0A
     ```
-    
+
     运行代码后，你路由器的2.4g WiFi名称会改名成：比如  "ESMT"，"Toshiba"，"Toshiba 90 768"。 90和768是坏块。 如果ESMT或者Toshiba后面没数字，那恭喜你，没有坏块！！！
 
 ### **固件 - OpenWrt**
@@ -159,8 +159,8 @@ IPv6 是 **互联网协议的第六版**，用于替代 IPv4，解决地址耗�
 - **无 NAT（网络地址转换）**，设备可直接全球互联。
 - **内置安全性**，支持 **IPSec**，增强安全性。
 - **支持自动配置（SLAAC 和 DHCPv6）**，减少网络管理复杂度。
-[校网 IPv6 终极指南 - CC98 论坛](https://www.cc98.org/topic/5344325)
-[有线 IPv6 环境下基于 DNS64/NAT64 突破外网出口限速的方法 - CC98 论坛](https://www.cc98.org/topic/5108856)
+  [校网 IPv6 终极指南 - CC98 论坛](https://www.cc98.org/topic/5344325)
+  [有线 IPv6 环境下基于 DNS64/NAT64 突破外网出口限速的方法 - CC98 论坛](https://www.cc98.org/topic/5108856)
 
 [学校网络架构升级，l2tp 和 ipv6 出了点问题 - CC98 论坛](https://www.cc98.org/topic/5945388)
 
@@ -175,7 +175,7 @@ IPv6 是 **互联网协议的第六版**，用于替代 IPv4，解决地址耗�
 ## Proxy
 
 !!! note "什么是代理"
-    代理服务器是一种位于用户和互联网之间的服务器，用于转发用户请求。代理服务器的作用是代替用户发送请求，然后将响应返回给用户。代理服务器可以用于访问被封锁的网站、保护用户隐私、提高访问速度等。
+代理服务器是一种位于用户和互联网之间的服务器，用于转发用户请求。代理服务器的作用是代替用户发送请求，然后将响应返回给用户。代理服务器可以用于访问被封锁的网站、保护用户隐私、提高访问速度等。
 
 ### 正向代理
 
@@ -185,10 +185,7 @@ IPv6 是 **互联网协议的第六版**，用于替代 IPv4，解决地址耗�
 
 有时候，用户想要访问某国外网站，该网站无法在国内直接访问，但是我们可以访问到一个代理服务器，这个代理服务器可以访问到这个国外网站。这样呢，用户对该国外网站的访问就需要通过代理服务器来转发请求，并且该代理服务器也会将请求的响应再返回给用户。这个上网的过程就是用到了正向代理。
 
-!!! note "正向代理，其实是代理服务器代理了客户端，去和目标服务器进行交互。"
-    - 突破访问限制
-    - 提高访问速度
-    - 隐藏客户端真实 IP
+!!! note "正向代理，其实是代理服务器代理了客户端，去和目标服务器进行交互。" - 突破访问限制 - 提高访问速度 - 隐藏客户端真实 IP
 
 [Clash for Windows 优雅地使用 TUN 模式接管系统流量 · Dejavu's Blog](https://blog.dejavu.moe/posts/cfw-tun/)
 
@@ -207,20 +204,20 @@ IPv6 是 **互联网协议的第六版**，用于替代 IPv4，解决地址耗�
 > [新的 ZJU-Rule 解决方案 - CC98 论坛](https://www.cc98.org/topic/5769136/1#1)
 > [Mythologyli/zju-connect: ZJU RVPN 客户端的 Go 语言实现](https://github.com/Mythologyli/ZJU-Connect)
 
-原 ZJU-Rule 的公共服务已经停止了，但是我们仍然可以使用一些基于[subconverter](https://github.com/tindy2013/subconverter)的公共订阅转换  
+原 ZJU-Rule 的公共服务已经停止了，但是我们仍然可以使用一些基于[subconverter](https://github.com/tindy2013/subconverter)的公共订阅转换
 
-**请注意，使用公共的订阅转换服务不能保证节点信息不被泄漏**  
+请注意，使用公共的订阅转换服务不能保证节点信息不被泄漏
 
 1. 打开订阅转换网页 (以 [acl4ssr](https://acl4ssr-sub.github.io/) 为例)
 2. 在远程配置（**不是后端地址**）输入`https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/config/ZJU.ini`，并点击下拉栏中的地址  
-  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-router.assets__20250503215349.webp)
-3. 如果用 [acl4ssr](https://acl4ssr-sub.github.io/) 的话，有个后端地址选项，并不是所有后端口可用，自己试试看  
+   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-router.assets__20250503215349.webp)
+3. 如果用 [acl4ssr](https://acl4ssr-sub.github.io/) 的话，有个后端地址选项，并不是所有后端口可用，自己试试看
 4. 在订阅链接位置处粘贴订阅链接，如果需要配置 ZJU-Connect，需要在最后一行加入`tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect`，然后在规则配置界面选择`ZJU-Connect`
 
 ```shell title="示例，填在订阅链接的位置"
-ss://aes-256-gcm:password@1.1.1.1:443#测试节点 
-ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw 
-vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=   
+ss://aes-256-gcm:password@1.1.1.1:443#测试节点
+ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw
+vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=
 tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
 ```
 
@@ -233,36 +230,36 @@ tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
 !!! note "Some Protocols"
 
     === "SS（Shadowsocks）"
-          - **特点**：简单高效，无混淆，易被封锁。  
-          - **格式**：  
+          - **特点**：简单高效，无混淆，易被封锁。
+          - **格式**：
           ```shell title="格式"
-          ss://加密方式:密码@服务器IP:端口#备注  
+          ss://加密方式:密码@服务器IP:端口#备注
           ```
           ```shell title="示例"
-          ss://aes-256-gcm:password@1.1.1.1:443#测试节点  
+          ss://aes-256-gcm:password@1.1.1.1:443#测试节点
           ```
-    
+
     === "SSR（ShadowsocksR）"
-          - **特点**：支持混淆和协议插件，抗封锁更强。  
-          - **格式**：  
+          - **特点**：支持混淆和协议插件，抗封锁更强。
+          - **格式**：
           ```shell title="格式"
-          ssr://Base64编码(IP:端口:协议:加密:混淆:密码/?参数)  
+          ssr://Base64编码(IP:端口:协议:加密:混淆:密码/?参数)
           ```
-    
+
           ```shell title="示例"
-          ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw  
+          ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw
           ```
-    
+
     === "VMess（V2Ray协议）"
-          - **特点**：动态端口，抗封锁强，配置复杂。  
-          - **格式**： 
-    
+          - **特点**：动态端口，抗封锁强，配置复杂。
+          - **格式**：
+
           ```shell title="格式"
-          vmess://Base64编码({"add":"IP","port":"443","id":"UUID"})  
+          vmess://Base64编码({"add":"IP","port":"443","id":"UUID"})
           ```
-    
+
           ```shell title="示例"
-          vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=  
+          vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=
           ```
 
 ZJU-Connect 服务配置[zju-connect/docs/service.md at main · Mythologyli/zju-connect](https://github.com/Mythologyli/zju-connect/blob/main/docs/service.md)
@@ -271,7 +268,7 @@ ZJU-Connect 服务配置[zju-connect/docs/service.md at main · Mythologyli/zju-
 
 ### Subconverter
 
-**Subconverter** 是一个开源工具（GitHub 项目：[tindy2013/subconverter](https://github.com/tindy2013/subconverter)），主要用于 **订阅链接转换**，常见于科学上网场景。  
+**Subconverter** 是一个开源工具（GitHub 项目：[tindy2013/subconverter](https://github.com/tindy2013/subconverter)），主要用于 **订阅链接转换**，常见于科学上网场景。
 
 **核心功能**：
 
@@ -282,8 +279,8 @@ ZJU-Connect 服务配置[zju-connect/docs/service.md at main · Mythologyli/zju-
   V2Ray 订阅 → Clash 订阅
   ```
 
-- **规则合并/自定义**：可合并多个订阅，或添加自定义规则（如去广告、分流）。  
-- **远程订阅缓存**：避免频繁请求原始订阅链接，提高访问速度。  
+- **规则合并/自定义**：可合并多个订阅，或添加自定义规则（如去广告、分流）。
+- **远程订阅缓存**：避免频繁请求原始订阅链接，提高访问速度。
 
 Subconverter 的工作原理
 
@@ -291,17 +288,17 @@ Subconverter 的工作原理
 用户请求 → Subconverter 服务器 → 获取原始订阅 → 转换格式 → 返回给用户
 ```
 
-1. **输入订阅链接**：  
-   - 支持 `vmess://`、`ss://`、`trojan://` 等协议。  
-2. **规则处理**：  
-   - 根据配置文件（`pref.ini`、`rule.txt`）修改规则。  
-3. **输出目标格式**：  
-   - 生成 Clash/Surge 等客户端的配置文件。  
+1. **输入订阅链接**：
+   - 支持 `vmess://`、`ss://`、`trojan://` 等协议。
+2. **规则处理**：
+   - 根据配置文件（`pref.ini`、`rule.txt`）修改规则。
+3. **输出目标格式**：
+   - 生成 Clash/Surge 等客户端的配置文件。
 
 **关键技术点**：
 
-- **模板引擎**：使用 Jinja2 等模板生成不同客户端的配置文件。  
-- **缓存机制**：减少对原始订阅的频繁请求。  
+- **模板引擎**：使用 Jinja2 等模板生成不同客户端的配置文件。
+- **缓存机制**：减少对原始订阅的频繁请求。
 
 ### Clash（代理工具）
 
@@ -347,11 +344,11 @@ Clash 是一个开源的网络代理工具，支持多种代理协议（如 HTTP
 
 **与 HTTP 代理的区别**：
 
-| 特性       | SOCKS5               | HTTP 代理           |
-|------------|----------------------|---------------------|
-| 协议层级   | 传输层（TCP/UDP）    | 应用层（HTTP/HTTPS）|
-| 支持 UDP   | ✅                   | ❌                  |
-| 适用场景   | 全局代理、游戏       | 浏览器网页访问      |
+| 特性     | SOCKS5            | HTTP 代理            |
+| -------- | ----------------- | -------------------- |
+| 协议层级 | 传输层（TCP/UDP） | 应用层（HTTP/HTTPS） |
+| 支持 UDP | ✅                | ❌                   |
+| 适用场景 | 全局代理、游戏    | 浏览器网页访问       |
 
 **在 Clash 中的应用**：
 
@@ -360,15 +357,15 @@ Clash 是一个开源的网络代理工具，支持多种代理协议（如 HTTP
 
 1. **Clash + TUN 模式**（全局代理）：
 
-    ```text
-    你的设备 → TUN 虚拟网卡 → Clash（规则匹配） → SOCKS5/V2Ray 代理 → 目标网站
-    ```
+   ```text
+   你的设备 → TUN 虚拟网卡 → Clash（规则匹配） → SOCKS5/V2Ray 代理 → 目标网站
+   ```
 
 2. **反向代理 + SOCKS5**（内网穿透）：
 
-    ```text
-    用户访问 [https://your-domain.com] → Nginx（反向代理）→ 本地 SOCKS5（Clash）→ 目标服务
-    ```
+   ```text
+   用户访问 [https://your-domain.com] → Nginx（反向代理）→ 本地 SOCKS5（Clash）→ 目标服务
+   ```
 
 ## 静态路由
 

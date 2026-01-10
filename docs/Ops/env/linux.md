@@ -19,7 +19,7 @@ unzip name.zip -d 当前目录
 ```
 
 ```shell title="如果是压缩包是.tar 后缀"
-tar xvf name.tar 
+tar xvf name.tar
 ```
 
 ```shell title="如果是压缩包是.tar.gz 后缀"
@@ -72,11 +72,11 @@ scp -P 2222 file.txt user@192.168.1.100:/home/user/
 
 常见操作
 
-|操作 | 快捷键|
-|---|---|
-|保存|`Ctrl + O`|
-|退出|`Ctrl + X`|
-|删除|`Ctrl + K`|
+| 操作 | 快捷键     |
+| ---- | ---------- |
+| 保存 | `Ctrl + O` |
+| 退出 | `Ctrl + X` |
+| 删除 | `Ctrl + K` |
 
 ### 蓝牙操作
 
@@ -104,11 +104,11 @@ bluetoothctl
 输入以下命令
 
 ```shell
-list 
-scan on 
+list
+scan on
 devices
 power on
-agent on 
+agent on
 default-agent
 pair yourDeviceMAC
 ```
@@ -212,7 +212,7 @@ export https_proxy=http://your_proxy_server:your_proxy_port
 ```
 
 !!! question "could not connect to the clash core"
-    检查一下网络是否能够正常连接，有可能是防火墙的规则的问题
+检查一下网络是否能够正常连接，有可能是防火墙的规则的问题
 
     ```bash title="允许所有入站流量"
     sudo iptables -A INPUT -j ACCEPT
@@ -250,7 +250,7 @@ sudo netplan apply
 
 [启动 netplan-wpa-wlan0.sevice 失败：未找到单元 netplan-wpa-wlan0.service - ubuntu](https://askoverflow.dev/ubuntu/question/1291424/failed-to-start-netplan-wpa-wlan0-sevice-unit-netplan-wpa-wlan0-service-not-fou/)
 !!! tip "注意事项"
-    出现类似错误：`line8 column 6:cloud not find expected` 提示是**冒号：后面没加空格**
+出现类似错误：`line8 column 6:cloud not find expected` 提示是**冒号：后面没加空格**
 
     出现类似错误：`netplan found character that cannot start any token`，提示是没有按五个层次写配置文档，一定要**下一层比上一层多空一格或以上。**
 
@@ -279,7 +279,7 @@ sudo apt-get install zjunet
 ### 路由
 
 ```shell title="查看路由表"
-route -n 
+route -n
 ```
 
 可以找到默认网关
@@ -438,7 +438,7 @@ apt-get install -y cifs-utils
 - 而是应该直接`双斜杠+ip地址`，如果有具体的共享的文件夹的话就把路径跟在后面。不需要加 smb 前缀，也不能用 `//` ，要用 `\\`,然后输入对应的账户和密码就完事了。
 
 > [window10 使用 smb 连接远程电脑的文件夹 [打开 smb 服务和连接巨坑]-CSDN 博客](https://blog.csdn.net/qq_44079295/article/details/120201515)
->
+
 #### linux 做服务器——samba
 
 ```shell title="安装"
@@ -464,13 +464,13 @@ systemctl status nmbd.service
 net usershare add "共享名" /home/Desktop/文件名 "备注名" Everyone:R guest_ok=y
 ```
 
-|参数 | 含义|
-|---|---|
-|Everyone:R |设置 Everyone 用户为只读权限|
-|Everyone:F |设置 Everyone 用户为可写权限|
-|Everyone:D |设置 Everyone 用户为拒绝权限|
-|guest_ok=y |允许匿名访问|
-|guest_ok=n |不允许匿名访问|
+| 参数       | 含义                         |
+| ---------- | ---------------------------- |
+| Everyone:R | 设置 Everyone 用户为只读权限 |
+| Everyone:F | 设置 Everyone 用户为可写权限 |
+| Everyone:D | 设置 Everyone 用户为拒绝权限 |
+| guest_ok=y | 允许匿名访问                 |
+| guest_ok=n | 不允许匿名访问               |
 
 ```shell title="客户端侧安装"
 sudo apt install smbclient
@@ -482,8 +482,7 @@ smbclinet //ip/name -U xxx
 
 > [Linux 上挂载 Samba（Windows & macOS 共享文件夹）的正确姿势 - 知乎](https://zhuanlan.zhihu.com/p/26763026)
 
-!!! tip "注意权限问题"
-    1. 设置了当前共享文件夹有可写权限的话，那么需要增加当前文件夹的 other 的写权限
+!!! tip "注意权限问题" 1. 设置了当前共享文件夹有可写权限的话，那么需要增加当前文件夹的 other 的写权限
 
     2. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
 
@@ -496,13 +495,13 @@ smbclient -L 192.168.1.70 -U lab
 
 Enter lab's password:   #输入密码，不回显
 Domain=[WIN7] OS=[Windows 7] Server=[Windows 7]
-   #共享点名称#      #类型#      #描述# 
+   #共享点名称#      #类型#      #描述#
     Sharename       Type      Comment
     ---------       ----      -------
     ADMIN$          Disk      远程管理
-    Share               Disk      
+    Share               Disk
     C$              Disk      默认共享
-Connection to 192.168.1.70 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND) 
+Connection to 192.168.1.70 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
 NetBIOS over TCP disabled -- no workgroup available #可能会出现一些错误警告，不过可以列出的话就不用管
 ```
 
@@ -583,7 +582,7 @@ touch ./file_need_to_delete
 ```
 
 ### sudo 下的 PATH 环境变量
->
+
 > 摘自[修改或定义 sudo 下的 PATH 环境变量 - ItsukiFujii](https://www.cnblogs.com/YukiNote/p/11375292.html)
 
 Linux 在普通用户权限下，可以使用 sudo 去执行相关的命令，但是有时候会提示：`Command not found`
@@ -636,7 +635,7 @@ sudo vim /etc/hosts
 127.0.1.1       xxxx
 ```
 
-### dpkg: error processing package ***
+### dpkg: error processing package \*\*\*
 
 [原文链接](https://blog.csdn.net/dou3516/article/details/105120221)
 
@@ -672,17 +671,17 @@ vim /etc/apt/sources.list
 ```
 
 !!! tip "注意换源的时候注意备份之前的"
-    ```shell
+`shell
     sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-    ```
+    `
 
 === "鱼香 ros"
-    ```shell
+`shell
     wget http://fishros.com/install -O fishros && bash fishros
-    ```
+    `
 
 === "清华源"
-    [ubuntu | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
+[ubuntu | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
 
     ```shell
     estricted universe multiverse
@@ -695,7 +694,7 @@ vim /etc/apt/sources.list
     ```
 
 === "aliyun 源"
-    [ubuntu镜像\_ubuntu下载地址\_ubuntu安装教程-阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/ubuntu)
+[ubuntu 镜像\_ubuntu 下载地址\_ubuntu 安装教程 - 阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/ubuntu)
 
     ```shell
     deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
@@ -742,8 +741,8 @@ sudo apt-get upgrade
 ```
 
 !!! failure "404"
-    [Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有release文件所以禁用-CSDN博客](https://blog.csdn.net/ys743276112/article/details/127436835)
-    [sudo apt-get update 命令出现没有Release文件问题解决\_debian apt get update 没有release 文件-CSDN博客](https://blog.csdn.net/A18040554844/article/details/110099737)
+[Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
+[sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
 
     另外的解决方法，拉取https问题
     ```shell
@@ -763,7 +762,7 @@ XIM：略 (现在用的相对比较少)
 sudo apt-get update
 sudo apt-get install fcitx-bin
 
-sudo apt-get install fcitx-table 
+sudo apt-get install fcitx-table
 sudo apt-get install fcitx-table-all
 ```
 
@@ -814,28 +813,28 @@ sudo apt-get install terminator
 
 !!! bug "设置为默认终端"
 
-|开启 or 关闭快捷键 | 作用|
-|---|---|
-|`Ctrl + Shift + O`| 水平分割终端（分成上下两个窗口）|
-|`Ctrl + Shift + E`| 垂直分割终端（分成左右两个窗口）|
-|`Ctrl + Shift + W`| 关闭当前终端|
-|`Ctrl + Shift + X`| 放大（还原）当前终端|
-|`Ctrl + Shift + G`| 清屏|
-|`Ctrl + Shift + Q`| 关闭所有终端（退出程序）|
-|`Ctrl + Shift + T`| 开一个新终端|
+| 开启 or 关闭快捷键 | 作用                             |
+| ------------------ | -------------------------------- |
+| `Ctrl + Shift + O` | 水平分割终端（分成上下两个窗口） |
+| `Ctrl + Shift + E` | 垂直分割终端（分成左右两个窗口） |
+| `Ctrl + Shift + W` | 关闭当前终端                     |
+| `Ctrl + Shift + X` | 放大（还原）当前终端             |
+| `Ctrl + Shift + G` | 清屏                             |
+| `Ctrl + Shift + Q` | 关闭所有终端（退出程序）         |
+| `Ctrl + Shift + T` | 开一个新终端                     |
 
-|快捷键 | 作用|
-|---|---|
-|`alt+方向键` or `ctrl+TAB`|切换窗口|
-|`ctrl shift +`|加字号|
-|`F11`|全屏|
-|`super(win) + g`|group，将不同窗口打包，指令可以广播|
-|`Super+Shift+g`|取消分组|
-|`ctrl+shift+f`|搜索命令|
-|`Ctrl+Shift+c`|复制指令|
-|`Ctrl+Shift+v`|粘贴指令|
-|`Ctrl+Shift+X`|    将分割的某一个窗口放大至全屏使用|
-|`Ctrl+Shift+Z`|    从放大至全屏的某一窗口回到多窗格界面|
+| 快捷键                     | 作用                                 |
+| -------------------------- | ------------------------------------ |
+| `alt+方向键` or `ctrl+TAB` | 切换窗口                             |
+| `ctrl shift +`             | 加字号                               |
+| `F11`                      | 全屏                                 |
+| `super(win) + g`           | group，将不同窗口打包，指令可以广播  |
+| `Super+Shift+g`            | 取消分组                             |
+| `ctrl+shift+f`             | 搜索命令                             |
+| `Ctrl+Shift+c`             | 复制指令                             |
+| `Ctrl+Shift+v`             | 粘贴指令                             |
+| `Ctrl+Shift+X`             | 将分割的某一个窗口放大至全屏使用     |
+| `Ctrl+Shift+Z`             | 从放大至全屏的某一窗口回到多窗格界面 |
 
 ### SSH
 
@@ -899,23 +898,24 @@ ssh-copy-id name@ip
 注意，windows 的 cmd 中不能直接执行 ssh-copy-id 命令，可以使用 git bash 或者其他 linux 终端工具
 
 当出现
+
 > Number of key(s) added: 1
-> Now try logging into the machine, with:   "ssh 'HAHA@127.0.0.1'" and check to make sure that only the key(s) you wanted were added.
+> Now try logging into the machine, with: "ssh 'HAHA@127.0.0.1'" and check to make sure that only the key(s) you wanted were added.
 
 说明配置成功！
 
-[深入理解\~/.ssh/config 和/etc/ssh/ssh\_config 配置文件 - 百度开发者中心](https://developer.baidu.com/article/details/2922032)
+[深入理解\~/.ssh/config 和/etc/ssh/ssh_config 配置文件 - 百度开发者中心](https://developer.baidu.com/article/details/2922032)
 
 !!! failure "错误与解决方法"
-    === "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"
-        警告：远程主机标识已更改！
+=== "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"
+警告：远程主机标识已更改！
 
         此报错是由于远程的主机的公钥发生了变化导致的。 ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。
 
         ```shell title="解决方法"
-        ssh-keygen -R XX.XX.XX.XX 
+        ssh-keygen -R XX.XX.XX.XX
         ```
-    
+
     === "连接IPV6地址"
         ```shell
         ssh -6 user@ipv6
@@ -949,7 +949,7 @@ sudo service ssh restart
 ```
 
 !!! note "-X 和-Y 的区别"
-    [xorg - What is the difference between \`ssh -Y\` (trusted X11 forwarding) and \`ssh -X\` (untrusted X11 forwarding)? - Ask Ubuntu](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
+[xorg - What is the difference between \`ssh -Y\` (trusted X11 forwarding) and \`ssh -X\` (untrusted X11 forwarding)? - Ask Ubuntu](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
 
     if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
 
@@ -1033,8 +1033,8 @@ chromium-browser --version
 [Weixin for Linux](https://linux.weixin.qq.com/en)
 
 ### typora
->
-> 参考[Ubuntu22.04 环境下使用 Typora\_typora ubuntu-CSDN 博客](https://blog.csdn.net/weixin_73546177/article/details/132033297)
+
+> 参考[Ubuntu22.04 环境下使用 Typora_typora ubuntu-CSDN 博客](https://blog.csdn.net/weixin_73546177/article/details/132033297)
 > [WittonBell/typoraCracker: A patch and keygen tools for typora.](https://github.com/WittonBell/typoraCracker)
 
 ```shell title="官网教程"
@@ -1122,7 +1122,7 @@ sudo systemctl status jupyter.service
 访问 `localhost:8888`即可看到，如果有公网的 ip 也可以访问到
 
 ### 坚果云
->
+
 > 参考帖子 [记录 Ubuntu22.04 安装坚果云](https://blog.csdn.net/weixin_45788868/article/details/140736624) 感谢
 
 ```shell
@@ -1142,13 +1142,13 @@ sudo ./update-toolchain.sh
 ```
 
 !!! question "这里我报错了，少一个库"
-    没搞明白，就全装了
+没搞明白，就全装了
 
     ```shell
     sudo aptitude install libnautilus-extension4
     sudo aptitude install libnautilus-extension1a
     sudo aptitude install libnautilus-extension-dev
-    ```     
+    ```
 
 ```shell
 sudo ./configure
@@ -1239,15 +1239,15 @@ nutstore help
     4Y09U-AJK97-089Z0-A3054-83KLA
     ```
 
-### 安装 VMware Tools 选项显示灰色的正确解决办法  
+### 安装 VMware Tools 选项显示灰色的正确解决办法
 
-1.关闭虚拟机；  
+1.关闭虚拟机；
 
-2.在虚拟机设置分别设置 CD/DVD、CD/DVD2 和软盘为自动检测三个步骤；  
+2.在虚拟机设置分别设置 CD/DVD、CD/DVD2 和软盘为自动检测三个步骤；
 
 3.再重启虚拟机，灰色字即点亮。
 
-4.重新安装 vmware-tools  
+4.重新安装 vmware-tools
 
 - 虚拟机无法打开
 

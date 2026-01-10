@@ -9,24 +9,17 @@
 !!! tip "趁手的工具才是最好的工具"
 
 !!! note "为什么要写这一个章节"
-    众所周知，大学中有很多课程都需要写实验报告/解题报告/小作业报告/论文等等，除却写作内容，排版也是非常令人头疼的一部分。常用的排版工具有两大类，一类是以word为代表的“所见即所得”式，另一类是像LaTeX这样子的“所想即所得”的编程式排版。
+众所周知，大学中有很多课程都需要写实验报告/解题报告/小作业报告/论文等等，除却写作内容，排版也是非常令人头疼的一部分。常用的排版工具有两大类，一类是以 word 为代表的“所见即所得”式，另一类是像 LaTeX 这样子的“所想即所得”的编程式排版。
 
- 发现身边有很多朋友并不是非常会排版，或者是排版会花费很多时间。而在现行的评价体系下，在内容质量大致相似的情况下，图文并茂，排版整洁的作业印象分一定会高不少。笔者 LaTeX 水平不高，目的就是想要快点把实验报告写掉:laughing:，中间也花了很多时间迭代几个模版，所以就有了这个笔记 + 分享性质的章节。
+发现身边有很多朋友并不是非常会排版，或者是排版会花费很多时间。而在现行的评价体系下，在内容质量大致相似的情况下，图文并茂，排版整洁的作业印象分一定会高不少。笔者 LaTeX 水平不高，目的就是想要快点把实验报告写掉:laughing:，中间也花了很多时间迭代几个模版，所以就有了这个笔记 + 分享性质的章节。
 
     这一个章节面向0 LaTeX 基础小白，使用`overleaf`平台，希望实现的效果是基本掌握后，只用15-20min就能完成日常论文/实验报告作业的排版。
 
-=== "我为什么要用 latex"
-    - 复用性高，所有设置都比较明晰 :yellow_heart:
-    - 只要做一个称心如意的模版，便可以**专注于内容本身，而将麻烦的排版交给编译器**:full_moon_with_face:
-    - 良好的公式体验：公式编辑较 word 方便和美观太多
-    - 公式、图表、参考文献可以自动标号
+=== "我为什么要用 latex" - 复用性高，所有设置都比较明晰 :yellow_heart: - 只要做一个称心如意的模版，便可以**专注于内容本身，而将麻烦的排版交给编译器**:full_moon_with_face: - 良好的公式体验：公式编辑较 word 方便和美观太多 - 公式、图表、参考文献可以自动标号
 
     当然，它也有一些缺点，比如图片排版较为复杂，调一个符合要求的模版比较困难，但是在当今 LLM 比较发达的今天，很多语法和格式问题都可以丢给 AI 来解决。
 
-=== "我为什么要用 overleaf"
-    - 不用进行包管理、环境配置简单、打开网址就可以用
-    - 云端自动保存、不怕写了半天的论文突然消失
-    - 有很多模版供使用
+=== "我为什么要用 overleaf" - 不用进行包管理、环境配置简单、打开网址就可以用 - 云端自动保存、不怕写了半天的论文突然消失 - 有很多模版供使用
 
 这里分享 4 个我自己魔改的模版，基本上覆盖到了大部分的日常学习场景。
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240629181605.webp)
@@ -36,7 +29,7 @@
 - [Template1：日常课程小作业](https://www.overleaf.com/read/hqckgzcdwscq#d182d9)
 - [Template2：中文课程论文](https://www.overleaf.com/read/yqgsngdxvvcd#a149e2)
 - [Template3：实验报告](https://www.overleaf.com/read/zxmwdhtbssrf#ee235c) 按照嵌入式系统等一些课程给的 word 模版改编
-- [Template4：实验报告](https://www.overleaf.com/read/kjpmbgxvmcwr#e6e432)  这一个是笔者使用频率最高的模版。
+- [Template4：实验报告](https://www.overleaf.com/read/kjpmbgxvmcwr#e6e432) 这一个是笔者使用频率最高的模版。
 
 使用模版的时候，**点击复制按钮，将模版复制一份使用**！
 
@@ -143,7 +136,7 @@
 
 在`pic.tex`文件中，由多种图片展示形式，选择你想要的形式，将代码复制到主文件下，把`\includegraphics[width=0.5\linewidth]{figures/example.png}`这一行改成你想要的图片的路径。
 
-****
+---
 
 ### 参考文献如何设置
 
@@ -162,13 +155,13 @@
 这种格式如何获取呢？
 
 === "方式一：从你找到论文的网页获取"
- <img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210459330.webp" alt="image-20240628210459330" style="zoom: 50%;" />
+<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210459330.webp" alt="image-20240628210459330" style="zoom: 50%;" />
 
 === "方式 2：使用`endnote`或者`zotero`等文献管理软件"
- <img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210840951.webp" alt="image-20240628210840951" style="zoom:50%;" />
+<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210840951.webp" alt="image-20240628210840951" style="zoom:50%;" />
 
 === "方式 3——GPT"
- 你已经有了一版参考文献的列表，但是你懒得一个一个去知网找了；打开任意一个大模型，输入你的参考文献的列表，说"请把上边的参考文献改写成为 bibtex 的格式"
+你已经有了一版参考文献的列表，但是你懒得一个一个去知网找了；打开任意一个大模型，输入你的参考文献的列表，说"请把上边的参考文献改写成为 bibtex 的格式"
 
 获取之后，请把对应的代码放在`ref.bib`文件下，这个代码中的`number1`可以改成任何你记得住的数字或者字符，相当于给这个参考文献一个名字。
 
@@ -314,7 +307,7 @@ tlmgr install <package>
 ```
 
 ```shell title="弹出并删除/mnt/texlive"
-sudo umount /mnt/texlive 
+sudo umount /mnt/texlive
 sudo rm -r /mnt/texlive
 ```
 
@@ -382,11 +375,11 @@ bibtex -v
 - 将语言设置为中文。依次选择 Opitions->Configure TeXstudio
 
 - 修改中文界面后，我们可以选择左侧命令设置不同编译器，外部 PDF 查看器，和参看文献的执行程序。点击 1 处，可以将上述提到的 3，4，5 等的路径设置为 TeXlive 安装路径下对应的 exe 执行程序。点击 2 处，就可恢复默认。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904105850.webp)
+  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904105850.webp)
 - 默认编译器、默认 PDF 查看器、默认文献工具等设置；点击构建选项，可以修改默认编译器、PDF 查看器和默认文献工具等。若写中文论文，则需修改默认编译器为 XelaTeX. 若为英文，则用 PdfLaTex。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904105924.webp)
+  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904105924.webp)
 - 设置默认字体编码和添加行号：点击编辑器选项，一般默认字体编码为 UTF-8（一般不修改）。显示行号默认：所有行号。添加行号，可以快速定位某个词或句的位置。此外，当程序报错时，可快速定位到出错位置，方便修改。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904110012.webp)
+  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904110012.webp)
 
 ```latex title="测试代码"
 \documentclass{article}
@@ -509,7 +502,7 @@ sudo tlmgr install fandol
 ```json
 // LATEX settings
 "editor.minimap.enabled": true,
-"latex-workshop.latex.tools": [ 
+"latex-workshop.latex.tools": [
     {
         "name": "pdflatex",
         "command": "pdflatex",
@@ -625,7 +618,7 @@ sudo tlmgr install fandol
 
 #### **快捷键**
 
-F1  输入`Open Keyboard Shortcuts`
+F1 输入`Open Keyboard Shortcuts`
 
 在`keybindings.json`中加入
 
@@ -651,7 +644,7 @@ F1  输入`Open Keyboard Shortcuts`
 ```
 
 !!! bug "chetex：warning ..."
-    在`setting.json`中加入
+在`setting.json`中加入
 
     ```
     "latex.linter.enabled": false
@@ -660,9 +653,7 @@ F1  输入`Open Keyboard Shortcuts`
     [教程](https://blog.csdn.net/weixin_40935730/article/details/121680692)
 
 !!! attention "个人感觉 vsc 里面的报错不是特别智能，查看 problem 报错有时候定位不到问题"
-    总结几个常见的报错：
-    - 图片位置错误/路径错误
-    - 没有闭合的括号或者指令
+总结几个常见的报错：- 图片位置错误/路径错误 - 没有闭合的括号或者指令
 
     可以先把图片注释掉，看看能不能调好
 
@@ -708,7 +699,7 @@ required to use pdflatex/xelatex/lualatex.
 
 \begin{document}
 \begin{align*}
-  
+
 \end{align*}
 \end{document}
 ```
@@ -735,7 +726,7 @@ required to use pdflatex/xelatex/lualatex.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}}
-    \caption{  } 
+    \caption{  }
 \end{figure}
 ```
 
@@ -814,8 +805,8 @@ bin/up
 首行不能缩进
 
 ```latex
-\usepackage{indentfirst} 
-\setlength{\parindent}{2em} % 控制首行缩进  
+\usepackage{indentfirst}
+\setlength{\parindent}{2em} % 控制首行缩进
 ```
 
 在 ctexart 类型文章中，标题\section 标题是居中的，现需要改为左对齐，需要设置如下。转自：Latex 标题左对齐
@@ -867,22 +858,22 @@ bin/up
 ```
 
 ```tex
-\left\{  
-             \begin{array}{**lr**}  
-             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\  
-             y=s, & 0\leq s\leq L,|t|\leq1.\\  
-             z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &    
-             \end{array}  
-\right.  
+\left\{
+             \begin{array}{**lr**}
+             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\
+             y=s, & 0\leq s\leq L,|t|\leq1.\\
+             z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &
+             \end{array}
+\right.
 ```
 
 $$
-\left\{  
-             \begin{array}{**lr**}  
-             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\  
-             y=s, & 0\leq s\leq L,|t|\leq1.\\  
+\left\{
+             \begin{array}{**lr**}
+             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\
+             y=s, & 0\leq s\leq L,|t|\leq1.\\
              z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &
-             \end{array}  
+             \end{array}
 \right.
 $$
 
@@ -928,10 +919,10 @@ $$
 
 ### 标注
 
-|                                                            |                            |
-| ---------------------------------------------------------- | -------------------------- |
-| 加^号 输入`\hat`  或 `\widehat`                            | $\hat{A}$<br>$\widehat{A}$ |
-| 加横线 输入 `\overline`                                    | $\overline{A}$             |
+|                                                           |                            |
+| --------------------------------------------------------- | -------------------------- |
+| 加^号 输入`\hat` 或 `\widehat`                            | $\hat{A}$<br>$\widehat{A}$ |
+| 加横线 输入 `\overline`                                   | $\overline{A}$             |
 | 加波浪线 输入`\widetilde`                                 | $\widetilde{A}$            |
 | 加一个点`\dot`{要加点的字母}加两个点`\ddot`{要加点的字母} | $\dot{A},\ddot{A}$         |
 

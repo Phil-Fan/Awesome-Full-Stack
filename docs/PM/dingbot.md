@@ -45,9 +45,9 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=e4329714f94c' -H 'Conten
 
 [天气查询 - 基础 API 文档 - 开发指南-Web 服务 API | 高德地图 API](https://lbs.amap.com/api/webservice/guide/api/weatherinfo/#t1)
 
-| 参数名     | 含义             | 规则说明                                                         | 是否必须 | 缺省值 |
-|-----------|------------------|------------------------------------------------------------------|---------|--------|
-| key       | 请求服务权限标识  | 用户在高德地图官网申请 web 服务 API 类型 KEY                         | 必填     | 无     |
-| city      | 城市编码           | 输入城市的 adcode，adcode 信息可参考城市编码表                          | 必填     | 无     |
-| extensions| 气象类型           | 可选值：base/all <br> base:返回实况天气 <br> all:返回预报天气             | 可选     | 无     |
-| output    | 返回格式           | 可选值：JSON/XML                                                 | 可选     | JSON   |
+| 参数名     | 含义             | 规则说明                                                      | 是否必须 | 缺省值 |
+| ---------- | ---------------- | ------------------------------------------------------------- | -------- | ------ |
+| key        | 请求服务权限标识 | 用户在高德地图官网申请 web 服务 API 类型 KEY                  | 必填     | 无     |
+| city       | 城市编码         | 输入城市的 adcode，adcode 信息可参考城市编码表                | 必填     | 无     |
+| extensions | 气象类型         | 可选值：base/all <br> base:返回实况天气 <br> all:返回预报天气 | 可选     | 无     |
+| output     | 返回格式         | 可选值：JSON/XML                                              | 可选     | JSON   |

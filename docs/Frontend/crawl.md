@@ -149,7 +149,7 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 - testDate：体测的日期
 - timeSolt：体测的时间段
 - jToken：不太懂具体是什么作用，推测是进行用户的识别
-- __：不清楚具体作用，推测为时间戳。
+- \_\_：不清楚具体作用，推测为时间戳。
 
 再试着点一次预约，我们发现了一个新的报文
 
@@ -164,8 +164,8 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 其实到找到你的 token，知道你要预约的时间段和年份，就可以抓了。
 
 ??? bug "没有搞懂的地方"
- 浙大体艺是用什么框架<br>
- token,cookie,session,cache 的区别
+浙大体艺是用什么框架<br>
+token,cookie,session,cache 的区别
 
 ### 第三步——使用代码进行报文模拟
 
@@ -209,7 +209,7 @@ def schedule_appointment(schedule_id, test_date, time_slot_id, test_point_name="
     response = requests.get(url, params=params, cookies=cookies)
     print(response.status_code)
     print(response.text)
-    
+
 # Example usage
 schedule_appointment("3322", "2024-04-12", "13:30-14:00")
 ```
@@ -239,7 +239,7 @@ def cancel_appointment(scheduled_id):
 
 1. 确定电脑可以通过 clash 进行正常连接，或者能通过 SSR 连接
 
-2. 打开 Clash 的`Allow Lan` ，这一步是为了让 Clash 允许局域网连接（在 SSR 中，则是允许来自局域网的连接）  
+2. 打开 Clash 的`Allow Lan` ，这一步是为了让 Clash 允许局域网连接（在 SSR 中，则是允许来自局域网的连接）
 
 3. 电脑进入`cmd`，输入`ipconfig`找到电脑自己的 IPv4 地址，例如`192.168.127.1`
 

@@ -1,6 +1,7 @@
 ---
 status:new
 ---
+
 # JavaScript
 
 [State of JavaScript 2024](https://2024.stateofjs.com/zh-Hans/)
@@ -13,8 +14,8 @@ status:new
 
 作用类似于：
 
-* Python 的解释器 python
-* Java 的虚拟机 java
+- Python 的解释器 python
+- Java 的虚拟机 java
 
 没有 Node.js，就不能直接在命令行运行 .js 程序。
 
@@ -55,7 +56,7 @@ sudo apt-get remove node
 
 ```shell
 node -v
-npm -v 
+npm -v
 ```
 
 ## NPM - 包管理器
@@ -66,8 +67,8 @@ Node.js 自带的包管理工具。用来下载、安装和管理 JavaScript 库
 
 类似于：
 
-* Python 的 pip
-* Java 的 maven/gradle
+- Python 的 pip
+- Java 的 maven/gradle
 
 ```bash title="检查版本"
 node -v   # 查看 Node.js 版本
@@ -189,7 +190,7 @@ npm info vue
 ```
 
 ```shell title="配置镜像站点"
-npm config set registry=http://registry.npm.taobao.org 
+npm config set registry=http://registry.npm.taobao.org
 ```
 
 ```shell
@@ -212,74 +213,74 @@ npm run build
 
 ### 核心语言 & 规范
 
-| 工具/库       | 功能                 | GitHub 链接                                                                          |
-| ---------- | ------------------ | ---------------------------------------------------------------------------------- |
-| ECMAScript | JavaScript 标准规范    | [https://github.com/tc39/ecma262](https://github.com/tc39/ecma262)                 |
+| 工具/库    | 功能                    | GitHub 链接                                                                        |
+| ---------- | ----------------------- | ---------------------------------------------------------------------------------- |
+| ECMAScript | JavaScript 标准规范     | [https://github.com/tc39/ecma262](https://github.com/tc39/ecma262)                 |
 | Babel      | JS 转译器（ES6+ → ES5） | [https://github.com/babel/babel](https://github.com/babel/babel)                   |
-| TypeScript | JS 静态类型超集          | [https://github.com/microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
+| TypeScript | JS 静态类型超集         | [https://github.com/microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
 
 ---
 
 ### 运行环境
 
-| 工具      | 功能                          | GitHub 链接                                                            |
-| ------- | --------------------------- | -------------------------------------------------------------------- |
-| Node.js | JS 服务器端运行环境                 | [https://github.com/nodejs/node](https://github.com/nodejs/node)     |
-| Deno    | 安全 JS/TS runtime            | [https://github.com/denoland/deno](https://github.com/denoland/deno) |
+| 工具    | 功能                           | GitHub 链接                                                          |
+| ------- | ------------------------------ | -------------------------------------------------------------------- |
+| Node.js | JS 服务器端运行环境            | [https://github.com/nodejs/node](https://github.com/nodejs/node)     |
+| Deno    | 安全 JS/TS runtime             | [https://github.com/denoland/deno](https://github.com/denoland/deno) |
 | Bun     | 高性能 JS/TS runtime & bundler | [https://github.com/oven-sh/bun](https://github.com/oven-sh/bun)     |
 
 ---
 
 ### 前端框架 / UI 框架
 
-| 工具        | 功能                      | GitHub 链接                                                                |
+| 工具      | 功能                    | GitHub 链接                                                              |
 | --------- | ----------------------- | ------------------------------------------------------------------------ |
-| React     | UI 库                    | [https://github.com/facebook/react](https://github.com/facebook/react)   |
-| Vue.js    | 渐进式框架                   | [https://github.com/vuejs/vue](https://github.com/vuejs/vue)             |
-| Angular   | 全功能框架                   | [https://github.com/angular/angular](https://github.com/angular/angular) |
-| Svelte    | 编译型 UI 框架               | [https://github.com/sveltejs/svelte](https://github.com/sveltejs/svelte) |
-| Solid.js  | 高性能响应式框架                | [https://github.com/solidjs/solid](https://github.com/solidjs/solid)     |
+| React     | UI 库                   | [https://github.com/facebook/react](https://github.com/facebook/react)   |
+| Vue.js    | 渐进式框架              | [https://github.com/vuejs/vue](https://github.com/vuejs/vue)             |
+| Angular   | 全功能框架              | [https://github.com/angular/angular](https://github.com/angular/angular) |
+| Svelte    | 编译型 UI 框架          | [https://github.com/sveltejs/svelte](https://github.com/sveltejs/svelte) |
+| Solid.js  | 高性能响应式框架        | [https://github.com/solidjs/solid](https://github.com/solidjs/solid)     |
 | Next.js   | React SSR/SSG/Fullstack | [https://github.com/vercel/next.js](https://github.com/vercel/next.js)   |
 | Nuxt.js   | Vue SSR/Fullstack       | [https://github.com/nuxt/nuxt](https://github.com/nuxt/nuxt)             |
-| Remix     | React 全栈框架              | [https://github.com/remix-run/remix](https://github.com/remix-run/remix) |
-| Astro     | 多框架静态站点生成器              | [https://github.com/withastro/astro](https://github.com/withastro/astro) |
-| SvelteKit | Svelte 全栈框架             | [https://github.com/sveltejs/kit](https://github.com/sveltejs/kit)       |
+| Remix     | React 全栈框架          | [https://github.com/remix-run/remix](https://github.com/remix-run/remix) |
+| Astro     | 多框架静态站点生成器    | [https://github.com/withastro/astro](https://github.com/withastro/astro) |
+| SvelteKit | Svelte 全栈框架         | [https://github.com/sveltejs/kit](https://github.com/sveltejs/kit)       |
 
 ---
 
 ### 后端框架
 
-| 工具         | 功能              | GitHub 链接                                                                    |
-| ---------- | --------------- | ---------------------------------------------------------------------------- |
+| 工具       | 功能                | GitHub 链接                                                                  |
+| ---------- | ------------------- | ---------------------------------------------------------------------------- |
 | Express.js | 轻量 Web 框架       | [https://github.com/expressjs/express](https://github.com/expressjs/express) |
 | Koa        | 极简 Web 框架       | [https://github.com/koajs/koa](https://github.com/koajs/koa)                 |
 | NestJS     | TypeScript 后端框架 | [https://github.com/nestjs/nest](https://github.com/nestjs/nest)             |
-| Fastify    | 高性能 Node 框架     | [https://github.com/fastify/fastify](https://github.com/fastify/fastify)     |
+| Fastify    | 高性能 Node 框架    | [https://github.com/fastify/fastify](https://github.com/fastify/fastify)     |
 
 ---
 
 ### 状态管理
 
-| 工具                           | 功能           | GitHub 链接                                                                                        |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------ |
+| 工具                         | 功能               | GitHub 链接                                                                                      |
+| ---------------------------- | ------------------ | ------------------------------------------------------------------------------------------------ |
 | Redux Toolkit                | Redux 官方最佳实践 | [https://github.com/reduxjs/redux-toolkit](https://github.com/reduxjs/redux-toolkit)             |
 | Zustand                      | 轻量状态管理       | [https://github.com/pmndrs/zustand](https://github.com/pmndrs/zustand)                           |
-| MobX                         | 响应式状态管理      | [https://github.com/mobxjs/mobx](https://github.com/mobxjs/mobx)                                 |
-| Recoil                       | React 状态管理   | [https://github.com/facebookexperimental/Recoil](https://github.com/facebookexperimental/Recoil) |
+| MobX                         | 响应式状态管理     | [https://github.com/mobxjs/mobx](https://github.com/mobxjs/mobx)                                 |
+| Recoil                       | React 状态管理     | [https://github.com/facebookexperimental/Recoil](https://github.com/facebookexperimental/Recoil) |
 | React Query / TanStack Query | 数据获取 & 缓存    | [https://github.com/TanStack/query](https://github.com/TanStack/query)                           |
-| Jotai                        | 原子化状态管理      | [https://github.com/pmndrs/jotai](https://github.com/pmndrs/jotai)                               |
+| Jotai                        | 原子化状态管理     | [https://github.com/pmndrs/jotai](https://github.com/pmndrs/jotai)                               |
 
 ---
 
 ### 构建 / 打包
 
-| 工具        | 功能                 | GitHub 链接                                                                            |
-| --------- | ------------------ | ------------------------------------------------------------------------------------ |
-| Webpack   | 模块打包器              | [https://github.com/webpack/webpack](https://github.com/webpack/webpack)             |
-| Rollup    | ES 模块打包            | [https://github.com/rollup/rollup](https://github.com/rollup/rollup)                 |
-| Parcel    | 零配置打包              | [https://github.com/parcel-bundler/parcel](https://github.com/parcel-bundler/parcel) |
-| Vite      | 极速开发 + 构建          | [https://github.com/vitejs/vite](https://github.com/vitejs/vite)                     |
-| esbuild   | 极快打包 & 转译          | [https://github.com/evanw/esbuild](https://github.com/evanw/esbuild)                 |
+| 工具      | 功能                 | GitHub 链接                                                                          |
+| --------- | -------------------- | ------------------------------------------------------------------------------------ |
+| Webpack   | 模块打包器           | [https://github.com/webpack/webpack](https://github.com/webpack/webpack)             |
+| Rollup    | ES 模块打包          | [https://github.com/rollup/rollup](https://github.com/rollup/rollup)                 |
+| Parcel    | 零配置打包           | [https://github.com/parcel-bundler/parcel](https://github.com/parcel-bundler/parcel) |
+| Vite      | 极速开发 + 构建      | [https://github.com/vitejs/vite](https://github.com/vitejs/vite)                     |
+| esbuild   | 极快打包 & 转译      | [https://github.com/evanw/esbuild](https://github.com/evanw/esbuild)                 |
 | Turbopack | Next.js 官方 bundler | [https://github.com/vercel/turbopack](https://github.com/vercel/turbopack)           |
 | Snowpack  | 构建 & dev server    | [https://github.com/snowpackjs/snowpack](https://github.com/snowpackjs/snowpack)     |
 
@@ -287,81 +288,81 @@ npm run build
 
 ### 包管理
 
-| 工具   | 功能            | GitHub 链接                                                          |
-| ---- | ------------- | ------------------------------------------------------------------ |
-| npm  | 官方包管理器        | [https://github.com/npm/cli](https://github.com/npm/cli)           |
+| 工具 | 功能              | GitHub 链接                                                        |
+| ---- | ----------------- | ------------------------------------------------------------------ |
+| npm  | 官方包管理器      | [https://github.com/npm/cli](https://github.com/npm/cli)           |
 | Yarn | Facebook 包管理器 | [https://github.com/yarnpkg/yarn](https://github.com/yarnpkg/yarn) |
-| pnpm | 高性能包管理器       | [https://github.com/pnpm/pnpm](https://github.com/pnpm/pnpm)       |
+| pnpm | 高性能包管理器    | [https://github.com/pnpm/pnpm](https://github.com/pnpm/pnpm)       |
 
 ---
 
 ### 测试
 
-| 工具         | 功能        | GitHub 链接                                                                          |
-| ---------- | --------- | ---------------------------------------------------------------------------------- |
+| 工具       | 功能          | GitHub 链接                                                                        |
+| ---------- | ------------- | ---------------------------------------------------------------------------------- |
 | Jest       | 单元测试      | [https://github.com/facebook/jest](https://github.com/facebook/jest)               |
 | Mocha      | 测试框架      | [https://github.com/mochajs/mocha](https://github.com/mochajs/mocha)               |
-| Chai       | 断言库       | [https://github.com/chaijs/chai](https://github.com/chaijs/chai)                   |
+| Chai       | 断言库        | [https://github.com/chaijs/chai](https://github.com/chaijs/chai)                   |
 | Vitest     | Vite 集成测试 | [https://github.com/vitest-dev/vitest](https://github.com/vitest-dev/vitest)       |
-| Cypress    | E2E 测试    | [https://github.com/cypress-io/cypress](https://github.com/cypress-io/cypress)     |
-| Playwright | E2E 自动化   | [https://github.com/microsoft/playwright](https://github.com/microsoft/playwright) |
+| Cypress    | E2E 测试      | [https://github.com/cypress-io/cypress](https://github.com/cypress-io/cypress)     |
+| Playwright | E2E 自动化    | [https://github.com/microsoft/playwright](https://github.com/microsoft/playwright) |
 
 ---
 
 ### Lint / 代码格式化 / 新一代工具
 
-| 工具       | 功能                                                     | GitHub 链接                                                                    |
-| -------- | ------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| ESLint   | JS/TS 静态分析                                             | [https://github.com/eslint/eslint](https://github.com/eslint/eslint)         |
-| Prettier | 代码格式化                                                  | [https://github.com/prettier/prettier](https://github.com/prettier/prettier) |
+| 工具     | 功能                                                          | GitHub 链接                                                                  |
+| -------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ESLint   | JS/TS 静态分析                                                | [https://github.com/eslint/eslint](https://github.com/eslint/eslint)         |
+| Prettier | 代码格式化                                                    | [https://github.com/prettier/prettier](https://github.com/prettier/prettier) |
 | Biome    | 一体化 Linter & Formatter & Bundler（ESLint + Prettier 替代） | [https://github.com/biomejs/biome](https://github.com/biomejs/biome)         |
-| Rome     | 一体化工具链                                                 | [https://github.com/rome/tools](https://github.com/rome/tools)               |
-| SWC      | 高性能 JS/TS 编译器                                          | [https://github.com/swc-project/swc](https://github.com/swc-project/swc)     |
+| Rome     | 一体化工具链                                                  | [https://github.com/rome/tools](https://github.com/rome/tools)               |
+| SWC      | 高性能 JS/TS 编译器                                           | [https://github.com/swc-project/swc](https://github.com/swc-project/swc)     |
 
 ---
 
 ### UI / 组件库
 
-| 工具                | 功能          | GitHub 链接                                                                                  |
-| ----------------- | ----------- | ------------------------------------------------------------------------------------------ |
+| 工具              | 功能           | GitHub 链接                                                                                |
+| ----------------- | -------------- | ------------------------------------------------------------------------------------------ |
 | Material-UI (MUI) | React 组件库   | [https://github.com/mui/material-ui](https://github.com/mui/material-ui)                   |
 | Ant Design        | UI 组件库      | [https://github.com/ant-design/ant-design](https://github.com/ant-design/ant-design)       |
-| Chakra UI         | React UI 框架 | [https://github.com/chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui)           |
+| Chakra UI         | React UI 框架  | [https://github.com/chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui)           |
 | Tailwind CSS      | 原子化 CSS     | [https://github.com/tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
-| Headless UI       | 无样式 UI 组件   | [https://github.com/tailwindlabs/headlessui](https://github.com/tailwindlabs/headlessui)   |
-| Storybook         | UI 组件文档     | [https://github.com/storybook/storybook](https://github.com/storybook/storybook)           |
+| Headless UI       | 无样式 UI 组件 | [https://github.com/tailwindlabs/headlessui](https://github.com/tailwindlabs/headlessui)   |
+| Storybook         | UI 组件文档    | [https://github.com/storybook/storybook](https://github.com/storybook/storybook)           |
 
 ### 数据库 & ORM
 
-| 工具           | 功能          | GitHub 链接                                                                        |
-| ------------ | ----------- | -------------------------------------------------------------------------------- |
-| Sequelize    | Node ORM    | [https://github.com/sequelize/sequelize](https://github.com/sequelize/sequelize) |
-| Prisma       | ORM & 类型安全  | [https://github.com/prisma/prisma](https://github.com/prisma/prisma)             |
-| TypeORM      | ORM 框架      | [https://github.com/typeorm/typeorm](https://github.com/typeorm/typeorm)         |
-| Objection.js | ORM         | [https://github.com/Vincit/objection.js](https://github.com/Vincit/objection.js) |
-| Mongoose     | MongoDB ODM | [https://github.com/Automattic/mongoose](https://github.com/Automattic/mongoose) |
+| 工具         | 功能           | GitHub 链接                                                                      |
+| ------------ | -------------- | -------------------------------------------------------------------------------- |
+| Sequelize    | Node ORM       | [https://github.com/sequelize/sequelize](https://github.com/sequelize/sequelize) |
+| Prisma       | ORM & 类型安全 | [https://github.com/prisma/prisma](https://github.com/prisma/prisma)             |
+| TypeORM      | ORM 框架       | [https://github.com/typeorm/typeorm](https://github.com/typeorm/typeorm)         |
+| Objection.js | ORM            | [https://github.com/Vincit/objection.js](https://github.com/Vincit/objection.js) |
+| Mongoose     | MongoDB ODM    | [https://github.com/Automattic/mongoose](https://github.com/Automattic/mongoose) |
 
 ---
 
 ### 工具链 / DevOps
 
-| 工具        | 功能              | GitHub 链接                                                              |
-| --------- | --------------- | ---------------------------------------------------------------------- |
-| Husky     | git hook 管理     | [https://github.com/typicode/husky](https://github.com/typicode/husky) |
-| Lerna     | monorepo 管理     | [https://github.com/lerna/lerna](https://github.com/lerna/lerna)       |
-| Nx        | monorepo 工具     | [https://github.com/nrwl/nx](https://github.com/nrwl/nx)               |
+| 工具      | 功能                 | GitHub 链接                                                            |
+| --------- | -------------------- | ---------------------------------------------------------------------- |
+| Husky     | git hook 管理        | [https://github.com/typicode/husky](https://github.com/typicode/husky) |
+| Lerna     | monorepo 管理        | [https://github.com/lerna/lerna](https://github.com/lerna/lerna)       |
+| Nx        | monorepo 工具        | [https://github.com/nrwl/nx](https://github.com/nrwl/nx)               |
 | Turborepo | 高性能 monorepo 构建 | [https://github.com/vercel/turbo](https://github.com/vercel/turbo)     |
 
 ## 历史
 
 JavaScript（简称 JS）是由 Netscape 公司的 Brendan Eich 在 1995 年十天内开发出来的一种脚本语言。最初设计用于浏览器端的动态网页内容生成，JavaScript 迅速成为 Web 开发的核心技术之一，与 HTML 和 CSS 并列为前端开发的三大支柱。
 
-* **诞生背景**：JavaScript 诞生于 Web 1.0 时代，最初被称为 Mocha，后改名为 LiveScript，最后才成为 JavaScript。
-* **发展历程**：从最初的客户端脚本语言，JavaScript 逐步演变成一门强大的编程语言，现今不仅用于浏览器端，还在服务器端广泛应用。
+- **诞生背景**：JavaScript 诞生于 Web 1.0 时代，最初被称为 Mocha，后改名为 LiveScript，最后才成为 JavaScript。
+- **发展历程**：从最初的客户端脚本语言，JavaScript 逐步演变成一门强大的编程语言，现今不仅用于浏览器端，还在服务器端广泛应用。
 
-* 是编程语言，Web 的核心技术之一
-* JavaScript 是遵循 ECMAScript 标准的脚本语言，与 Java 没有任何关系
-* 现在也可用于通用编程：Node.js
+- 是编程语言，Web 的核心技术之一
+- JavaScript 是遵循 ECMAScript 标准的脚本语言，与 Java 没有任何关系
+- 现在也可用于通用编程：Node.js
 
 ## 语法
 
@@ -381,11 +382,11 @@ function add(a, b) {
 
 ```html
 <script>
-console.log('Hello, World!');
+  console.log("Hello, World!");
 
-fetch('https://api.example.com')
-    .then(response => response.json())
-    .then(data => document.body.innerHTML = data.message);
+  fetch("https://api.example.com")
+    .then((response) => response.json())
+    .then((data) => (document.body.innerHTML = data.message));
 </script>
 <script async src="my-super-cool-script.js"></script>
 ```
@@ -393,7 +394,7 @@ fetch('https://api.example.com')
 事件监听
 
 ```javascript
-document.getElementById("myButton").addEventListener("click", function() {
+document.getElementById("myButton").addEventListener("click", function () {
   alert("Button clicked!");
 });
 ```
@@ -416,12 +417,12 @@ document.getElementById("myButton").addEventListener("click", function() {
 
 ## Beyond
 
-* JavaScript 的缺点：性能不足（解释型）、弱类型
-* WebAssembly（WASM）：在浏览器中运行的跨平台字节码格式
-  * 由 C、C++、Rust 等编译型语言编译生成
-  * 可以直接在浏览器中运行，性能接近原生代码
-  * 可以与 JavaScript 互操作
-  * 适合于需要高性能的应用，如游戏、图像、视频处理等
+- JavaScript 的缺点：性能不足（解释型）、弱类型
+- WebAssembly（WASM）：在浏览器中运行的跨平台字节码格式
+  - 由 C、C++、Rust 等编译型语言编译生成
+  - 可以直接在浏览器中运行，性能接近原生代码
+  - 可以与 JavaScript 互操作
+  - 适合于需要高性能的应用，如游戏、图像、视频处理等
 
 ### TS | TypeScript
 
@@ -450,7 +451,7 @@ class Person {
 let person = new Person("Alice");
 person.greet();
 
-import { add } from './math';
+import { add } from "./math";
 console.log(add(2, 3));
 ```
 
@@ -458,6 +459,6 @@ console.log(add(2, 3));
 **模块化：** 支持模块化编程，提高代码复用性和组织性。
 
 ```typescript
-import { add } from './math';
+import { add } from "./math";
 console.log(add(2, 3));
 ```

@@ -12,15 +12,15 @@ Node.js 通过事件驱动、非阻塞 I/O 模型，使其在处理大量并发�
 ## 基本使用
 
 ```javascript
-const http = require('http');
+const http = require("http");
 
-const hostname = '127.0.0.1';
+const hostname = "127.0.0.1";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\\n');
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hello, World!\\n");
 });
 
 server.listen(port, hostname, () => {
@@ -31,15 +31,15 @@ server.listen(port, hostname, () => {
 创建简单服务器
 
 ```javascript
-const http = require('http');
+const http = require("http");
 
-const hostname = '127.0.0.1';
+const hostname = "127.0.0.1";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\\n');
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hello, World!\\n");
 });
 
 server.listen(port, hostname, () => {

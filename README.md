@@ -108,7 +108,7 @@ be very in-depth and continue interviewing me continually until it's complete, t
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
   - [Veo - Google DeepMind](https://deepmind.google/models/veo/)
 - Audio
-  - 调用类：[ElevenLabs](https://elevenlabs.io), [火山引擎](https://www.volcengine.com/product/tts),  [科大讯飞](https://www.xfyun.cn/services/smart-tts), [Fish Audio](https://fishspeech.net/zh), [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech), [SiliconFlow](https://siliconflow.cn/), [腾讯云](https://cloud.tencent.com/product/tts), [阿里云百炼](https://ai.aliyun.com/nls/tts)
+  - 调用类：[ElevenLabs](https://elevenlabs.io), [火山引擎](https://www.volcengine.com/product/tts), [科大讯飞](https://www.xfyun.cn/services/smart-tts), [Fish Audio](https://fishspeech.net/zh), [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech), [SiliconFlow](https://siliconflow.cn/), [腾讯云](https://cloud.tencent.com/product/tts), [阿里云百炼](https://ai.aliyun.com/nls/tts)
   - 本地部署类：[EdgeTTS](https://github.com/rany2/edge-tts), [Fish Speech](https://github.com/fishaudio/fish-speech), [GPT-SoVITS V2](https://github.com/v3ucn/GPT-SoVITS-V2), [GPT-SoVITS V3](https://github.com/RVC-Boss/GPT-SoVITS), [Index-TTS](https://github.com/index-tts/index-tts), [PaddleSpeech](https://github.com/PaddlePaddle/PaddleSpeech)
 
 ## 工具
@@ -131,7 +131,7 @@ be very in-depth and continue interviewing me continually until it's complete, t
 
 - [Next.js](https://nextjs.org/)
   - [TypeScript](https://github.com/microsoft/TypeScript)
-  - [biome](https://github.com/biomejs/biome): 配置更简单、更快速的 linter/formater
+  - [biome](https://github.com/biomejs/biome): Next.js 项目
   - [tailwindcss](https://github.com/tailwindlabs/tailwindcss)+[shadcn/ui](https://ui.shadcn.com/)
     - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
   - [motion](https://github.com/motiondivision/motion): 动画库
@@ -195,6 +195,13 @@ npx create-next-app@latest my-app
 - [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
 - [Drone CI](https://github.com/harness/drone)
 - [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
+
+- Linter:
+  - [eslint/eslint](https://github.com/eslint/eslint): JavaScript/TypeScript 静态分析
+  - [prettier/prettier](https://github.com/prettier/prettier): 代码格式化
+  - [biomejs/biome](https://github.com/biomejs/biome): 一体化 Linter & Formatter & Bundler（ESLint + Prettier 替代）
+  - [markdownlint](https://github.com/DavidAnson/markdownlint): Markdown 静态分析
+  - [autocorrect](https://github.com/huacnlee/autocorrect): CJK 排版自动修正
 
 ### 运维与监控
 

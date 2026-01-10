@@ -122,9 +122,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Use secret
-      run: echo "My secret is $"
+      - name: Use secret
+        run: echo "My secret is $"
 ```

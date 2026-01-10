@@ -12,7 +12,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
 
 ```shell title="添加 Kubernetes GPG 密钥"
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.34/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg # allow unprivileged APT programs to read this keyring   
+sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg # allow unprivileged APT programs to read this keyring
 ```
 
 ```shell title="添加 Kubernetes 稳定仓库"
@@ -81,10 +81,10 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
 ```
 
 ```shell title="部署 Deployment"
@@ -118,9 +118,9 @@ spec:
   selector:
     app: nginx
   ports:
-  - port: 80
-    targetPort: 80
-    nodePort: 30080
+    - port: 80
+      targetPort: 80
+      nodePort: 30080
 ```
 
 部署：
@@ -203,12 +203,12 @@ kubectl delete deployment nginx
 
 ### Kubernetes 对象层级
 
-| 层级 | 说明 | 示例 |
-| --- | --- | --- |
-| Cluster | 整个 Kubernetes 控制平面与节点集合 | `minikube`、生产集群 |
-| Namespace | Cluster 内的逻辑隔离边界 | `default`、`kube-system`、`rbgs-test` |
-| Workload/Resource | 以 YAML 定义的 Kubernetes 对象 | Deployment、Service、RoleBasedGroup |
-| Pod | 最小运行单元，真正承载容器 | 运行 `nginx` 的 Pod |
+| 层级              | 说明                               | 示例                                  |
+| ----------------- | ---------------------------------- | ------------------------------------- |
+| Cluster           | 整个 Kubernetes 控制平面与节点集合 | `minikube`、生产集群                  |
+| Namespace         | Cluster 内的逻辑隔离边界           | `default`、`kube-system`、`rbgs-test` |
+| Workload/Resource | 以 YAML 定义的 Kubernetes 对象     | Deployment、Service、RoleBasedGroup   |
+| Pod               | 最小运行单元，真正承载容器         | 运行 `nginx` 的 Pod                   |
 
 ### RoleBasedGroup 的 namespace
 
@@ -337,12 +337,12 @@ K8s 允许你表达复杂的调度需求：
 
 StatefulSet 出现就是为了解决 Deployment 不能解决的 3 个问题：
 
-| 能力           | Deployment | StatefulSet         |
-| ------------ | ---------- | ------------------- |
-| Pod 固定名称     | ❌          | ✔（nginx-0, nginx-1） |
-| 稳定持久化存储      | ❌          | ✔（PVC 自动绑定）         |
-| Headless DNS | ❌          | ✔                   |
-| 有序创建/删除      | ❌          | ✔                   |
+| 能力           | Deployment | StatefulSet           |
+| -------------- | ---------- | --------------------- |
+| Pod 固定名称   | ❌         | ✔（nginx-0, nginx-1） |
+| 稳定持久化存储 | ❌         | ✔（PVC 自动绑定）     |
+| Headless DNS   | ❌         | ✔                     |
+| 有序创建/删除  | ❌         | ✔                     |
 
 **StatefulSet** 的 Pod 命名
 
@@ -450,9 +450,9 @@ spec:
     plural: podgroups
   scope: Namespaced
   versions:
-  - name: v1alpha1
-    served: true
-    storage: true
+    - name: v1alpha1
+      served: true
+      storage: true
 ```
 
 安装后，K8s 会有新的资源：
@@ -483,12 +483,12 @@ watch(crd) → reconcile() → 更新 pod / config / svc / pvc
 
 这就是 K8s 的自愈机制扩展到 Custom Resource。
 
-| 能力          | 用途           |
-| ----------- | ------------ |
-| 调度器         | 控制 Pod 运行在哪  |
-| StatefulSet | 分布式有状态系统     |
-| HPA         | 自动扩缩容        |
-| CRD         | 拓展 K8s API   |
+| 能力        | 用途                |
+| ----------- | ------------------- |
+| 调度器      | 控制 Pod 运行在哪   |
+| StatefulSet | 分布式有状态系统    |
+| HPA         | 自动扩缩容          |
+| CRD         | 拓展 K8s API        |
 | Operator    | 自动化复杂 LLM 服务 |
 
 ## 进阶实践

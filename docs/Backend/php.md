@@ -5,13 +5,7 @@
 
 [PHP 学习路线](https://www.runoob.com/w3cnote/php-learning-recommend.html)
 
-!!! tip "学习路线"
-    1. 熟悉 HTML/CSS/JS 等网页基本元素，完成阶段可自行制作简单的网页，对元素属性相对熟悉。
-    2. 理解动态语言的概念和运做机制，熟悉基本的 PHP 语法。
-    3. 学习如何将 PHP 与 HTML 结合起来，完成简单的动态页面。
-    4. 接触学习 MySQL，开始设计数据库。
-    5. 不断巩固 PHP 语法，熟悉大部分的 PHP 常用函数，理解面向对象编程，MySQL 优化，以及一些模板和框架。
-    6. 最终完成一个功能齐全的动态站点。
+!!! tip "学习路线" 1. 熟悉 HTML/CSS/JS 等网页基本元素，完成阶段可自行制作简单的网页，对元素属性相对熟悉。2. 理解动态语言的概念和运做机制，熟悉基本的 PHP 语法。3. 学习如何将 PHP 与 HTML 结合起来，完成简单的动态页面。4. 接触学习 MySQL，开始设计数据库。5. 不断巩固 PHP 语法，熟悉大部分的 PHP 常用函数，理解面向对象编程，MySQL 优化，以及一些模板和框架。6. 最终完成一个功能齐全的动态站点。
 
 ## 基础语法
 
@@ -74,7 +68,7 @@ echo "这是一个", "字符串，", "使用了", "多个", "参数。";
 $txt1="学习 PHP";
 $txt2="RUNOOB.COM";
 $cars=array("Volvo","BMW","Toyota");
- 
+
 print $txt1;
 print "<br>";
 print "在 $txt2 学习 PHP ";
@@ -113,7 +107,7 @@ foreach($age as $x=>$x_value)
 
 - 松散比较：使用两个等号 `==` 比较，只比较值，不比较类型。
 - 严格比较：用三个等号 `===` 比较，除了比较值，也比较类型。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__Backend__assets__PHP.assets__20240702171832.webp)
+  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__Backend__assets__PHP.assets__20240702171832.webp)
 
 ```php
 <?php
@@ -240,7 +234,7 @@ $conn->close();
 将序列化的值当作参数传入
 
 !!! note "最终的原因"
-    PHP是弱类型的原因，我们可以利用这样的特性去绕过一些判断
+PHP 是弱类型的原因，我们可以利用这样的特性去绕过一些判断
 
 #### [BUUCTF[极客大挑战 2019]PHP](https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]PHP)
 
@@ -324,19 +318,19 @@ http://02801fc4-349c-428a-bb2c-2015f2934d2b.node5.buuoj.cn:81/?select=O:4:%22Nam
 上课老师讲的一个例题，主要核心思想就是利用 php 这种弱类型的语言。构造的 exp 是利用引用，使得两个变量一模一样，从而达到目的。
 
 !!! note "类型"
-        a - array
-        b - boolean
-        d - double
-        i - integer
-        o - common object
-        r - reference
-        s - non-escaped binary string
-        S - escaped binary string
-        C - custom object
-        O - class
-        N - null
-        R - pointer reference
-        U - unicode string
+a - array
+b - boolean
+d - double
+i - integer
+o - common object
+r - reference
+s - non-escaped binary string
+S - escaped binary string
+C - custom object
+O - class
+N - null
+R - pointer reference
+U - unicode string
 
 ```php linenums="1" hl_lines="7"
 <?php

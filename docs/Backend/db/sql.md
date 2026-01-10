@@ -5,12 +5,7 @@
 SQL (Structured Query Language:结构化查询语言) 是用于管理关系数据库管理系统（RDBMS）
 
 ??? note "What is RDBMS"
-    即关系数据库管理系统(Relational Database Management System)的特点：
-    1. 数据以表格的形式出现
-    2. 每行为各种记录名称
-    3. 每列为记录名称所对应的数据域
-    4. 许多的行和列组成一张表单
-    5. 若干的表单组成database
+即关系数据库管理系统 (Relational Database Management System) 的特点：1. 数据以表格的形式出现 2. 每行为各种记录名称 3. 每列为记录名称所对应的数据域 4. 许多的行和列组成一张表单 5. 若干的表单组成 database
 
 SQL（Structured Query Language）是管理关系型数据库的标准语言。简单来说，它就是让我们能与数据库"对话"的一种特殊语言。想象一下，数据库就像一个巨大的数字仓库，而 SQL 就是你向仓库管理员发出的精确指令——"给我找出所有去年购买过产品的客户"，"把这些商品按价格从高到低排列"，或者"更新用户张三的电话号码"。
 
@@ -27,20 +22,20 @@ SQL（Structured Query Language）是管理关系型数据库的标准语言。�
 
 ## SQL 与 DBMS 的关系
 
-SQL 是**操作数据库的标准语言**，而 MySQL、SQLite 等则是**具体的数据库管理系统（DBMS）**。它们之间的关系可以这样理解：  
+SQL 是**操作数据库的标准语言**，而 MySQL、SQLite 等则是**具体的数据库管理系统（DBMS）**。它们之间的关系可以这样理解：
 
-- **SQL** 是通用的查询语言，定义了如何与数据库交互（如 `SELECT`, `INSERT`, `UPDATE`, `DELETE`）。  
-- **MySQL** 是一个**客户端 - 服务器型**的关系数据库，适合 Web 应用、企业级系统等需要多用户并发访问的场景。  
-- **SQLite** 是一个**嵌入式**数据库，整个数据库就是一个文件，适合移动端、桌面应用或小型项目，无需额外服务器。  
+- **SQL** 是通用的查询语言，定义了如何与数据库交互（如 `SELECT`, `INSERT`, `UPDATE`, `DELETE`）。
+- **MySQL** 是一个**客户端 - 服务器型**的关系数据库，适合 Web 应用、企业级系统等需要多用户并发访问的场景。
+- **SQLite** 是一个**嵌入式**数据库，整个数据库就是一个文件，适合移动端、桌面应用或小型项目，无需额外服务器。
 
 ??? note "主要区别"
 
-    | 特性        | MySQL              | SQLite             |  
-    |------------|--------------------|--------------------|  
-    | **架构**    | 客户端-服务器模式   | 嵌入式，无独立服务 |  
-    | **适用场景**| 高并发、多用户访问 | 单机、轻量级应用   |  
-    | **存储方式**| 数据存储在服务器   | 整个DB是一个文件   |  
-    | **性能**    | 适合大规模数据     | 轻量，低开销       |  
+    | 特性        | MySQL              | SQLite             |
+    |------------|--------------------|--------------------|
+    | **架构**    | 客户端-服务器模式   | 嵌入式，无独立服务 |
+    | **适用场景**| 高并发、多用户访问 | 单机、轻量级应用   |
+    | **存储方式**| 数据存储在服务器   | 整个DB是一个文件   |
+    | **性能**    | 适合大规模数据     | 轻量，低开销       |
 
 ## 语法
 
@@ -55,7 +50,7 @@ SQL 是**操作数据库的标准语言**，而 MySQL、SQLite 等则是**具体
 
 -- 这也是注释 (注意后面有个空格)
 
-# 这还是注释 
+# 这还是注释
 
 /*!version_number 当数据库版本大于 version_number(或 version_number 为空) 时注释内容会被执行，否则就是普通注释*/
 ```
@@ -114,17 +109,17 @@ select 返回的数据结构就是表头，从下面这个例子可以看出
 
 #### WHERE 子句 | 条件查询
 
-|运算符 | 描述|
-|---|---|
-|`=`| 等于|
-|`<>`| 不等于。注释：在 SQL 的一些版本中，该操作符可被写成 `!=`|
-|`>`| 大于|
-|`<`| 小于|
-|`>=`| 大于等于|
-|`<=`|小于等于|
-|`BETWEEN`| 在某个范围内|
-|`LIKE`| 搜索某种模式|
-|`IN`| 指定针对某个列的多个可能值|
+| 运算符    | 描述                                                     |
+| --------- | -------------------------------------------------------- |
+| `=`       | 等于                                                     |
+| `<>`      | 不等于。注释：在 SQL 的一些版本中，该操作符可被写成 `!=` |
+| `>`       | 大于                                                     |
+| `<`       | 小于                                                     |
+| `>=`      | 大于等于                                                 |
+| `<=`      | 小于等于                                                 |
+| `BETWEEN` | 在某个范围内                                             |
+| `LIKE`    | 搜索某种模式                                             |
+| `IN`      | 指定针对某个列的多个可能值                               |
 
 #### AND OR 条件
 
@@ -205,11 +200,11 @@ WHERE condition;
 ### 改
 
 !!! note "请注意 SQL UPDATE 语句中的 WHERE 子句！"
-    WHERE 子句规定哪条记录或者哪些记录需要更新。如果您省略了 WHERE 子句，所有的记录都将被更新！
+WHERE 子句规定哪条记录或者哪些记录需要更新。如果您省略了 WHERE 子句，所有的记录都将被更新！
 
 ```sql
-UPDATE Websites 
-SET alexa='5000', country='USA' 
+UPDATE Websites
+SET alexa='5000', country='USA'
 WHERE name='菜鸟教程';
 ```
 
@@ -230,13 +225,13 @@ SELECT group_concat(col_name1, col_name2…) FROM table_name /*整合行、
 
 **一些常用的 URL 编码：**
 
-|Character|URL Encode|
-|---|---|
-|Space|`%20`|
-|#  |`%23`|
-|' |`%27`|
-|"| `%22`|
-|+ |`%2B`|
+| Character | URL Encode |
+| --------- | ---------- |
+| Space     | `%20`      |
+| #         | `%23`      |
+| '         | `%27`      |
+| "         | `%22`      |
+| +         | `%2B`      |
 
 `#+$-_.!*()`浏览器地址栏默认不编码，但是不意味着不能编码
 
@@ -328,7 +323,7 @@ kali 自带 sqlmap
 使用–batch 参数，可以在所有需要用户输入的部分（通常是询问执行 yes 还是 no），执行默认操作，不需要用户再输入
 
 #### 高级功能
->
+
 > 参考 [SQLMap 使用详解 - 未完成的歌 QAQ - 博客园](https://www.cnblogs.com/wwcdg/p/15913888.html#3roles_154)
 
 === "1、`--level 5`：探测等级"
@@ -782,9 +777,8 @@ Table: USERS
 这个时候就完成了第一步，也就是使用管理者账号登录
 
 ??? note "**查看权限**"
-    发现aaactf这个账号的权限是FILE
-    ```
-[08:43:11] [INFO] fetching database users privileges
+发现 aaactf 这个账号的权限是 FILE
+`[08:43:11] [INFO] fetching database users privileges
     database management system users roles:
     [*] 'aaactf'@'localhost' [1]:
         role: FILE
@@ -848,7 +842,7 @@ Table: USERS
         role: SUPER
         role: TRIGGER
         role: UPDATE
-    ```
+   `
 
 获得了 admin 账号，如果这个时候再能获得一个 RCE 就无敌了
 
@@ -860,7 +854,7 @@ Table: USERS
 - My.ini 文件中的这项配置 secure_file_priv=””为空
 
 !!! note "**获得物理地址**"
-    单引号注入
+单引号注入
 
     ```
     Fatal error: Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/web/www.zjusec.com/migrate.php:80 Stack trace: #0 {main} thrown in /home/web/www.zjusec.com/migrate.php on line 80
@@ -879,7 +873,7 @@ Table: USERS
 ```
 
 !!! bug "中间还尝试过使用 `--sql-shell`"
-    可以读是可以读，但是想要使用 system 命令的时候，一直没有回显，所以放弃了
+可以读是可以读，但是想要使用 system 命令的时候，一直没有回显，所以放弃了
 
 于是换了另一种方法，使用`--file-read`参数，读取服务器上的文件
 

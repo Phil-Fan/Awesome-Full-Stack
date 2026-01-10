@@ -15,8 +15,8 @@ npm install next@latest react react-dom
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  }
+    "lint": "next lint",
+  },
 }
 ```
 

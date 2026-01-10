@@ -14,7 +14,7 @@
 - 远程：[ToDesk](https://www.todesk.com/)、无影云电脑
 - 压缩：[Bandzip](https://www.bandisoft.com/bandizip/)
 - 其他：[logi option+](https://www.logitech.com/zh-cn/setup/ergosetup/logi-options.html)
-- 公式识别：[SimpleTex](https://simpletex.cn/)  优化得不错
+- 公式识别：[SimpleTex](https://simpletex.cn/) 优化得不错
 - RSS 阅读器：[Folo](https://folo.is/?new_locale=zh-cn)
 - LLM: [Cherry Studio](https://www.cherry-ai.com/)
 - 邮件：Gmail
@@ -46,31 +46,31 @@
 - [Scroll Reverser for macOS](https://pilotmoon.com/scrollreverser/): 反向滚动鼠标和触控板
 - [Typora](https://typoraio.cn/): Markdown
 
-    ```shell
-    echo 'alias typora="open -a Typora"' >> ~/.zshrc
-    ```
+  ```shell
+  echo 'alias typora="open -a Typora"' >> ~/.zshrc
+  ```
 
 - windows 虚拟机 [Parallels Desktop](https://www.parallels.cn/products/desktop/trial/)，可以找一个 tb 店解锁
 - [waydabber/BetterDisplay](https://github.com/waydabber/BetterDisplay?tab=readme-ov-file)：没钱上 4K 显示器的解决方案，Unlock your displays on your Mac! Flexible HiDPI scaling
 - $\LaTeX$ 环境
 
-    ```shell
-    brew install mactex --cask
-    ```
+  ```shell
+  brew install mactex --cask
+  ```
 
 - [Piclist](https://piclist.cn/): 图床
 
-    ```shell title="安装 piclist"
-    brew install piclist --cask
-    ```
+  ```shell title="安装 piclist"
+  brew install piclist --cask
+  ```
 
 !!! note "注意 macos 没有签名时候需要手动信任"
-    ```shell
+`shell
     xattr -cr /Applications/zju-learning-assistant.app
-    ```
+    `
 
 !!! note "资源站"
-    尽量还是支持正版
+尽量还是支持正版
 
     1. [xclient](https://xclient.info/)
     2. [macked](https://macked.app/)
@@ -153,7 +153,7 @@
 - F1，输入 `Open User Settings`
 - 搜索 `word wrap`
 - 修改为 `on`
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-software.assets__20241211133345.webp)
+  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-software.assets__20241211133345.webp)
 
 #### 内存占用过大问题
 

@@ -9,7 +9,11 @@
     "preview": "pnpm --filter awesome-full-stack-docs preview",
     "lint": "pre-commit run --all-files"
   },
-  "keywords": ["awesome", "full-stack", "resources"],
+  "keywords": [
+    "awesome",
+    "full-stack",
+    "resources"
+  ],
   "author": "Phil Fan",
   "license": "CC0-1.0"
 }

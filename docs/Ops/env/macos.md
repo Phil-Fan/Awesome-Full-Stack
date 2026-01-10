@@ -29,7 +29,7 @@
 ### Typing
 
 - ++fn+backspace++ 在 mac 中等于 ++del++
-- ++command+control+space++  emoji
+- ++command+control+space++ emoji
 - ++shift+option+b++ 颜文字
 - ++tab++ 使用声调打字
 
@@ -146,7 +146,7 @@ brew install gemini-cli
 在使用硬盘传数据的时候，老是报`错误代码 -50`，搜了一下才发现 mac 原生是不支持 NTFS 文件系统的
 
 !!! info "什么是 NTFS"
-    NTFS（New Technology File System）是由微软开发的一种文件系统，最早在 Windows NT 操作系统中引入。它是 Windows 系统的默认文件系统，用于存储和检索硬盘上的数据。
+NTFS（New Technology File System）是由微软开发的一种文件系统，最早在 Windows NT 操作系统中引入。它是 Windows 系统的默认文件系统，用于存储和检索硬盘上的数据。
 
 官网地址
 
@@ -218,26 +218,27 @@ source ~/.zshrc
 ### 换 conda 源
 
 === "THU"
-    ```shell
-    conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/>
-    conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/>
-    conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/>
-    conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/>
-    conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/>
-    conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/>
+
+````shell
+conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/>
+conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/>
+conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/>
+conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/>
+conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/>
+conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/>
 
     # 搜索时显示通道地址
     conda config --set show_channel_urls yes
     ```
 
 === "ustc 源"
-    ```shell
-    conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/pkgs/main/>
-    conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/pkgs/free/>
-    conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/>
-    conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/>
-    conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/>
-    conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/>
+```shell
+conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/pkgs/main/>
+conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/pkgs/free/>
+conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/>
+conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/>
+conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/>
+conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/>
 
     conda config --set show_channel_urls yes
     ```
@@ -251,7 +252,7 @@ source ~/.zshrc
 ```shell
 command + 空格            #  打开聚焦搜索
 输入 ~/Library/Application Support       # 找到 Application Support 文件夹
-```
+````
 
 在`Application Support`这个文件夹里面建一个 pip 文件夹;
 在新建的 pip 文件夹下建一个`pip.conf`文件。

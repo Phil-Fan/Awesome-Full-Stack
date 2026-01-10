@@ -8,7 +8,7 @@
 git init
 git remote -v
 git remote add origin + ssh
-git remote rm origin 
+git remote rm origin
 
 git pull origin [branch]:[master]
 git add .
@@ -58,7 +58,7 @@ git reset --hard + commit_id
 ```
 
 ```shell
-git reset --hard HEAD^ 
+git reset --hard HEAD^
 ```
 
 只能后退，一个 ^ 表示回退一个版本，两个^ 表示回退两个版本，依次类推
@@ -107,7 +107,7 @@ PR，全称 Pull Request（拉取请求），是一种非常重要的协作机�
 2. 将仓库 B clone 到我本地电脑
 3. 在本地创建一个分支，如 bugfix/issue-12，该分支用于存放我的代码修改。同时在我的 github 上的仓库 B 也创建一个同名的该分支
 4. 切换到该分支 bugfix/issue-12，修改代码
-  
+
 ```shell
 git checkout -b bugfix/issue-12
 ```
@@ -136,7 +136,7 @@ git push -u origin bugfix/issue-12
 
 **subject 必填**用于对 commit 进行简短的描述
 
- **type 必填**表示提交类型，值有以下几种：
+**type 必填**表示提交类型，值有以下几种：
 
 - feat - 新功能 feature
 - fix - 修复 bug
@@ -179,11 +179,11 @@ squash commit3
 
 ### merge vs rebase vs squash
 
-| 方式       | 本质     | 历史形态       | 是否改历史 | 什么时候用         |
-| -------- | ------ | ---------- | ----- | ------------- |
-| `merge`  | 两条线合并  | 有 merge 节点 | 否     | 公共分支、安全第一     |
-| `rebase` | 把提交挪位置 | 一条直线       | 是     | 整理个人提交        |
-| `squash` | 多个变一个  | 一条直线       | 是     | 提 PR / 上 main |
+| 方式     | 本质         | 历史形态      | 是否改历史 | 什么时候用         |
+| -------- | ------------ | ------------- | ---------- | ------------------ |
+| `merge`  | 两条线合并   | 有 merge 节点 | 否         | 公共分支、安全第一 |
+| `rebase` | 把提交挪位置 | 一条直线      | 是         | 整理个人提交       |
+| `squash` | 多个变一个   | 一条直线      | 是         | 提 PR / 上 main    |
 
 ### 放弃本地修改，强制覆盖
 
@@ -246,24 +246,24 @@ rm -rf .git/modules/<path>
 
 ### 创建个人令牌
 
-[github 创建个人令牌](https://blog.csdn.net/qq_46941656/article/details/119737804)  
+[github 创建个人令牌](https://blog.csdn.net/qq_46941656/article/details/119737804)
 
 ```txt
-Setting 
+Setting
 -> Developer settings
--> Personal access tokens 
--> Generate new token 保存密码到自己可以看到的位置 
+-> Personal access tokens
+-> Generate new token 保存密码到自己可以看到的位置
 ```
 
 ### 免密登陆
 
 [git 保存密码](https://cloud.tencent.com/developer/article/2207770)
 
-``` shell
-# 记住密码 
-git config --global credential.helper store  
-# 删除密码 
-git config --global --unset credential.helper 
+```shell
+# 记住密码
+git config --global credential.helper store
+# 删除密码
+git config --global --unset credential.helper
 ```
 
 ### github 配置 ssh
@@ -297,15 +297,15 @@ ssh -T git@github.com
 [win 系统使用 vscode 连接虚拟机](https://blog.csdn.net/qq_40300094/article/details/114639608)
 
 ```shell
-ifconfig #记录 ip 地址 
-ssh user.name@ip 
+ifconfig #记录 ip 地址
+ssh user.name@ip
 ```
 
-#### 设置 ssh 免密登录  
+#### 设置 ssh 免密登录
 
-在 win 主机上`ssh-keygen`生成一对公私钥，将公钥发送到服务器的`~/.ssh/authorized_keys`文件下  
+在 win 主机上`ssh-keygen`生成一对公私钥，将公钥发送到服务器的`~/.ssh/authorized_keys`文件下
 
-在 win 主机上的 ssh 配置中加入`IdentityFile`文件，即可实现免密登录  
+在 win 主机上的 ssh 配置中加入`IdentityFile`文件，即可实现免密登录
 
 [理解公钥和私钥](https://zhuanlan.zhihu.com/p/113522792)
 
@@ -320,7 +320,7 @@ git config --global https.proxy 'http://127.0.0.1:7890'
 git config --global http.proxy 'socks5://127.0.0.1:7890'
 #https 代理
 git config --global https.proxy 'socks5://127.0.0.1:7890'
- 
+
 #取消 http 代理
 git config --global --unset http.proxy
 #取消 https 代理
@@ -389,7 +389,7 @@ git push -u origin master
 
 ### 远端链接失败 `fatal: Couldn‘t find remote ref master`
 
-````shell
+```shell
 # 检查本地配置
 git config user.name/git config --global user.name
 git config user.email/git config --gloabl user.email
@@ -398,7 +398,7 @@ git config user.email/git config --gloabl user.email
 git remote -v
 git remote rm origin
 git remote add origin XXXX
-````
+```
 
 ### 文件过大 `RPC failed；curl 56 Recv failure: Connection was reset`
 

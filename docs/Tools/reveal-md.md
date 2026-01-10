@@ -54,7 +54,7 @@ live:
 
 build:
  @echo "Building main slides..."
- @reveal-md main.dark.md --scripts https://cdn.tonycrane.cc/heti/heti.js,https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/latest.min.js,./utils/heti_worker.js --template ./utils/template.html --static ../site --assets-dir assets 
+ @reveal-md main.dark.md --scripts https://cdn.tonycrane.cc/heti/heti.js,https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/latest.min.js,./utils/heti_worker.js --template ./utils/template.html --static ../site --assets-dir assets
  @rm ../site/main.html
 
 clean:

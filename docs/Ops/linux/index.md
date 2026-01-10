@@ -12,7 +12,7 @@ fedora core 9 , linux kernel
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__Linux__assets__index.assets__image-20220914193238844.webp)
 
-- 1984 年，**Richard Stallman**  提出 GNU Project 与 Unix 完全兼容
+- 1984 年，**Richard Stallman** 提出 GNU Project 与 Unix 完全兼容
 - 自由软件基金会 FSF 指定共用版权协议 GPL
 
 ## 自由软件
@@ -30,4 +30,4 @@ fedora core 9 , linux kernel
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__Linux__assets__index.assets__image-20220914202059333.webp)
 
-[Linux 学习系列一：Linux 的简单介绍以及命令行的基本操作_奋斗的西瓜瓜的博客-CSDN 博客](https://blog.csdn.net/qq_37085158/article/details/126993054)
+[Linux 学习系列一：Linux 的简单介绍以及命令行的基本操作\_奋斗的西瓜瓜的博客-CSDN 博客](https://blog.csdn.net/qq_37085158/article/details/126993054)
