@@ -89,12 +89,16 @@ be very in-depth and continue interviewing me continually until it's complete, t
 
 - [planning-with-files](https://github.com/OthmanAdi/planning-with-files): Manus 风格持久化 Markdown 规划
 - [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): 多平台专业 UI/UX 设计智能
+- [notebooklm-skill](https://github.com/PleasePrompto/notebooklm-skill): Claude Code 与 Google NotebookLM 通信，查询上传文档并获取基于引用的答案
+- [obsidian-skills](https://github.com/kepano/obsidian-skills): Obsidian 的 Claude Skills 集合
 
 ### 知识库
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
 
 ### 多模态
+
+- [ComfyUI](https://www.comfy.org/zh-cn/): 用 AI 生成视频、图像、音频
 
 - Image
   - 🍌
@@ -103,46 +107,16 @@ be very in-depth and continue interviewing me continually until it's complete, t
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
   - [Veo - Google DeepMind](https://deepmind.google/models/veo/)
 - Audio
-
-### TTS 服务对比
-
-#### 接口调用类
-
-| 服务名称 | 官方链接 | 特点 |
-|---------|---------|------|
-| ElevenLabs | https://elevenlabs.io | 行业领先，高质量语音合成 |
-| Fish Audio | https://fishspeech.net/zh | 免费专业AI配音与声音克隆 |
-| OpenAI TTS | https://platform.openai.com/docs/guides/text-to-speech | GPT 模型驱动，支持多音色 |
-| SiliconFlow | https://siliconflow.cn/ | 硅基流动，CosyVoice 等多模型 |
-| 302.AI | https://302.ai/ | API 聚合平台，支持 TTS-Flash |
-| 扣子 Coze | https://www.coze.cn/ | 字节跳动 AI 智能体平台 |
-| MiniMax | https://www.minimaxi.com/audio/text-to-speech | 高质量中文语音合成 |
-| 灵犀智能 | https://lingxi.apifox.cn/ | 多模态 AI 客服，流式 TTS |
-| EdgeTTS | 微软 Edge 浏览器内置 | 免费本地调用，多语言支持 |
-| 科大讯飞 | 官网待补充 | 国内领先语音技术 |
-| 火山引擎 | 字节跳动云服务 | 企业级语音解决方案 |
-| 腾讯云 | https://cloud.tencent.com/product/tts | 腾讯云语音合成 |
-| 阿里云百炼 | https://www.aliyun.com/product/ai/nls | 阿里云语音服务 |
-| 机智云 | https://www.gizwits.com/ | AI 离线语音识别方案 |
-| ACGN TTS | https://github.com/annacode747/AcgTTS | 开源 TTS 实现 |
-
-#### 本地部署类
-
-| 服务名称 | GitHub/官网 | 特点 |
-|---------|------------|------|
-| Fish Speech | https://github.com/fishaudio/fish-speech | SOTA 开源 TTS，支持 13 种语言 |
-| GPT-SoVITS V2 | https://github.com/v3ucn/GPT-SoVITS-V2 | 1 分钟训练数据，少样本语音克隆 |
-| GPT-SoVITS V3 | https://github.com/RVC-Boss/GPT-SoVITS | 53.8k+ star，跨语言支持 |
-| Index-TTS | https://github.com/index-tts/index-tts | 工业级可控零样本 TTS |
-| PaddleSpeech | https://github.com/PaddlePaddle/PaddleSpeech | 飞桨语音工具包，全流程支持 |
+  - 调用类：[ElevenLabs](https://elevenlabs.io), [火山引擎](https://www.volcengine.com/product/tts),  [科大讯飞](https://www.xfyun.cn/services/smart-tts), [Fish Audio](https://fishspeech.net/zh), [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech), [SiliconFlow](https://siliconflow.cn/), [腾讯云](https://cloud.tencent.com/product/tts), [阿里云百炼](https://ai.aliyun.com/nls/tts)
+  - 本地部署类：[EdgeTTS](https://github.com/rany2/edge-tts), [Fish Speech](https://github.com/fishaudio/fish-speech), [GPT-SoVITS V2](https://github.com/v3ucn/GPT-SoVITS-V2), [GPT-SoVITS V3](https://github.com/RVC-Boss/GPT-SoVITS), [Index-TTS](https://github.com/index-tts/index-tts), [PaddleSpeech](https://github.com/PaddlePaddle/PaddleSpeech)
 
 ## 工具
 
 - [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
-- [Hyprland](https://github.com/hyprwm/Hyprland): Linux 动态平铺 Wayland 合成器
-- [Vim](https://www.vim.org/)
+- [tmux](https://github.com/tmux/tmux)
+- [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/doc/install/)
   - [lazyvim](https://www.lazyvim.org)
-  - [Neovim](https://neovim.io/doc/install/)
+- [chezmoi](https://github.com/twpayne/chezmoi): Dotfiles 管理工具
 
 ## Template
 
@@ -154,7 +128,6 @@ be very in-depth and continue interviewing me continually until it's complete, t
 
 ## 前端
 
-- [electron](https://github.com/electron/electron): Build cross-platform desktop apps with JavaScript, HTML, and CSS
 - [Next.js](https://nextjs.org/)
   - [TypeScript](https://github.com/microsoft/TypeScript)
   - [biome](https://github.com/biomejs/biome): 配置更简单、更快速的 linter/formater
@@ -171,6 +144,7 @@ npx create-next-app@latest my-app
 
 - [Taro](https://docs.taro.zone/docs/): 使用 React/Vue 开发多平台小程序应用
 - [uni-app](https://uniapp.dcloud.net.cn/): 使用 Vue 开发多平台应用（小程序、H5、App）
+- [electron](https://github.com/electron/electron): Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
 ## 后端
 
@@ -199,7 +173,7 @@ npx create-next-app@latest my-app
 
 ### 中间件
 
-- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统
+- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
 
 ### 应用部署
 
@@ -219,6 +193,7 @@ npx create-next-app@latest my-app
 - [jenkins](https://www.jenkins.io)
 - [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
 - [Drone CI](https://github.com/harness/drone)
+- [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
 
 ### 运维与监控
 
@@ -257,6 +232,13 @@ npx create-next-app@latest my-app
 - [Product Hunt](https://www.producthunt.com/)
 - [X](https://x.com/)
 
+### 多平台内容分发
+
+- [蚁小二](https://www.yixiaoer.cn/vip): 多平台内容分发订阅服务，支持平台较全
+- [Multipost](https://multipost.app/): 开源免费的多平台内容分发工具
+- [Buffer](https://publish.buffer.com/all-channels): 海外多平台内容分发工具
+- [TurboPush](https://www.turbopush.top/)
+
 ### 内容与文档
 
 - [MkDocs](https://www.mkdocs.org/)
@@ -264,6 +246,7 @@ npx create-next-app@latest my-app
 - [fumadocs](https://github.com/fuma-nama/fumadocs)
 - [Jekyll](https://jekyllrb.com)
   - [minima](https://github.com/jekyll/minima)
+- [Vitepress](https://vitepress.dev/)
 
 - [reveal-md](https://github.com/webpro/reveal-md)
 - [Slidev](https://sli.dev/)
