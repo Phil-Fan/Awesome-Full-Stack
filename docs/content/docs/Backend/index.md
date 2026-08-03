@@ -4,12 +4,6 @@ title: "后端开发"
 
 # 后端开发
 
-## 平台
-
-- [Android](./platform/android.md)
-- [HarmonyOS](./platform/harmony.md)
-- [Xcode](./platform/xcode.md)
-
 - [Bun](https://bun.sh/): 快速的一体化 JavaScript 运行时
 - [Python](https://www.python.org/)
   - [uv](https://github.com/astral-sh/uv): package and project manager

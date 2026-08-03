@@ -1,8 +1,8 @@
 ---
-title: "IOS 开发"
+title: "iOS 开发"
 ---
 
-# IOS 开发
+# iOS 开发
 
 > [!TIP]
 >
