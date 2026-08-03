@@ -25,6 +25,7 @@ npx create-next-app@latest my-app
 - [React Bits](https://www.reactbits.dev/): UI 组件库
 - [udecode/plate](https://github.com/udecode/plate): Rich-text editor with AI and shadcn/ui
 - [AI Elements](https://elements.ai-sdk.dev/): AI Chatbot 组件库
+- [assistant-ui](https://github.com/assistant-ui/assistant-ui): 基于 TypeScript/React 的生产级 AI Chat UI 组件库
 - [React PDF Viewer](https://www.embedpdf.com/docs/react): PDF 预览
 - [liteparse](https://github.com/run-llama/liteparse): A fast, helpful, and open-source document parser
 
