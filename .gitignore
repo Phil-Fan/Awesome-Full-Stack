@@ -4,5 +4,8 @@
 .spec-workflow
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+docs/.next/
+docs/.source/
+docs/tsconfig.tsbuildinfo
 node_modules/
 .serena

@@ -1,0 +1,400 @@
+---
+title: "路由器与网络代理"
+---
+
+# 路由器与网络代理
+
+## 资料推荐
+
+- **[恩山无线论坛](https://www.right.com.cn/forum/forum.php)** - 路由器固件与配置
+- **[SuLingGG](https://github.com/SuLingGG)** - OpenWrt 编译
+- **[ZJU-Connect](https://github.com/Mythologyli/ZJU-Connect)** - 校园网 RVPN 客户端
+
+## 路由器基础
+
+### LAN vs WAN
+
+路由器就像一个**交通枢纽**，有两个主要的进出口：
+
+> [!NOTE]
+>
+> LAN（局域网）
+>
+> 内部网络接口，连接家里的设备：
+>
+> - 多个端口（4 个 RJ45）
+> - 分配私有 IP（192.168.1.x）
+> - 内置 DHCP 服务器
+> - 网关地址：192.168.1.1
+>
+> WAN（广域网）
+>
+> 外部网络接口，连接互联网：
+>
+> - 只有一个端口
+> - 获取公网 IP
+> - 负责 NAT 转换
+> - 处理内外网数据转发
+>
+
+### 工作流程
+
+```text
+互联网 (WAN) ←→ 路由器 (NAT) ←→ 家里设备 (LAN)
+     ↑                 ↑              ↑
+  公网 IP          网关/防火墙      私有 IP
+```
+
+> [!TIP]
+>
+> LAN 是**院子里的门**，WAN 是**通往大街的门**。路由器就是**门卫**，管理院子内外的人和物的进出。
+>
+
+## 路由器固件
+
+### Breed - 救命稻草
+
+**Breed** 是路由器的 Bootloader（引导加载程序），相当于电脑的 BIOS。
+
+```text
+原厂固件坏了 → Breed 仍然活着 → 刷入新固件 → 救活路由器
+```
+
+**核心功能：**
+
+- Web 界面刷写固件
+- 固件备份与恢复
+- 修改 MAC 地址
+- **防止变砖**（刷机失败也能恢复）
+
+> [!TIP]
+>
+> 路由器存储器会出现坏块，导致系统不稳定。检查方法：
+>
+> ```html
+> http://192.168.31.1/cgi-bin/luci/;stok=<你的 stok>/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=%0A%5B%20-z%20%22%24(dmesg%20%7C%20grep%20ESMT)%22%20%5D%20%26%26%20B%3D%22Toshiba%22%20%7C%7C%20B%3D%22ESMT%22%0Auci%20set%20wireless.%24(uci%20show%20wireless%20%7C%20awk%20-F%20'.'%20'%2Fwl1%2F%20%7Bprint%20%242%7D').ssid%3D%22%24B%20%24(dmesg%20%7C%20awk%20'%2FBad%2F%20%7Bprint%20%245%7D')%22%0A%2Fetc%2Finit.d%2Fnetwork%20restart%0A
+> ```
+>
+> 运行后 2.4G WiFi 名称会变成 `ESMT` 或 `Toshiba`，后面数字就是坏块数量。无数字 = 无坏块！
+>
+
+### OpenWrt vs Padavan
+
+| 特性 | OpenWrt | Padavan |
+| --- | --- | --- |
+| 基础 | Linux 嵌入式系统 | 基于 ASUSWRT |
+| 扩展性 | 强（软件包丰富） | 弱（不支持扩展） |
+| 难度 | 高（适合高级用户） | 低（适合普通用户） |
+| 稳定性 | 需要配置 | 开箱即用 |
+| 适用场景 | 高级功能、自定义 | 日常使用 |
+
+**OpenWrt** - 可玩性极高
+
+- 开源，完全自定义
+- 软件包管理（OpenVPN、L2TP、AdGuardHome）
+- 支持 IPv6、Shell 编程
+
+[OpenClash 内核更新失败解决方法 | Netanio 博客](https://blog.netanio.com/article/1919c71a-5dda-8013-8bfe-e339a814bd39)
+
+#### 汉化
+
+```shell
+opkg update && opkg install luci-i18n-base-zh-cn
+```
+
+- 进入【System】—>【System】—>【Language and Style】。
+- 在【Language】选项中选择【简体中文 (Chinese Simplified)】。
+- 点击【Save & Apply】保存应用。
+
+### openclash
+
+[OpenWrt 安装 OpenClash - Forever Young](https://www.luxiyue.com/openwrt/openwrt%e5%ae%89%e8%a3%85openclash/)
+
+## 代理基础
+
+### 什么是代理？
+
+> [!TIP]
+>
+> **你**想给**朋友**送礼物，但朋友家不让**陌生人**进。
+>
+> **正向代理**：你找**快递员**代送，朋友只知道快递员，不知道是你送的。
+>
+> **反向代理**：朋友家门口有个**管家**，你找管家转交，朋友以为礼物是管家送的。
+>
+
+### 正向代理
+
+```text
+你 → 代理服务器 → 目标网站
+```
+
+**作用：** 代替你发送请求，隐藏你的真实身份。
+
+**应用场景：**
+
+- 访问被封锁的网站
+- 保护隐私
+- 提高访问速度
+
+### 反向代理
+
+```text
+客户端 → 反向代理 → 真实服务器
+```
+
+**作用：** 代替服务器接收请求，隐藏服务器真实身份。
+
+**应用场景：**
+
+- 负载均衡
+- 缓存加速
+- 安全防护
+
+> [!NOTE]
+>
+> Nginx 反向代理
+>
+> ```nginx
+> server {
+>     listen 80;
+>     server_name example.com;
+> 
+>     location / {
+>         proxy_pass http://127.0.0.1:3000;
+>     }
+> }
+> ```
+>
+> 用户访问 `example.com`，Nginx 转发到本地 3000 端口。
+>
+> Clash + 内网穿透
+>
+> ```text
+> 外网用户 → Nginx (反向代理) → 本地 Clash (SOCKS5) → 目标服务
+> ```
+>
+
+### Tailscale
+
+- [Tailscale + Clash - 使用 Tailscale 和 Clash 实现内网穿透](https://blog.ichr.me/post/tailscale-mihomo-quantumult-x/)
+- [Tailscale 与 clash 共存](https://jiz4oh.com/2024/09/tailscale-with-clash/#google_vignette)
+
+## 代理协议
+
+### SS / SSR / VMess
+
+| 协议 | 特点 | 格式示例 |
+| --- | --- | --- |
+| **SS** | 简单高效，易被封锁 | `ss://aes-256-gcm:password@1.1.1.1:443#节点` |
+| **SSR** | 支持混淆，抗封锁强 | `ssr://Base64编码(...)` |
+| **VMess** | 动态端口，配置复杂 | `vmess://Base64编码(...)` |
+
+### SOCKS5 vs HTTP 代理
+
+| 特性 | SOCKS5 | HTTP 代理 |
+| --- | --- | --- |
+| 协议层级 | 传输层（TCP/UDP） | 应用层（HTTP/HTTPS） |
+| 支持 UDP | ✅ | ❌ |
+| 适用场景 | 全局代理、游戏 | 浏览器网页访问 |
+
+**SOCKS5** 更底层，可以代理所有流量（包括游戏、BT 下载）。
+
+## 代理工具
+
+### Clash - 规则分流之王
+
+**核心功能：**
+
+- 规则分流（国内直连，国外走代理）
+- 订阅多个节点
+- RESTful API 动态控制
+
+### TUN 模式 - 全局接管
+
+**TUN（隧道模式）**：创建虚拟网卡，接管系统所有流量。
+
+```text
+你的设备 → TUN 虚拟网卡 → Clash（规则匹配） → 代理/直连
+```
+
+**优势：** 无需手动配置每个应用的代理。
+
+### Subconverter - 订阅转换
+
+**作用：** 将不同格式的订阅链接转换为目标格式。
+
+```text
+V2Ray 订阅 → Subconverter → Clash 订阅
+```
+
+**功能：**
+
+- 格式互转（Clash、Surge、Quantumult 等）
+- 规则合并
+- 自定义规则
+
+## IPv6
+
+**IPv6** 是互联网协议第六版，解决 IPv4 地址耗尽问题。
+
+| 特性 | IPv4 | IPv6 |
+| --- | --- | --- |
+| 地址长度 | 32 位 | 128 位 |
+| 地址数量 | 43 亿 | 几乎无限 |
+| NAT | 需要 | 不需要 |
+| 安全性 | 无 | 内置 IPSec |
+
+**优势：**
+
+- 设备可直接全球互联（无需 NAT）
+- 内置安全性（IPSec）
+- 自动配置（SLAAC 和 DHCPv6）
+
+## 静态路由
+
+**静态路由**是由管理员手工写入转发表的路由条目：目的网段、下一跳或出接口事先写死，**不会**随链路或邻居关系自动增删。与之相对，通过 OSPF、BGP、RIP 等协议学到的路由，或从 DHCP/PPPoE 获得的默认路由，属于**动态/半动态**学习，会随拓扑与策略变化而更新。
+
+**典型组成要素**（不同厂商字段名可能不同，语义相近）：
+
+1. **目的网络 / 前缀**（目的 IP + 子网掩码，或 CIDR）：匹配“要去哪里”的流量；前缀越长通常越优先（最长匹配）。
+2. **下一跳 IP**：把报文先交给哪台三层设备（常写对端互联地址或网关）。
+3. **出接口**：从本机哪个物理/逻辑接口发出；常与下一跳一起配置，用于正确解析二层下一跳。
+4. **优先级 / 管理距离 / 度量值**：多条路由都能命中同一目的时，决定谁优先（具体数值含义以设备文档为准）。
+
+**常见使用场景**：
+
+- **多 WAN 或策略分流**：为某段目的网段指定走线路 A，其余走线路 B（常与策略路由、多路由表配合）。
+- **小型网络无 IGP**：内网多网段互访、访问 VPN 对端子网、固定指向某网关的管理流量。
+- **校园网 / 企业专网并存**：在已有默认上网路由的前提下，为校内地址段追加更精确的静态前缀，避免访问校内资源时误走公网出口。
+
+**取舍简述**：静态路由行为可预期、对设备开销小、排障直观；缺点是拓扑或对端地址变化时要人工维护，配置错误可能导致黑洞路由或环路。
+
+> [!TIP]
+>
+> 仅靠“一条默认路由”往往无法在多出口、VPN、校园网等环境里精细控制走向；为特定**目的网段**增加静态路由，可以把访问校内、专线或指定出口的流量显式指到正确下一跳。延伸阅读：[CC98：为什么要设置静态路由](https://www.cc98.org/topic/5650063)。
+>
+
+## DNS 重新绑定
+
+[DNS 重新绑定（DNS Rebinding）](https://www.akamai.com/zh/glossary/what-is-dns-rebinding) 利用浏览器**同源策略（SOP）**与**先后两次解析同一域名却得到不同 IP** 的组合：攻击者控制恶意解析或勾结的解析链路，诱导用户打开其域名下的页面。首次解析可能返回公网上的合法服务地址，并把 **TTL 设得很短**，使记录很快过期；页面内脚本再次解析同一域名时，结果被换成 **RFC 1918 内网地址、链路本地地址或本机环回地址** 等。浏览器仍认为与页面“同源”，从而可能对内网 Web 管理界面、仅监听在局域网的 HTTP 服务等发起请求并携带 Cookie，造成未授权读改、信息泄露，或作为更大攻击链的一环。
+
+**缓解需多层配合**，包括但不限于：浏览器/运行时的 DNS pinning 或同类防护；在 **DNS 或防火墙上过滤、丢弃或重写** “对外部域名却解析到内网/保留地址”的应答；内网管理面使用 HTTPS、强鉴权与网段隔离；关闭从 WAN 侧直连路由器管理口等。仅强调“丢弃上游返回的内网解析”并不足以覆盖全部变体，但确实是常见且重要的一层。
+
+## ZJU-Rule + ZJU-Connect
+
+> [新的 ZJU-Rule 解决方案 - CC98 论坛](https://www.cc98.org/topic/5769136/1#1)
+> [Mythologyli/zju-connect: ZJU RVPN 客户端的 Go 语言实现](https://github.com/Mythologyli/ZJU-Connect)
+
+原 ZJU-Rule 的公共服务已经停止了，但是我们仍然可以使用一些基于[subconverter](https://github.com/tindy2013/subconverter)的公共订阅转换
+
+请注意，使用公共的订阅转换服务不能保证节点信息不被泄漏
+
+1. 打开订阅转换网页 (以 [acl4ssr](https://acl4ssr-sub.github.io/) 为例)
+2. 在远程配置（**不是后端地址**）输入`https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/config/ZJU.ini`，并点击下拉栏中的地址
+   ![image](https://img.philfan.cn/Tools__Environment__assets__settings-router.assets__20250503215349.webp)
+3. 如果用 [acl4ssr](https://acl4ssr-sub.github.io/) 的话，有个后端地址选项，并不是所有后端口可用，自己试试看
+4. 在订阅链接位置处粘贴订阅链接，如果需要配置 ZJU-Connect，需要在最后一行加入`tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect`，然后在规则配置界面选择`ZJU-Connect`
+
+```shell title="示例，填在订阅链接的位置"
+ss://aes-256-gcm:password@1.1.1.1:443#测试节点
+ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw
+vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=
+tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
+```
+
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-router.assets__image-20250715010941873.webp)
+
+```text
+你的设备 → TUN 虚拟网卡 → Clash（规则匹配，ZJU-Rule） → SOCKS5/V2Ray 代理 (ZJU-Connect) → 目标网站
+```
+
+> [!TIP]
+>
+> ### SS（Shadowsocks）
+>
+> - **特点**：简单高效，无混淆，易被封锁。
+> - **格式**：
+>
+> ```shell title="格式"
+> ss://加密方式:密码@服务器IP:端口#备注
+> ```
+>
+> ```shell title="示例"
+> ss://aes-256-gcm:password@1.1.1.1:443#测试节点
+> ```
+>
+> ### SSR（ShadowsocksR）
+>
+> - **特点**：支持混淆和协议插件，抗封锁更强。
+> - **格式**：
+>
+> ```shell title="格式"
+> ssr://Base64编码(IP:端口:协议:加密:混淆:密码/?参数)
+> ```
+>
+> ```shell title="示例"
+> ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw
+> ```
+>
+> ### VMess（V2Ray 协议）
+>
+> - **特点**：动态端口，抗封锁强，配置复杂。
+> - **格式**：
+>
+> ```shell title="格式"
+> vmess://Base64编码({"add":"IP","port":"443","id":"UUID"})
+> ```
+>
+> ```shell title="示例"
+> vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=
+> ```
+>
+
+ZJU-Connect 服务配置[zju-connect/docs/service.md at main · Mythologyli/zju-connect](https://github.com/Mythologyli/zju-connect/blob/main/docs/service.md)
+
+[PlistEdit Pro - Advanced Mac plist and JSON editor](https://www.fatcatsoftware.com/plisteditpro/)
+
+## 常见问题
+
+### 所有节点都超时
+
+- 系统时间和网络时间不一致
+
+[北京时间校准 - 时分秒毫秒在线显示](http://time.syiban.com/xiaozhun.php)
+
+```shell
+sudo apt-get install chrony -y
+sudo systemctl start chronyd
+sudo systemctl enable chronyd
+sudo chronyd -q 'server cn.pool.ntp.org iburst'
+sudo systemctl restart chronyd
+chronyc tracking
+chronyc sources -v
+```
+
+### 有线网络与 Wi-Fi 节点优先级设置
+
+请复制以下命令并运行（会提示输入 sudo 密码）：
+
+```bash
+# 将 Wi-Fi 优先级调高 (Metric 设为 50)
+sudo nmcli connection modify "ZJUWLAN-Secure" ipv4.route-metric 50
+
+# 将有线连接优先级调低 (Metric 设为 1000)
+sudo nmcli connection modify "有线连接 3" ipv4.route-metric 1000
+```
+
+为了让修改后的 Metric 立即生效，我们需要将网卡“断开再重连”一次：
+
+```bash
+# 重启 Wi-Fi
+sudo nmcli connection down "ZJUWLAN-Secure" && sudo nmcli connection up "ZJUWLAN-Secure"
+
+# 重启有线连接
+sudo nmcli connection down "有线连接 3" && sudo nmcli connection up "有线连接 3"
+```
+
+```bash
+ip route
+```

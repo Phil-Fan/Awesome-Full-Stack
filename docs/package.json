@@ -4,11 +4,27 @@
   "description": "全栈开发资源与知识库",
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "next start",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf .next .source"
   },
   "devDependencies": {
-    "vitepress": "^1.6.4"
+    "@mdx-js/mdx": "^3.1.0",
+    "@types/mdx": "^2.0.14",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "fumadocs-mdx": "^11.6.0",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fumadocs-core": "^15.6.0",
+    "fumadocs-ui": "^15.6.0"
   }
 }
