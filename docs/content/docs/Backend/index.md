@@ -7,8 +7,6 @@ title: "后端开发"
 ## 平台
 
 - [Android](./platform/android.md)
-- [Electron](./platform/electron.md)
-- [Flutter](./platform/flutter.md)
 - [HarmonyOS](./platform/harmony.md)
 - [Xcode](./platform/xcode.md)
 

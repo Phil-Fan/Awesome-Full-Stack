@@ -1,5 +1,5 @@
 ---
-title: "MCP/Skills? Claude Code 使用实践、洞察"
+title: "Poco 的产品思考"
 ---
 
 # MCP/Skills? Claude Code 使用实践、洞察

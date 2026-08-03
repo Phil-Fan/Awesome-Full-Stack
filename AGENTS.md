@@ -15,8 +15,20 @@
 ├── docs/
 │   ├── app/                   # Next.js App Router 页面与布局
 │   ├── content/docs/          # Fumadocs Markdown/MDX 文档源
+│   │   ├── AI/                # AI 资源
+│   │   ├── Backend/           # 后端资源
+│   │   │   ├── db/            # 数据库资源
+│   │   │   └── platform/      # 后端平台资源
+│   │   ├── Cloud/             # 云服务资源
 │   │   ├── CodeQuality/       # Code Quality 资源
-│   │   └── Multiplatform/     # 跨平台资源
+│   │   ├── Frontend/          # 前端资源
+│   │   ├── Multiplatform/     # 跨平台资源
+│   │   ├── PM/                # 产品管理资源
+│   │   └── Tools/             # 开发工具与运维资源
+│   │       ├── dev/           # 原开发工具文档
+│   │       ├── env/           # 环境配置资源
+│   │       ├── hardware/      # 硬件资源
+│   │       └── linux/         # Linux 资源
 │   ├── lib/source.ts          # Fumadocs 文档源加载器
 │   ├── source.config.ts       # Fumadocs MDX 配置
 │   ├── mdx-components.tsx     # MDX 组件映射

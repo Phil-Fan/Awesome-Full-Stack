@@ -1,14 +1,12 @@
 import { notFound } from "next/navigation";
-import { redirect } from "next/navigation";
 import { DocsBody, DocsPage } from "fumadocs-ui/page";
 import { source } from "@/lib/source";
 import { useMDXComponents } from "@/mdx-components";
 
 export default async function Page(
-  props: PageProps<"/[[...slug]]">,
+  props: PageProps<"/[...slug]">,
 ) {
   const params = await props.params;
-  if (!params.slug) redirect("/AI");
 
   const page = source.getPage(params.slug);
 
