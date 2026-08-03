@@ -6,6 +6,9 @@ docs/.vitepress/dist/
 docs/.vitepress/cache/
 docs/.next/
 docs/.source/
+docs/.open-next/
+docs/out/
+docs/wrangler.local.json
 docs/tsconfig.tsbuildinfo
 node_modules/
 .serena

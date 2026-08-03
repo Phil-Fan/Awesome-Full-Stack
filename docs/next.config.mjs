@@ -5,7 +5,8 @@ const withMDX = createMDX();
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  outputFileTracingRoot: new URL(".", import.meta.url).pathname,
+  output: "export",
+  trailingSlash: true,
 };
 
 export default withMDX(config);
