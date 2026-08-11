@@ -1,14 +1,8 @@
-import type { DocsLayoutProps } from "fumadocs-ui/layouts/docs";
-import { SidebarFolder } from "@/app/sidebar-folder";
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
-export const baseOptions: Omit<DocsLayoutProps, "tree"> = {
+export const baseOptions: BaseLayoutProps = {
   nav: {
     title: "Awesome Full Stack",
   },
   githubUrl: "https://github.com/Phil-Fan/Dev-Notes",
-  sidebar: {
-    components: {
-      Folder: SidebarFolder,
-    },
-  },
 };

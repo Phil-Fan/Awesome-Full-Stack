@@ -1,8 +1,4 @@
-import { defineDocs, defineConfig } from "fumadocs-mdx/config";
-
-export const docs = defineDocs({
-  dir: "content/docs",
-});
+import { defineConfig } from "fumadocs-mdx/config";
 
 export default defineConfig({
   mdxOptions: {
@@ -14,6 +10,7 @@ export default defineConfig({
       defaultColor: false,
       fallbackLanguage: "text",
     },
+    // 图片全部为外链图床，禁用构建时远程图片尺寸探测
     remarkImageOptions: false,
   },
 });

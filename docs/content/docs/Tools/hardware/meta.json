@@ -1,0 +1,12 @@
+{
+  "title": "硬件",
+  "icon": "Cpu",
+  "pages": [
+    "Arduino",
+    "DGXSpark",
+    "FPGA",
+    "JetsonNano",
+    "JetsonThor",
+    "RaspberryPi"
+  ]
+}

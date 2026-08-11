@@ -1,18 +1,9 @@
+@import "tailwindcss";
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --color-fd-primary: 30 64 175;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-fd-primary: 96 165 250;
-  }
+html {
+  scrollbar-gutter: stable;
 }
 
 figure.shiki {

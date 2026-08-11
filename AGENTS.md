@@ -17,8 +17,7 @@
 │   ├── content/docs/          # Fumadocs Markdown/MDX 文档源
 │   │   ├── AI/                # AI 资源
 │   │   ├── Backend/           # 后端资源
-│   │   │   ├── db/            # 数据库资源
-│   │   │   └── platform/      # 后端平台资源
+│   │   │   └── db/            # 数据库资源
 │   │   ├── Cloud/             # 云服务资源
 │   │   ├── CodeQuality/       # Code Quality 资源
 │   │   ├── Frontend/          # 前端资源
@@ -49,7 +48,7 @@
 | 站点根 | 内容与配置在 **`docs/`** | 首页 `docs/app/page.tsx` |
 | 质量 | **pre-commit** + CI `Quality Check` | `markdownlint-cli2` + autocorrect |
 | CI | `.github/workflows/check.yml` | `pre-commit/action` |
-| 构建 | 根脚本转发子包 | `pnpm dev/build/preview` → filter docs |
+| 构建 | 根脚本转发子包，静态导出（`output: "export"` → `docs/out/`） | `pnpm dev/build` → filter docs |
 | 应用框架 | **Next.js App Router** | 应用依赖只放在 `docs` 子包 |
 
 ### 硬性约定
@@ -66,8 +65,7 @@
 
 ```bash
 pnpm dev      # 启动文档开发服务器
-pnpm build    # 构建文档
-pnpm start    # 启动生产构建
+pnpm build    # 构建文档（静态导出到 docs/out/）
 pnpm lint     # 执行 pre-commit 全量检查
 ```
 

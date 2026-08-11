@@ -1,0 +1,18 @@
+{
+  "title": "开发工具",
+  "icon": "Code",
+  "pages": [
+    "AdobeIllustrator",
+    "AdobePhotoshop",
+    "filebrowser",
+    "gdb",
+    "git",
+    "latex",
+    "markdown",
+    "mkdocs",
+    "reveal-md",
+    "tampermonkey",
+    "typst",
+    "vim"
+  ]
+}

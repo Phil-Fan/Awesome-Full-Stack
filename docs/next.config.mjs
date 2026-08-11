@@ -1,3 +1,4 @@
+import { fileURLToPath } from "node:url";
 import { createMDX } from "fumadocs-mdx/next";
 
 const withMDX = createMDX();
@@ -7,6 +8,7 @@ const config = {
   reactStrictMode: true,
   output: "export",
   trailingSlash: true,
+  outputFileTracingRoot: fileURLToPath(new URL("../", import.meta.url)),
 };
 
 export default withMDX(config);

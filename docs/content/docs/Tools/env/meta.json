@@ -1,0 +1,15 @@
+{
+  "title": "环境配置",
+  "icon": "Settings",
+  "pages": [
+    "l2tp",
+    "linux",
+    "linux-kali",
+    "linux-ros",
+    "macos",
+    "router",
+    "server",
+    "windows",
+    "windows-wsl"
+  ]
+}

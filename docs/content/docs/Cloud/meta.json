@@ -1,0 +1,17 @@
+{
+  "title": "云服务",
+  "icon": "Cloud",
+  "pages": [
+    "aliyun",
+    "cicd",
+    "cloudflare",
+    "docker",
+    "docker-compose",
+    "fluid",
+    "k3s-plan",
+    "k8s",
+    "microservice",
+    "rbg",
+    "runtime"
+  ]
+}

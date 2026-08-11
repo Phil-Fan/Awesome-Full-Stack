@@ -1,5 +1,6 @@
 {
   "title": "开发工具与运维",
+  "icon": "Wrench",
   "pages": [
     "dev",
     "env",
