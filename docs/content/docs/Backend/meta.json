@@ -1,5 +1,13 @@
 {
   "title": "后端开发",
   "icon": "Server",
-  "pages": ["dart", "db", "java", "nodejs", "php", "python"]
+  "pages": [
+    "best-practices",
+    "auth",
+    "db",
+    "cache",
+    "network",
+    "rpa",
+    "packet-capture"
+  ]
 }

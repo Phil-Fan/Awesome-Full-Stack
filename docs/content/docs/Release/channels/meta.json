@@ -1,0 +1,4 @@
+{
+  "title": "发布渠道",
+  "pages": ["cargo", "npm", "pypi", "homebrew", "apple-store"]
+}

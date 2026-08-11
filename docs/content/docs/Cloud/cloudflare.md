@@ -2,8 +2,6 @@
 title: "CloudFlare"
 ---
 
-# CloudFlare
-
 ## 域名托管
 
 一键托管域名

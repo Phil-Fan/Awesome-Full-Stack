@@ -2,8 +2,6 @@
 title: "微服务架构"
 ---
 
-# 微服务架构
-
 > **现代微服务架构 =
 > API 网关 + 微服务 + Docker + Kubernetes
 >

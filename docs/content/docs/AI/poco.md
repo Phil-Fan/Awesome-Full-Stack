@@ -2,6 +2,12 @@
 title: "Poco 的产品思考"
 ---
 
+<Callout type="warn">
+
+本文写于 2026.1，内容可能过时。
+
+</Callout>
+
 # MCP/Skills? Claude Code 使用实践、洞察
 
 就在最近，Anthropic 发布了 Opus 4.6 模型，OpenAI 发布了 GPT 5.3 Codex，而国内也开启了百模大战：Seeddance\ MiniMax\Kimi\GLM\Deepseek，而在不久后的春节假期，更是可以预见的会有一大波新模型和新产品发布。

@@ -19,16 +19,20 @@
 │   │   ├── Backend/           # 后端资源
 │   │   │   └── db/            # 数据库资源
 │   │   ├── Cloud/             # 云服务资源
+│   │   │   ├── container/     # 容器与编排资源
+│   │   │   └── runtime/       # 运行时资源
 │   │   ├── Frontend/          # 前端资源
 │   │   ├── Multiplatform/     # 跨平台资源
 │   │   │   └── mobile/        # 移动端资源
+│   │   ├── Release/           # 产品发布资源
+│   │   │   └── channels/      # 发布渠道资源
 │   │   ├── Tools/             # 开发工具与运维资源
 │   │   │   ├── dev/           # 原开发工具文档
 │   │   │   ├── env/           # 环境配置资源
 │   │   │   ├── hardware/      # 硬件资源
 │   │   │   └── linux/         # Linux 资源
 │   │   ├── CodeQuality.md     # Code Quality 资源
-│   │   └── PM.md              # 产品管理资源
+│   │   └── Content.md         # 内容资源
 │   ├── lib/source.ts          # Fumadocs 文档源加载器
 │   ├── source.config.ts       # Fumadocs MDX 配置
 │   ├── mdx-components.tsx     # MDX 组件映射
@@ -93,37 +97,33 @@ pnpm lint     # 执行 pre-commit 全量检查
 - 避免使用加粗文本代替标题（例如 `**标题**`）
 - 避免重复同级标题名称（必要时加限定词）
 
-### 5.2.1 告警/提示框语法（GFM Alert）
+### 5.2.1 告警/提示框语法（Fumadocs Callout）
 
-本仓库使用 **GitHub Flavored Markdown Alert** 语法（`> [!TYPE]`），该语法被 Fumadocs 的 MDX 管线和 GitHub 支持，禁止使用 `:::` 容器或 `!!!` 旧语法。
+本仓库使用 **Fumadocs `<Callout>` 组件** 作为告警/提示框，禁止使用 `:::` 容器、`!!!` 旧语法或 GFM Alert（`> [!TYPE]`，当前 MDX 管线不会渲染其样式）。
 
-```markdown
-> [!NOTE]
-> 用于补充说明、背景信息。
+```mdx
+<Callout type="info">
+补充说明、背景信息。
+</Callout>
 
-> [!TIP]
-> 用于技巧、最佳实践、快捷操作。
+<Callout type="idea">
+技巧、最佳实践、快捷操作。
+</Callout>
 
-> [!IMPORTANT]
-> 用于关键信息、必须了解的内容。
+<Callout type="warning">
+关键信息、必须了解的内容。
+</Callout>
 
-> [!WARNING]
-> 用于需要引起注意的警告。
+<Callout type="warn">
+需要引起注意的警告。
+</Callout>
 
-> [!CAUTION]
-> 用于潜在风险、危险操作警告。
+<Callout type="error">
+潜在风险、危险操作警告。
+</Callout>
 ```
 
-每个告警块内每行必须以 `>` 开头，包含代码块时也需加前缀：
-
-```markdown
-> [!TIP]
-> 推荐使用以下命令安装：
->
-> ```bash
-> brew install foo
-> ```
-```
+`<Callout>` 与内部 Markdown 内容之间需保留空行；标签必须成对闭合，禁止嵌套空 Callout。
 
 ### 5.3 文件与命名
 

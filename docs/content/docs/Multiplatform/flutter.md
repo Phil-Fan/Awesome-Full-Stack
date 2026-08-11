@@ -2,7 +2,15 @@
 title: "Flutter"
 ---
 
-# Flutter
+## 简介
+
+[Flutter](https://flutter.dev/) 是 Google 开源的跨平台 UI 框架，使用 Dart 语言与自绘引擎，一套代码可构建 iOS、Android、Web、桌面应用。
+
+## 能力
+
+- 自绘渲染引擎，各平台 UI 表现一致、性能接近原生
+- Hot Reload 快速调试
+- 丰富的 Widget 体系与 Material/Cupertino 组件库
 
 ## Install
 

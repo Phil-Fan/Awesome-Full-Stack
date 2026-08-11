@@ -2,8 +2,6 @@
 title: "Docker"
 ---
 
-# Docker
-
 Docker = Software + Dependencies，重点是 OS
 
 在整个生态中的位置

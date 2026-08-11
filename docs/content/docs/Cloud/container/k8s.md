@@ -2,8 +2,6 @@
 title: "Kubernetes"
 ---
 
-# Kubernetes
-
 ## 安装
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=450905506&bvid=BV1gj411E7W3&cid=1332974538&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="640px" height="320px"></iframe>

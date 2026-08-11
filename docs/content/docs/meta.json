@@ -4,9 +4,10 @@
     "Frontend",
     "Backend",
     "Multiplatform",
+    "CodeQuality",
     "Tools",
     "Cloud",
-    "CodeQuality",
-    "PM"
+    "Release",
+    "Content"
   ]
 }

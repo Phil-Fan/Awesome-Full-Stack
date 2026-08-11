@@ -1,10 +1,13 @@
 ---
-title: "网络相关软件使用"
+title: "抓包"
 ---
 
-# 网络相关软件使用
+- [Wireshark](https://www.wireshark.org/)
+- [Reqable](https://github.com/reqable/reqable-app) 小黄鸟，可抓包小程序
+- [Stream](https://apps.apple.com/app/stream/id1312141691) iOS 抓包
+- [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12，Mac 不可用
 
-## 抓包 - Wireshark
+## Wireshark
 
 ### 配置
 
@@ -17,7 +20,7 @@ sudo launchctl enable system/org.wireshark.ChmodBPF
 sudo launchctl load '/Library/LaunchDaemons/org.wireshark.ChmodBPF.plist'
 ```
 
-## 抓包 - Proxifier
+## Proxifier
 
 [Proxifier - The Most Advanced Proxy Client](https://www.proxifier.com/)
 
@@ -42,9 +45,9 @@ Proxifier 的主要功能：
 
 3. 顶部 Profile 菜单 - Proxificaiton rules - Add - Application - 加号 - 选择要抓包的应用程序
 
-## 抓包 - Yakit
+## Yakit
 
-## 抓包 - Charles
+## Charles
 
 Charles 的主要功能：
 
@@ -62,7 +65,7 @@ Charles 的主要功能：
 
 [charles 对 iOS 手机的 https 进行抓包（图文教程）\_charles 怎么抓 ios 手机包-CSDN 博客](https://blog.csdn.net/weixin_43837268/article/details/121938674)
 
-## 抓包 - Burpsuite
+## Burpsuite
 
 Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻击和分析 Web 应用程序的工具。主要功能包括：
 
@@ -145,7 +148,7 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 >
 > 请求行由三部分构成：第一部分说明请求类型为 get 方法请求，第二部分（用/分开）是资源 URL，第三部分说明使用的是 HTTP1.1 版本。
 
-很奇怪的是，这里我们看到这个 GET 请求的 URL，直接将 token 和日期什么的进行明文传递了。
+很奇怪的是，这里我们看到这个 GET 请求的 URL，直接将 token 和日期什么的等进行明文传递了。
 
 （朴素认知下，这是不是意味着只要嗅探到你的浙大体艺预约报文，就可以获得你的 token，~~进而可以取消你的预约~~）
 
@@ -272,7 +275,7 @@ def cancel_appointment(scheduled_id):
 
 ## 使用“共享文件夹”实现 iPhone 与 PC 间文件快速传输
 
-> 参考文献：[如何通过“共享文件夹”实现 iPhone 与 PC 间文件快速传输](https://zhuanlan.zhihu.com/p/145540093)
+> 参考文献：[如何通过"共享文件夹"实现 iPhone 与 PC 间文件快速传输](https://zhuanlan.zhihu.com/p/145540093)
 
 ### PC 端设置
 

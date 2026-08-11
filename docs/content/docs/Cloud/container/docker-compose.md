@@ -2,8 +2,6 @@
 title: "Docker Compose"
 ---
 
-# Docker Compose
-
 Docker Compose 是一种基于 YAML 的多容器编排工具，用于在单机环境中统一定义、启动和管理多个相互依赖的 Docker 服务。
 
 * **多个容器**

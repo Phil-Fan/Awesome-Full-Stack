@@ -3,15 +3,9 @@
   "icon": "Cloud",
   "pages": [
     "aliyun",
-    "cicd",
     "cloudflare",
-    "docker",
-    "docker-compose",
-    "fluid",
-    "k3s-plan",
-    "k8s",
+    "container",
     "microservice",
-    "rbg",
     "runtime"
   ]
 }

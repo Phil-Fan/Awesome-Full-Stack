@@ -15,7 +15,6 @@ icon: ShieldCheck
 粗粒度/系统侧
 
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma): 自托管的网站与服务可用性监控工具
-- [Beszel](https://github.com/henrygd/beszel): 轻量级服务器资源监控平台
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
 

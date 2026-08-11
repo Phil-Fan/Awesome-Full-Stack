@@ -1,5 +1,5 @@
 {
   "title": "AI 开发",
   "icon": "Bot",
-  "pages": ["claude"]
+  "pages": ["poco", "cli", "plugin", "software", "multimodal"]
 }

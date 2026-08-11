@@ -1,5 +1,10 @@
 {
   "title": "前端开发",
   "icon": "Palette",
-  "pages": ["crawl", "docs", "jekyii", "nextjs", "ruby", "rule"]
+  "pages": [
+    "best-practices",
+    "components",
+    "inspiration",
+    "docs"
+  ]
 }

@@ -1,0 +1,5 @@
+{
+  "title": "产品发布",
+  "icon": "Rocket",
+  "pages": ["intro", "channels", "promotion", "analytics", "compliance"]
+}
