@@ -536,13 +536,14 @@ awk '/connection/ {print $2}' log.txt | sort | uniq -c | sort -rn
 grep "ERROR" log.txt | awk '{print $1, $2}' | sort | uniq -c
 ```
 
-> [!TIP]
->
-> - **grep** - 搜索文本
-> - **sed** - 替换和编辑文本
-> - **awk** - 格式化和分析数据
-> - **jq** - 处理 JSON 数据
-> - **sort/uniq** - 排序和去重
-> - **cut** - 提取列
-> - **xargs** - 构建命令参数
->
+<Callout type="idea">
+
+- **grep** - 搜索文本
+- **sed** - 替换和编辑文本
+- **awk** - 格式化和分析数据
+- **jq** - 处理 JSON 数据
+- **sort/uniq** - 排序和去重
+- **cut** - 提取列
+- **xargs** - 构建命令参数
+
+</Callout>

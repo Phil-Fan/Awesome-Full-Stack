@@ -291,15 +291,16 @@ traceroute google.com
 mtr google.com
 ```
 
-> [!TIP]
->
-> | 权限 | 数字 | 说明 |
-> | --- | --- | --- |
-> | rwxrwxrwx | 777 | 所有人可读写执行 |
-> | rwxr-xr-x | 755 | 所有者完全权限，其他人只读 |
-> | rw-r--r-- | 644 | 标准文件权限 |
-> | rw------- | 600 | 私有文件 |
-> | rwxrwxrwt | 1777 | Sticky + 777 |
-> | rwsr-xr-x | 2755 | SGID + 755 |
-> | rwsr-xr-x | 4755 | SUID + 755 |
->
+<Callout type="idea">
+
+| 权限 | 数字 | 说明 |
+| --- | --- | --- |
+| rwxrwxrwx | 777 | 所有人可读写执行 |
+| rwxr-xr-x | 755 | 所有者完全权限，其他人只读 |
+| rw-r--r-- | 644 | 标准文件权限 |
+| rw------- | 600 | 私有文件 |
+| rwxrwxrwt | 1777 | Sticky + 777 |
+| rwsr-xr-x | 2755 | SGID + 755 |
+| rwsr-xr-x | 4755 | SUID + 755 |
+
+</Callout>

@@ -1,5 +1,5 @@
 {
   "title": "跨平台",
   "icon": "Smartphone",
-  "pages": ["android", "electron", "flutter", "harmony", "ios", "tauri"]
+  "pages": ["mobile", "electron", "flutter", "tauri"]
 }

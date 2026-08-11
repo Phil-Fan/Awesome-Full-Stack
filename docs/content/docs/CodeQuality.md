@@ -1,8 +1,7 @@
 ---
 title: "Code Quality"
+icon: ShieldCheck
 ---
-
-# Code Quality
 
 ### 可观测
 

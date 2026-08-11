@@ -315,16 +315,17 @@ cp image.{png,jpg} /backup/       # 复制 png 和 jpg
 mkdir -p {src,build,test}/utils   # 创建多级目录
 ```
 
-> [!TIP]
->
-> ```bash
-> # 备份文件
-> cp file.txt{,.bak}                # 快速备份
-> 
-> # 重命名
-> mv old.{txt,md}                   # old.txt -> old.md
-> ```
->
+<Callout type="idea">
+
+```bash
+# 备份文件
+cp file.txt{,.bak}                # 快速备份
+
+# 重命名
+mv old.{txt,md}                   # old.txt -> old.md
+```
+
+</Callout>
 
 ## Stream
 

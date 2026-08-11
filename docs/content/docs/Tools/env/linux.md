@@ -4,9 +4,6 @@ title: "Linux"
 
 # Linux
 
-> [!TIP]
->
-
 ## 常见操作
 
 ### 压缩
@@ -216,9 +213,11 @@ export http_proxy=http://your_proxy_server:your_proxy_port
 export https_proxy=http://your_proxy_server:your_proxy_port
 ```
 
-> [!IMPORTANT]
+<Callout type="warning">
 
 检查一下网络是否能够正常连接，有可能是防火墙的规则的问题
+
+</Callout>
 
     ```bash title="允许所有入站流量"
     sudo iptables -A INPUT -j ACCEPT
@@ -255,9 +254,11 @@ sudo netplan apply
 2.改文件的编辑必须严格按照格式来，**是分层的**，用空格来退格
 
 [Netplan YAML 配置文档](https://netplan.readthedocs.io/en/latest/netplan-yaml/)
-> [!TIP]
+<Callout type="idea">
 
 出现类似错误：`line8 column 6:cloud not find expected` 提示是**冒号：后面没加空格**
+
+</Callout>
 
     出现类似错误：`netplan found character that cannot start any token`，提示是没有按五个层次写配置文档，一定要**下一层比上一层多空一格或以上。**
 
@@ -489,12 +490,13 @@ smbclinet //ip/name -U xxx
 
 > [Linux 上挂载 Samba（Windows & macOS 共享文件夹）的正确姿势 - 知乎](https://zhuanlan.zhihu.com/p/26763026)
 
-> [!TIP]
->
-> 1. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
->
-> 不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
->
+<Callout type="idea">
+
+1. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
+
+不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
+
+</Callout>
 
 #### linux 作客户端——挂载文件系统
 
@@ -678,58 +680,61 @@ uname -a
 vim /etc/apt/sources.list
 ```
 
-> [!TIP]
->
-> ```shell
-> sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-> ```
->
-> 鱼香 ros
->
-> ```shell
-> wget http://fishros.com/install -O fishros && bash fishros
-> ```
->
-> 清华源
->
-> ```shell
-> estricted universe multiverse
-> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-> # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-> # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-> # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-> ```
->
-> ZJU mirror
->
-> ```shell
-> deb https://mirrors.zju.edu.cn/ubuntu/ focal main restricted universe multiverse
-> deb https://mirrors.zju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-> deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-> deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-> ```
->
-> Update
->
-> ```shell
-> sudo apt-get update
-> sudo apt-get upgrade
-> ```
->
+<Callout type="idea">
 
-> [!WARNING]
-> [Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
-> [sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
->
-> 另外的解决方法，拉取 https 问题
->
-> ```shell
-> sudo apt install apt-transport-https
-> sudo apt install ca-certificates
-> ```
->
+```shell
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+```
+
+鱼香 ros
+
+```shell
+wget http://fishros.com/install -O fishros && bash fishros
+```
+
+清华源
+
+```shell
+estricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+```
+
+ZJU mirror
+
+```shell
+deb https://mirrors.zju.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.zju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+```
+
+Update
+
+```shell
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+</Callout>
+
+<Callout type="warn">
+
+[Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
+[sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
+
+另外的解决方法，拉取 https 问题
+
+```shell
+sudo apt install apt-transport-https
+sudo apt install ca-certificates
+```
+
+</Callout>
 
 ### 中文系统
 
@@ -792,8 +797,7 @@ tar -xzvf xxxx.tar.gz
 sudo apt-get install terminator
 ```
 
-> [!WARNING]
->
+<Callout type="warn">
 
 | 开启 or 关闭快捷键 | 作用                             |
 | ------------------ | -------------------------------- |
@@ -804,6 +808,8 @@ sudo apt-get install terminator
 | `Ctrl + Shift + G` | 清屏                             |
 | `Ctrl + Shift + Q` | 关闭所有终端（退出程序）         |
 | `Ctrl + Shift + T` | 开一个新终端                     |
+
+</Callout>
 
 | 快捷键                     | 作用                                 |
 | -------------------------- | ------------------------------------ |
@@ -888,15 +894,17 @@ ssh-copy-id name@ip
 
 [深入理解\~/.ssh/config 和/etc/ssh/ssh_config 配置文件 - 百度开发者中心](https://developer.baidu.com/article/details/2922032)
 
-> [!WARNING]
-> 警告：远程主机标识已更改！
->
-> 此报错是由于远程的主机的公钥发生了变化导致的。ssh 服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh 就会核对公钥，如果和上次记录的不同，OpenSSH 会发出警告。
->
-> ```shell title="解决方法"
-> ssh-keygen -R XX.XX.XX.XX
-> ```
->
+<Callout type="warn">
+
+警告：远程主机标识已更改！
+
+此报错是由于远程的主机的公钥发生了变化导致的。ssh 服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh 就会核对公钥，如果和上次记录的不同，OpenSSH 会发出警告。
+
+```shell title="解决方法"
+ssh-keygen -R XX.XX.XX.XX
+```
+
+</Callout>
 
 ### X11 设置 GUI
 
@@ -925,13 +933,15 @@ sudo apt install xauth
 sudo service ssh restart
 ```
 
-> [!TIP]
-> if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
->
-> But if you use `ssh -Y remotemachine` the remote machine is treated as a trusted client. This last option can open security problems. Because other graphical (X11) clients could sniff data from the remote machine (make screenshots, do keylogging and other nasty stuff) and it is even possible to alter those data.
->
-> > [xorg](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
->
+<Callout type="idea">
+
+if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
+
+But if you use `ssh -Y remotemachine` the remote machine is treated as a trusted client. This last option can open security problems. Because other graphical (X11) clients could sniff data from the remote machine (make screenshots, do keylogging and other nasty stuff) and it is even possible to alter those data.
+
+> [xorg](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
+
+</Callout>
 
 ### conda
 
@@ -1119,9 +1129,11 @@ cd nutstore_linux_src_installer
 sudo ./update-toolchain.sh
 ```
 
-> [!IMPORTANT]
+<Callout type="warning">
 
 没搞明白，就全装了
+
+</Callout>
 
     ```shell
     sudo aptitude install libnautilus-extension4

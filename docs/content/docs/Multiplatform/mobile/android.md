@@ -2,8 +2,6 @@
 title: "Android"
 ---
 
-# Android
-
 ## 安装
 
 ### 安装 Android SDK

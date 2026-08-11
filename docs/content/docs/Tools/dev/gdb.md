@@ -32,12 +32,14 @@ wget https://ftp.gnu.org/gnu/gdb/gdb-10.2.tar.xz
 tar -xvzf gdb-10.2.tar.xz
 ```
 
-> [!IMPORTANT]
+<Callout type="warning">
 
 `shell title="解压缩换成这个命令"
     tar -vxf gdb-10.2.tar.xz
     `
-tar 包压缩的时候用`-cvf`参数，解压的时候用`-xvf`参数（用此命令解决了）
+tar 包压缩的时候用 `-cvf` 参数，解压的时候用 `-xvf` 参数（用此命令解决了）
+
+</Callout>
 
     或压缩的时候用`-czvf`参数，解压的时候用`-xzvf`参数（常用，这次报了这个错）
 
@@ -70,9 +72,11 @@ cd build
 ../configure --enable-tui
 ```
 
-> [!IMPORTANT]
+<Callout type="warning">
 
 查阅官方发现：Build GDB with the text-mode full-screen user interface (TUI).Requires a curses library (ncurses and cursesX are also supported).
+
+</Callout>
 
     你需要安装ncurses库，才能安装tui。[参考 configure: WARNING: no enhanced curses library found; disabling TUI](https://www.linuxquestions.org/questions/linux-newbie-8/configure-warning-no-enhanced-curses-library-found%3B-disabling-tui-4175443971/)
 
@@ -94,11 +98,13 @@ cd build
     sudo make install
     ```
 
-> [!IMPORTANT]
+<Callout type="warning">
 
 `shell
     sudo apt-get install texinfo
     `
+
+</Callout>
 
 ```shell title="编译"
 make

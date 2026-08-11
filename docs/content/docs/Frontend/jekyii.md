@@ -2,8 +2,6 @@
 title: "Jekyll"
 ---
 
-# Jekyll
-
 [Jekyll • 简单静态博客网站生成器 - 将纯文本转换为静态博客网站](https://jekyllcn.com/)
 
 ## 安装
@@ -14,9 +12,11 @@ title: "Jekyll"
 gem install jekyll
 ```
 
-> [!WARNING]
+<Callout type="warn">
 
 这一步报错了，所以再把镜像源切换回官方的
+
+</Callout>
 
     ```shell
     gem sources -a https://rubygems.org/
@@ -54,7 +54,9 @@ jekyll serve
 jekyll serve -P 5555
 ```
 
-## [academicpages](https://github.com/academicpages/academicpages.github.io)
+## academicpages
+
+[academicpages](https://github.com/academicpages/academicpages.github.io)
 
 > 参考
 > [Wanjia Zhao](https://wanjiazhao1203.github.io/#academicservices)

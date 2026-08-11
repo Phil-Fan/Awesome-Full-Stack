@@ -61,6 +61,10 @@ Dev
 - [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp): Chrome DevTools for coding agents
 - [shadcn MCP](https://ui.shadcn.com/)
 
+### ACP
+
+- [Agent Client Protocol](https://agentclientprotocol.com/get-started/introduction): 编辑器与 AI 编码 Agent 之间的通信协议
+
 ### Plugins
 
 - [obra/superpowers: An agentic skills framework & software development methodology that works.](https://github.com/obra/superpowers)

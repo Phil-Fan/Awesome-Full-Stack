@@ -19,15 +19,16 @@
 │   │   ├── Backend/           # 后端资源
 │   │   │   └── db/            # 数据库资源
 │   │   ├── Cloud/             # 云服务资源
-│   │   ├── CodeQuality/       # Code Quality 资源
 │   │   ├── Frontend/          # 前端资源
 │   │   ├── Multiplatform/     # 跨平台资源
-│   │   ├── PM/                # 产品管理资源
-│   │   └── Tools/             # 开发工具与运维资源
-│   │       ├── dev/           # 原开发工具文档
-│   │       ├── env/           # 环境配置资源
-│   │       ├── hardware/      # 硬件资源
-│   │       └── linux/         # Linux 资源
+│   │   │   └── mobile/        # 移动端资源
+│   │   ├── Tools/             # 开发工具与运维资源
+│   │   │   ├── dev/           # 原开发工具文档
+│   │   │   ├── env/           # 环境配置资源
+│   │   │   ├── hardware/      # 硬件资源
+│   │   │   └── linux/         # Linux 资源
+│   │   ├── CodeQuality.md     # Code Quality 资源
+│   │   └── PM.md              # 产品管理资源
 │   ├── lib/source.ts          # Fumadocs 文档源加载器
 │   ├── source.config.ts       # Fumadocs MDX 配置
 │   ├── mdx-components.tsx     # MDX 组件映射
@@ -45,7 +46,7 @@
 | 包管理 | **pnpm workspace** | 根 `pnpm-workspace.yaml` → `packages: ["docs"]` |
 | 文档框架 | **Fumadocs**（基于 Next.js） | `fumadocs-core`、`fumadocs-mdx`、`fumadocs-ui` |
 | 语言 | 正文 **Markdown/MDX**；配置 **TypeScript** | `docs/content/docs/`、`docs/app/` |
-| 站点根 | 内容与配置在 **`docs/`** | 首页 `docs/app/page.tsx` |
+| 站点根 | 内容与配置在 **`docs/`** | 根页面 `docs/content/docs/index.md`（`app/[[...slug]]`） |
 | 质量 | **pre-commit** + CI `Quality Check` | `markdownlint-cli2` + autocorrect |
 | CI | `.github/workflows/check.yml` | `pre-commit/action` |
 | 构建 | 根脚本转发子包，静态导出（`output: "export"` → `docs/out/`） | `pnpm dev/build` → filter docs |

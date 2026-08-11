@@ -1,8 +1,7 @@
 ---
 title: "产品管理"
+icon: Compass
 ---
-
-# 产品管理
 
 ### 信息源与宣传
 
@@ -27,17 +26,6 @@ title: "产品管理"
 - [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
 - [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 - [PostHog](https://posthog.com/self-driving)
-
-### 内容与文档
-
-- [MkDocs](https://www.mkdocs.org/)
-- [fumadocs](https://github.com/fuma-nama/fumadocs)
-- [Jekyll](https://jekyllrb.com)
-  - [minima](https://github.com/jekyll/minima)
-- [Vitepress](https://vitepress.dev/)
-
-- [reveal-md](https://github.com/webpro/reveal-md)
-- [Slidev](https://sli.dev/)
 
 ### 设计
 

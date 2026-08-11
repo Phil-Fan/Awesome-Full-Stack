@@ -90,77 +90,50 @@ jobs:
 
 ### 提示块
 
-> [!WARNING]
-
-注意`extension`不要拼成`extention`！！
-
-> [!WARNING]
+<Callout type="warn">
 
 发现一个 bug，请尽快修复！
 
-> [!TIP]
->
+</Callout>
 
-> [!TIP]
->
-
-> [!IMPORTANT]
+<Callout type="warning">
 
 这是一个问题，请回答！
 
-> [!WARNING]
+</Callout>
+
+<Callout type="warn">
 
 注意！注意！注意！
 
-> [!TIP]
-
-恭喜你，完成了一个任务！
-
-> [!TIP]
->
-
-> [!NOTE]
->
-
-> [!NOTE]
->
-
-> [!NOTE]
->
+</Callout>
 
 ### 列表
 
 ```text
-- [x] finished
 - [ ] not finished
 ```
 
 ### 图标 Badge
 
 其实是一个图片
-
 [![image](https://img.shields.io/github/stars/Phil-Fan/Phil-Fan.github.io)](https://github.com/Phil-Fan/Phil-Fan.github.io)
 
 - [Badge 制作指北——手把手教你制作 Badge - 少数派](https://sspai.com/post/81310)
 - [Static Badge | Shields.io](https://shields.io/badges)
 - [Simple Icons](https://simpleicons.org/)
 - [Semantic Scholar - Academic Graph API](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data)
-- [Google Scholar API | Scrape Google Scholar - SerpApi](https://serpapi.com/google-scholar-api)
 
 ### 代码块
 
 [Code blocks(代码块) - Material for MkDocs](https://wdk-docs.github.io/mkdocs-material-docs/reference/code-blocks/#annotations-with-numbers)
-
 `hl_lines="2 3"` 高亮行
 
 `linenums="1"` 显示行号
 
-`title="bubble_sort.py"` 显示文件名字
-
 ### 嵌入 b 站/youtube 视频
 
 1.打开 B 站的视频 2.点击“分享”按钮，获取“嵌入代码”：B 站视频的下一行，点击“分享”按钮，下方弹出分享页面。
-
 ![image](https://img.philfan.cn/Tools__Efficiency__assets__Mkdocs.assets__20241031230641.webp)
 
 禁用方法很简单，就是在视频 url 链接最后加上 autoplay=0。例如：
@@ -179,21 +152,22 @@ jobs:
 </iframe>
 ```
 
-> [!NOTE]
->
-> | 参数用途 | 参数名 | 使用方法 |
-> | --- | --- | --- |
-> | 是否自动播放 (默认否) | `autoplay` | 1: 开启，0: 关闭 |
-> | 默认弹幕开关 (默认开启) | `danmaku` | 1: 开启，0: 关闭 |
-> | 是否默认静音 (默认否) | `muted` | 1: 开启，0: 关闭 |
-> | 一键静音按钮是否显示 (默认不显示) | `hasMuteButton` | 1: 开启，0: 关闭 |
-> | 视频封面下方是否显示播放量弹幕量等信息 (默认显示) | `hideCoverInfo` | 1: 开启，0: 关闭 |
-> | 是否隐藏弹幕按钮 (默认不隐藏) | `hideDanmakuButton` | 1: 开启，0: 关闭 |
-> | 是否隐藏全屏按钮 (默认显示) | `noFullScreenButton` | 1: 开启，0: 关闭 |
-> | 是否开始记忆播放 (默认开启) | `fw` | 1: 开启，0: 关闭 |
-> | 默认开始时间 (默认 0) | `t` | 直接填写数值，单位秒 |
-> | 是否显示高清 (默认否) | `highQuality` | 1: 开启，0: 关闭 (貌似是无用的，各位可以试试) |
->
+<Callout type="info">
+
+| 参数用途 | 参数名 | 使用方法 |
+| --- | --- | --- |
+| 是否自动播放 (默认否) | `autoplay` | 1: 开启，0: 关闭 |
+| 默认弹幕开关 (默认开启) | `danmaku` | 1: 开启，0: 关闭 |
+| 是否默认静音 (默认否) | `muted` | 1: 开启，0: 关闭 |
+| 一键静音按钮是否显示 (默认不显示) | `hasMuteButton` | 1: 开启，0: 关闭 |
+| 视频封面下方是否显示播放量弹幕量等信息 (默认显示) | `hideCoverInfo` | 1: 开启，0: 关闭 |
+| 是否隐藏弹幕按钮 (默认不隐藏) | `hideDanmakuButton` | 1: 开启，0: 关闭 |
+| 是否隐藏全屏按钮 (默认显示) | `noFullScreenButton` | 1: 开启，0: 关闭 |
+| 是否开始记忆播放 (默认开启) | `fw` | 1: 开启，0: 关闭 |
+| 默认开始时间 (默认 0) | `t` | 直接填写数值，单位秒 |
+| 是否显示高清 (默认否) | `highQuality` | 1: 开启，0: 关闭 (貌似是无用的，各位可以试试) |
+
+</Callout>
 
 ### 嵌套列表
 
@@ -241,8 +215,7 @@ pip install mdx_truly_sane_lists
 - `mkdocs build` - Build the documentation site.
 - `mkdocs -h` - Print help message and exit.
 
-> [!NOTE]
->
+<Callout type="info">
 
 ```Shell
    pip install mkdocs
@@ -252,6 +225,8 @@ pip install mdx_truly_sane_lists
    pip install mkdocs-statistics-plugin
    pip install mkdocs-heti-plugin
 ```
+
+</Callout>
 
 ### 页面组织
 
@@ -275,8 +250,6 @@ pip install mdx_truly_sane_lists
 
 jupyter 遇到了单行公式无法显示的问题
 [Local MathJax with mkdocs-jupyter · squidfunk/mkdocs-material · Discussion #7134](https://github.com/squidfunk/mkdocs-material/discussions/7134)
-
-Steps to reproduce
 
 Download MathJax:
 
@@ -461,18 +434,19 @@ plugins:
         custom_mathjax_url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
 ```
 
-> [!WARNING]
->
-> ```text
->   DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
->   given by the platformdirs library.  To remove this warning and
->   see the appropriate new directories, set the environment variable
->   `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
->   The use of platformdirs will be the default in `jupyter_core` v6
-> ```
->
-> [DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs · Issue #148 · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/issues/148)
->
+<Callout type="warn">
+
+```text
+  DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
+  given by the platformdirs library.  To remove this warning and
+  see the appropriate new directories, set the environment variable
+  `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
+  The use of platformdirs will be the default in `jupyter_core` v6
+```
+
+[DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs · Issue #148 · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/issues/148)
+
+</Callout>
 
 如果想要实现 material 中的某些功能，需要自己写 html 代码
 
@@ -671,11 +645,12 @@ changelog: True
 
 ### 解析 xmind
 
-> [!NOTE]
->
+<Callout type="info">
 
 [OpenFiles.online](https://openfiles.online/)
 [在浏览器中解析和渲染 XMind 文件 | 文森的主站](https://liangwensen.com/blog/parse-and-render-xmind-file-in-browser)
+
+</Callout>
 
 ## Deprecated
 
@@ -706,9 +681,8 @@ picgo 中的设置如下
 
 1. 设定`keyid`，就是创建用户的`AccessKey ID`，
 2. `KeySecret` 就是`AccessKeySecret`
-3. 存储空间名就是创建 Bucket 的名字，存储区域也是创建时设定的，忘记的可以通过 Bucket 概览查看，如下图所示：
-4. 存储路径默认设置 img/即可
-5. 如果自己有已经备案的域名，可以填写设定自定义域名，如果没有不填即可。
+3. 存储路径默认设置 img/即可
+4. 如果自己有已经备案的域名，可以填写设定自定义域名，如果没有不填即可。
 
 ![image](https://img.philfan.cn/Tools__Efficiency__assets__Mkdocs.assets__20240813014140.webp)
 

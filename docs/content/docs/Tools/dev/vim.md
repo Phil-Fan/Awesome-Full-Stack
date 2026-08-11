@@ -2,8 +2,6 @@
 title: "Vim"
 ---
 
-# Vim
-
 ## 安装与配置
 
 [教程](https://www.cnblogs.com/cxl-/p/15319734.html)
@@ -170,7 +168,9 @@ js\:|Js: javascript:\ $S; JavaScript
 
 ## 技巧
 
-### [重复](https://blog.csdn.net/ii1245712564/article/details/46496347)
+### 重复
+
+参考：[CSDN 博客](https://blog.csdn.net/ii1245712564/article/details/46496347)
 
 `.` 用于重复上一次更改。例如，使用 `x` 删除一个字符后，可以连续按 `.` 来重复删除。
 ![image](https://img-blog.csdn.net/20150614230108127)
