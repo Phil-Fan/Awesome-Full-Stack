@@ -118,12 +118,15 @@ unset http_proxy && unset https_proxy
    通过全局代理的方式，实现模型的下载。
 
 1. 使用镜像网址
-   国内 huggingface 镜像地址：<https://hf-mirror.com/>
+   国内 huggingface 镜像地址：[hf-mirror.com](https://hf-mirror.com/)
    往下翻，直接可看到使用教程。主要有四种解决方式。最直接的方式就是一个个下载使用。
 
 1. 在代码中增加设置
+
+   ```python
    import os
-   os.environ['HF_ENDPOINT'] = '<https://hf-mirror.com>'
+   os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+   ```
 
 ### Llama 模型申请
 

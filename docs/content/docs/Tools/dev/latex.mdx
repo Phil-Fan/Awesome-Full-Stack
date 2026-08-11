@@ -71,7 +71,7 @@ title: "Latex 备忘录"
 
 ```latex
 % 我是一行注释
-\section{} %我是一句注释
+\section\{} %我是一句注释
 ```
 
 ### 个人信息
@@ -85,9 +85,9 @@ title: "Latex 备忘录"
 一般不建议使用 3-4 甚至更高的标题
 
 ```latex
-\section{} % 我是一级标题
-\subsection{} % 我是二级标题
-\subsubsection{} % 我是三级标题
+\section\{} % 我是一级标题
+\subsection\{} % 我是二级标题
+\subsubsection\{} % 我是三级标题
 ```
 
 ### 表格
@@ -111,18 +111,18 @@ title: "Latex 备忘录"
 插入之后编辑区域就会出现这样的代码
 
 ```latex
-\begin{figure}[htbp]
+\begin\{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/example.png} % 数字表示放缩比例
-    \caption{Enter Caption} % 图片标题
-    \label{fig:enter-label} % 图片 tag，用于交叉引用
-\end{figure}
+    \includegraphics[width=0.5\linewidth]\{figures/example.png} % 数字表示放缩比例
+    \caption\{Enter Caption} % 图片标题
+    \label\{fig:enter-label} % 图片 tag，用于交叉引用
+\end\{figure}
 ```
 
 注意！！！
 
 - 如图，`folder location`请放在`figures`这个文件夹下，你可以在左侧的列表中看到。
-- 请在`\begin{figure}`后边加上`[htbp]`!
+- 请在`\begin\{figure}`后边加上`[htbp]`!
 
 #### 如何插入并排的图片
 
@@ -131,36 +131,36 @@ title: "Latex 备忘录"
 同样的，这里的数字代表放缩的比例，可以修改一下看看会发生什么。
 
 ```latex
-\begin{figure}[!htbp]
+\begin\{figure}[!htbp]
     \centering
-    \begin{minipage}[b]{0.45\linewidth}
+    \begin\{minipage}[b]\{0.45\linewidth}
         \centering
-        \includegraphics[width=0.9\textwidth]{example}
-        \caption{非子图并排题注 1}
-    \end{minipage}%
-    \begin{minipage}[b]{0.45\linewidth}
+        \includegraphics[width=0.9\textwidth]\{example}
+        \caption\{非子图并排题注 1}
+    \end\{minipage}%
+    \begin\{minipage}[b]\{0.45\linewidth}
         \centering
-        \includegraphics[width=0.9\textwidth]{example}
-        \caption{非子图并排题注 2}
-    \end{minipage}
-\end{figure}
+        \includegraphics[width=0.9\textwidth]\{example}
+        \caption\{非子图并排题注 2}
+    \end\{minipage}
+\end\{figure}
 ```
 
 #### 如何插入 2x2，3 个并排或者其他类型
 
-在`pic.tex`文件中，由多种图片展示形式，选择你想要的形式，将代码复制到主文件下，把`\includegraphics[width=0.5\linewidth]{figures/example.png}`这一行改成你想要的图片的路径。
+在`pic.tex`文件中，由多种图片展示形式，选择你想要的形式，将代码复制到主文件下，把`\includegraphics[width=0.5\linewidth]\{figures/example.png}`这一行改成你想要的图片的路径。
 
 ### 参考文献如何设置
 
 `latex`中的参考文献是使用`bibtex`，什么意思呢？就是要用类似下面的语句来声明一个你要引用的文献
 
 ```latex
-@book{14,
-  title={新时代的中国绿色发展},
-  author={{中华人民共和国国务院新闻办公室}},
-  publisher={人民出版社},
-  year={2023},
-  address={北京}
+@book\{14,
+  title=\{新时代的中国绿色发展},
+  author=\{\{中华人民共和国国务院新闻办公室}},
+  publisher=\{人民出版社},
+  year=\{2023},
+  address=\{北京}
 }
 ```
 
@@ -183,18 +183,18 @@ title: "Latex 备忘录"
 获取之后，请把对应的代码放在`ref.bib`文件下，这个代码中的`number1`可以改成任何你记得住的数字或者字符，相当于给这个参考文献一个名字。
 
 ```latex
-@book{number1,
-  title={新时代的中国绿色发展},
-  author={{中华人民共和国国务院新闻办公室}},
-  publisher={人民出版社},
-  year={2023},
-  address={北京}
+@book\{number1,
+  title=\{新时代的中国绿色发展},
+  author=\{\{中华人民共和国国务院新闻办公室}},
+  publisher=\{人民出版社},
+  year=\{2023},
+  address=\{北京}
 }
 ```
 
 **在文中如何引用呢？**
 
-在准备好上面的文献列表以后，在文中想要插入引用文献的地方打`\cite{xxx}`命令，xxx 就是你刚才给文献取的名字。
+在准备好上面的文献列表以后，在文中想要插入引用文献的地方打`\cite\{xxx}`命令，xxx 就是你刚才给文献取的名字。
 
 ### 交叉引用
 
@@ -207,15 +207,15 @@ title: "Latex 备忘录"
 聪明的你可能注意到了，在刚才图片或者表格的代码当中，有一行是`label`，这一行的名字就相当于图片的 tag。
 
 ```latex
-\begin{figure}[htbp]
+\begin\{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/example.png} % 数字表示放缩比例
-    \caption{Enter Caption} % 图片标题
-    \label{xxxx} % 图片 tag，用于交叉引用
-\end{figure}
+    \includegraphics[width=0.5\linewidth]\{figures/example.png} % 数字表示放缩比例
+    \caption\{Enter Caption} % 图片标题
+    \label\{xxxx} % 图片 tag，用于交叉引用
+\end\{figure}
 ```
 
-`如图1所示`——就可以改写成`如图\ref{xxxx}所示`，其中`xxxx`是你要交叉引用的对象的 label
+`如图1所示`——就可以改写成`如图\ref\{xxxx}所示`，其中`xxxx`是你要交叉引用的对象的 label
 
 ### 公式
 
@@ -224,7 +224,7 @@ title: "Latex 备忘录"
 
 遇到不会的上网搜索一下，应该问题不大。
 
-推荐一个小工具 <https://www.latexlive.com/>
+推荐一个小工具 [latexlive.com](https://www.latexlive.com/)
 
 ### 共享与同步
 
@@ -377,30 +377,30 @@ bibtex -v
   ![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240904110012.webp)
 
 ```latex title="测试代码"
-\documentclass{article}
-\usepackage{amsmath}
+\documentclass\{article}
+\usepackage\{amsmath}
 
-\begin{document}
+\begin\{document}
 
-\title{TeX Live Configuration Test}
-\author{Your Name}
-\date{\today}
+\title\{TeX Live Configuration Test}
+\author\{Your Name}
+\date\{\today}
 
 \maketitle
 
-\section{Introduction}
+\section\{Introduction}
 This is a simple document to test if TeX Live is configured correctly.
 
-\section{Mathematics}
+\section\{Mathematics}
 Here is a simple mathematical equation:
-\begin{equation}
+\begin\{equation}
     E = mc^2
-\end{equation}
+\end\{equation}
 
-\section{Conclusion}
+\section\{Conclusion}
 If you can see this document with the title, sections, and the equation above, then your TeX Live installation is working correctly.
 
-\end{document}
+\end\{document}
 ```
 
 编译后显示下面的页面，说明编译成功
@@ -427,41 +427,41 @@ brew install mactex --cask
 会自己下一个 Texshop，可以验证一下是否安装成功了
 
 ```latex
-\documentclass{article}
-\usepackage{amsmath}
-\usepackage{ctex}
+\documentclass\{article}
+\usepackage\{amsmath}
+\usepackage\{ctex}
 
-\begin{document}
+\begin\{document}
 
-\title{LaTeX 环境验证}
-\author{你的名字}
-\date{\today}
+\title\{LaTeX 环境验证}
+\author\{你的名字}
+\date\{\today}
 
 \maketitle
 
-\section{引言}
+\section\{引言}
 这是一个简单的 LaTeX 文档，用于验证环境是否正常工作。
 
-\section{数学公式}
+\section\{数学公式}
 以下是一个数学公式的示例：
 
-\begin{align}
+\begin\{align}
     E = Mc^2
-\end{align}
+\end\{align}
 
 
-\section{列表}
+\section\{列表}
 以下是一个无序列表的示例：
-\begin{itemize}
+\begin\{itemize}
     \item 项目 1
     \item 项目 2
     \item 项目 3
-\end{itemize}
+\end\{itemize}
 
-\section{总结}
+\section\{总结}
 如果你能够看到这个文档的正常输出，那么你的 LaTeX 环境已经设置成功。
 
-\end{document}
+\end\{document}
 ```
 
 ```shell title="安装字体"
@@ -498,7 +498,7 @@ sudo tlmgr install fandol
 // LATEX settings
 "editor.minimap.enabled": true,
 "latex-workshop.latex.tools": [
-    {
+    \{
         "name": "pdflatex",
         "command": "pdflatex",
         "args": [
@@ -508,7 +508,7 @@ sudo tlmgr install fandol
             "%DOCFILE%"
         ]
     },
-    {
+    \{
         "name": "xelatex",
         "command": "xelatex",
         "args": [
@@ -518,7 +518,7 @@ sudo tlmgr install fandol
             "%DOCFILE%"
         ]
     },
-    {
+    \{
         "name": "bibtex",
         "command": "bibtex",
         "args": [
@@ -527,19 +527,19 @@ sudo tlmgr install fandol
     }
 ],
 "latex-workshop.latex.recipes": [
-    {
+    \{
         "name": "xelatex",
         "tools": [
             "xelatex"
         ],
     },
-    {
+    \{
         "name": "pdflatex",
         "tools": [
             "pdflatex"
         ]
     },
-    {
+    \{
         "name": "xe->bib->xe->xe",
         "tools": [
             "xelatex",
@@ -548,7 +548,7 @@ sudo tlmgr install fandol
             "xelatex"
         ]
     },
-    {
+    \{
         "name": "pdf->bib->pdf->pdf",
         "tools": [
             "pdflatex",
@@ -618,22 +618,22 @@ F1 输入`Open Keyboard Shortcuts`
 在`keybindings.json`中加入
 
 ```json title="快捷键，可以自己改key binding"
-{
+\{
     "key": "cmd+b",
     "scope": "latex",
     "command": "editor.action.insertSnippet",
     "when": "editorTextFocus && editorLangId == 'latex'",
-    "args": {
-        "snippet": "\\textbf{$TM_SELECTED_TEXT}$0"
+    "args": \{
+        "snippet": "\\textbf\{$TM_SELECTED_TEXT}$0"
     }
 },
-{
+\{
     "key": "ctrl+i",
     "scope": "latex",
     "command": "editor.action.insertSnippet",
     "when": "editorTextFocus && editorLangId == 'latex'",
-    "args": {
-        "snippet": "\\textit{$TM_SELECTED_TEXT}$0"
+    "args": \{
+        "snippet": "\\textit\{$TM_SELECTED_TEXT}$0"
     }
 }
 ```
@@ -698,15 +698,15 @@ F1 输入`Open Keyboard Shortcuts`
 </Callout>
 
 ```latex
-\documentclass{article}
-\usepackage{amsmath}
-\pagestyle{empty}
+\documentclass\{article}
+\usepackage\{amsmath}
+\pagestyle\{empty}
 
-\begin{document}
-\begin{align*}
+\begin\{document}
+\begin\{align*}
 
-\end{align*}
-\end{document}
+\end\{align*}
+\end\{document}
 ```
 
 ### paste image —— 图片插入助手
@@ -720,7 +720,7 @@ F1 输入`Open Keyboard Shortcuts`
 </Callout>
 
 ```json title="setting"
-"pasteImage.insertPattern": "\\begin{figure}[htbp]\n \\centering\n \\includegraphics[width=0.4\\textwidth]{figures/${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}}\n \\caption{  }\n \\label{  }\n\\end{figure}"
+"pasteImage.insertPattern": "\\begin\{figure}[htbp]\n \\centering\n \\includegraphics[width=0.4\\textwidth]\{figures/$\{imageSyntaxPrefix}$\{imageFilePath}$\{imageSyntaxSuffix}}\n \\caption\{  }\n \\label\{  }\n\\end\{figure}"
 ```
 
 按`F1`,输入 shortcut，打开快捷键设置，把 latex workshop 中的 `ctrl+alt+v` 预览去掉（因为和 paste image 的快捷键冲突了）
@@ -730,11 +730,11 @@ F1 输入`Open Keyboard Shortcuts`
 然后就可以使用快捷键`ctrl+alt+v`插入图片了，可以根据需要修改快捷键和插入的格式。
 
 ```latex title="插入图片"
-\begin{figure}[htbp]
+\begin\{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}}
-    \caption{  }
-\end{figure}
+    \includegraphics[width=0.7\textwidth]\{$\{imageSyntaxPrefix}$\{imageFilePath}$\{imageSyntaxSuffix}}
+    \caption\{  }
+\end\{figure}
 ```
 
 ### 服务器使用 Docker 构建 Overleaf
@@ -760,7 +760,7 @@ cd lib
 vi docker-compose.base.yml
 ```
 
-将源文件的 image: "${IMAGE}" 改为 image: wrm244/sharelatex:with-texlive-full 改这一行即可，以下为修改后文件内容
+将源文件的 image: "$\{IMAGE}" 改为 image: wrm244/sharelatex:with-texlive-full 改这一行即可，以下为修改后文件内容
 
 在根目录下启动
 
@@ -785,7 +785,7 @@ bin/up
 设置字体大小的基本尺寸为 10pt，11pt 和 12pt，其中默认为 10pt
 
 ```latex
-\documentclass[12pt]{article}
+\documentclass[12pt]\{article}
 ```
 
 |      声明       | 对应字号 |
@@ -804,26 +804,26 @@ bin/up
 ### 对齐
 
 ```latex
-\leftline{尊敬的各位老师}     %左对齐
-\rightline{书略陈固陋，勿劳赐复}    %右对齐
+\leftline\{尊敬的各位老师}     %左对齐
+\rightline\{书略陈固陋，勿劳赐复}    %右对齐
 \centering %居中
 ```
 
 首行不能缩进
 
 ```latex
-\usepackage{indentfirst}
-\setlength{\parindent}{2em} % 控制首行缩进
+\usepackage\{indentfirst}
+\setlength\{\parindent}\{2em} % 控制首行缩进
 ```
 
 在 ctexart 类型文章中，标题\section 标题是居中的，现需要改为左对齐，需要设置如下。转自：Latex 标题左对齐
 
 ```tex
-\documentclass[UTF8]{ctexart}
+\documentclass[UTF8]\{ctexart}
 
-\CTEXsetup[format={\Large\bfseries}]{section}
+\CTEXsetup[format=\{\Large\bfseries}]\{section}
 
-\title{题目}
+\title\{题目}
 ```
 
 ### 换行换页
@@ -847,7 +847,7 @@ bin/up
 也可以手动指定。
 
 ```latex
-\hyphenation{hy-phen-a-tion}
+\hyphenation\{hy-phen-a-tion}
 ```
 
 ## 公式与符号
@@ -856,91 +856,91 @@ bin/up
 
 ```tex
 \left\{
- \begin{}
+ \begin\{}
  ···
- \end{}
+ \end\{}
 \right.
 ```
 
 ```tex
 \left\{
-             \begin{array}{**lr**}
-             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\
+             \begin\{array}\{**lr**}
+             x=\dfrac\{3\pi}\{2}(1+2t)\cos(\dfrac\{3\pi}\{2}(1+2t)), &  \\
              y=s, & 0\leq s\leq L,|t|\leq1.\\
-             z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &
-             \end{array}
+             z=\dfrac\{3\pi}\{2}(1+2t)\sin(\dfrac\{3\pi}\{2}(1+2t)), &
+             \end\{array}
 \right.
 ```
 
 $$
 \left\{
-             \begin{array}{**lr**}
-             x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\
+             \begin\{array\}\{**lr**\}
+             x=\dfrac\{3\pi\}\{2\}(1+2t)\cos(\dfrac\{3\pi\}\{2\}(1+2t)), &  \\
              y=s, & 0\leq s\leq L,|t|\leq1.\\
-             z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &
-             \end{array}
+             z=\dfrac\{3\pi\}\{2\}(1+2t)\sin(\dfrac\{3\pi\}\{2\}(1+2t)), &
+             \end\{array\}
 \right.
 $$
 
 ```tex
-\begin{gathered}
-\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}
+\begin\{gathered}
+\begin\{matrix} 0 & 1 \\ 1 & 0 \end\{matrix}
 \quad
-\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
+\begin\{pmatrix} 0 & -i \\ i & 0 \end\{pmatrix}
 \quad
-\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+\begin\{bmatrix} 0 & -1 \\ 1 & 0 \end\{bmatrix}
 \quad
-\begin{Bmatrix} 1 & 0 \\ 0 & -1 \end{Bmatrix}
+\begin\{Bmatrix} 1 & 0 \\ 0 & -1 \end\{Bmatrix}
 \quad
-\begin{vmatrix} a & b \\ c & d \end{vmatrix}
+\begin\{vmatrix} a & b \\ c & d \end\{vmatrix}
 \quad
-\begin{Vmatrix} i & 0 \\ 0 & -i \end{Vmatrix}
-\end{gathered}
+\begin\{Vmatrix} i & 0 \\ 0 & -i \end\{Vmatrix}
+\end\{gathered}
 ```
 
 $$
-\begin{gathered}
-\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}
+\begin\{gathered\}
+\begin\{matrix\} 0 & 1 \\ 1 & 0 \end\{matrix\}
 \quad
-\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
+\begin\{pmatrix\} 0 & -i \\ i & 0 \end\{pmatrix\}
 \quad
-\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+\begin\{bmatrix\} 0 & -1 \\ 1 & 0 \end\{bmatrix\}
 \quad
-\begin{Bmatrix} 1 & 0 \\ 0 & -1 \end{Bmatrix}
+\begin\{Bmatrix\} 1 & 0 \\ 0 & -1 \end\{Bmatrix\}
 \quad
-\begin{vmatrix} a & b \\ c & d \end{vmatrix}
+\begin\{vmatrix\} a & b \\ c & d \end\{vmatrix\}
 \quad
-\begin{Vmatrix} i & 0 \\ 0 & -i \end{Vmatrix}
-\end{gathered}
+\begin\{Vmatrix\} i & 0 \\ 0 & -i \end\{Vmatrix\}
+\end\{gathered\}
 $$
 
 ### 矩阵与向量
 
 |               |                  |
 | ------------- | ---------------- |
-| \vec{}        | $\vec{a}$        |
-| \mathbf       | $\mathbf{A}$     |
-| \boldsymbol{} | $\boldsymbol{A}$ |
+| \vec\{}        | $\vec\{a}$        |
+| \mathbf       | $\mathbf\{A}$     |
+| \boldsymbol\{} | $\boldsymbol\{A}$ |
 
 ### 标注
 
 |                                                           |                            |
 | --------------------------------------------------------- | -------------------------- |
-| 加^号 输入`\hat` 或 `\widehat`                            | $\hat{A}$<br>$\widehat{A}$ |
-| 加横线 输入 `\overline`                                   | $\overline{A}$             |
-| 加波浪线 输入`\widetilde`                                 | $\widetilde{A}$            |
-| 加一个点`\dot`{要加点的字母}加两个点`\ddot`{要加点的字母} | $\dot{A},\ddot{A}$         |
+| 加^号 输入`\hat` 或 `\widehat`                            | $\hat\{A}$<br/>$\widehat\{A}$ |
+| 加横线 输入 `\overline`                                   | $\overline\{A}$             |
+| 加波浪线 输入`\widetilde`                                 | $\widetilde\{A}$            |
+| 加一个点`\dot`\{要加点的字母}加两个点`\ddot`\{要加点的字母} | $\dot\{A},\ddot\{A}$         |
 
 字母正下方加文字
 
 ```tex
-\mathop{expr1}\limits_{expr2}^{expr3}
+\mathop\{expr1}\limits_\{expr2}^\{expr3}
 ```
 
-$\mathop{expr1}\limits_{expr2}^{expr3}$​
+$\mathop\{expr1}\limits_\{expr2}^\{expr3}$​
 
-$\sum\limits_{i=0}^n {x_i}$​
+$\sum\limits_\{i=0}^n \{x_i}$​
 
-`limits`命令必需加在数学符号后边，所以使用`\mathop{}`包裹
+`limits`命令必需加在数学符号后边，所以使用`\mathop\{}`包裹
 
-$f_3(d) = \mathop{max}\limits_{x_3}(2x_3 + f_4(d-x_3))$
+$f_3(d) = \mathop\{max}\limits_\{x_3}(2x_3 + f_4(d-x_3))$
