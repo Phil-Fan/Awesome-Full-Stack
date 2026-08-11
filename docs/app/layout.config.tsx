@@ -2,7 +2,7 @@ import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: "Awesome Full Stack",
+    title: <span className="font-title">Phil's Dev Note</span>,
   },
   githubUrl: "https://github.com/Phil-Fan/Dev-Notes",
 };

@@ -4,6 +4,7 @@ title: "组件库"
 
 - [React Bits](https://www.reactbits.dev/): UI 组件库
 - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
+- [thinking-orbs](https://github.com/Jakubantalik/thinking-orbs): AI/Agent UI 的点阵思考球加载指示器，9 种类型、两种尺寸、自动深色/浅色
 
 编辑器
 

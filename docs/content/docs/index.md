@@ -1,5 +1,5 @@
 ---
-title: "Awesome Full Stack"
+title: "Phil's Dev Note"
 description: "全栈开发资源与知识库"
 ---
 

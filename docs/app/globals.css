@@ -6,6 +6,11 @@ html {
   scrollbar-gutter: stable;
 }
 
+.font-title {
+  font-family: var(--font-title), serif;
+  font-weight: 700;
+}
+
 figure.shiki {
   padding: 0;
   border: 0;

@@ -4,7 +4,7 @@
 
 ## 1) 项目定位
 
-- 项目名：`Awesome Full Stack`
+- 项目名：`Phil's Dev Note`
 - 类型：文档/知识库站点（Fumadocs + Next.js）
 - 主要内容：AI、前端、后端、云原生、运维、工具、产品与运营相关笔记与资源
 
@@ -24,6 +24,7 @@
 │   │   ├── Frontend/          # 前端资源
 │   │   ├── Multiplatform/     # 跨平台资源
 │   │   │   └── mobile/        # 移动端资源
+│   │   ├── ProductNotes/      # 产品开发笔记
 │   │   ├── Release/           # 产品发布资源
 │   │   │   └── channels/      # 发布渠道资源
 │   │   ├── Tools/             # 开发工具与运维资源
