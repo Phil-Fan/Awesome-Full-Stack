@@ -7,7 +7,7 @@ D1 是 Cloudflare 推出的 Serverless 关系型数据库，基于 SQLite 构建
 
 ## 特性
 
-- 基于 SQLite，标准 SQL（参见 [SQL](./sql.md)）
+- 基于 SQLite，标准 SQL（参见 [SQL](./sql.mdx)）
 - 零运维，随 Workers 部署到全球边缘
 - 免费额度充足，适合个人项目与中小型应用
 
@@ -63,4 +63,4 @@ wrangler d1 execute my-database --local --file ./schema.sql
 ## 参考
 
 - [D1 官方文档](https://developers.cloudflare.com/d1/)
-- SQLite 语法基础：[SQL](./sql.md)
+- SQLite 语法基础：[SQL](./sql.mdx)

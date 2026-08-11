@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: "Phil's Dev Note",
     template: "%s | Phil's Dev Note",
   },
-  description: "全栈开发资源与知识库",
+  description: "Phil 的全栈开发笔记",
 };
 
 export default function RootLayout({

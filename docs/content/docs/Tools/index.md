@@ -111,29 +111,29 @@ title: "开发工具"
 ### Linux
 
 - [概述](./linux/index.md)
-- [文件管理](./linux/01-File.md)
-- [Shell](./linux/02-Shell.md)
-- [数据处理](./linux/03-DataProcess.md)
-- [用户管理](./linux/04-User.md)
-- [管理员](./linux/05-Admin.md)
+- [文件管理](./linux/01-File.mdx)
+- [Shell](./linux/02-Shell.mdx)
+- [数据处理](./linux/03-DataProcess.mdx)
+- [用户管理](./linux/04-User.mdx)
+- [管理员](./linux/05-Admin.mdx)
 
 ### 环境配置
 
-- [Linux L2TP VPN 配置与网络调试](./env/l2tp.md)
-- [Linux Kali](./env/linux-kali.md)
-- [Linux ROS](./env/linux-ros.md)
-- [Linux](./env/linux.md)
-- [macOS](./env/macos.md)
-- [路由器](./env/router.md)
-- [服务器](./env/server.md)
-- [Windows WSL](./env/windows-wsl.md)
-- [Windows](./env/windows.md)
+- [Linux L2TP VPN 配置与网络调试](./env/l2tp.mdx)
+- [Linux Kali](./env/linux-kali.mdx)
+- [Linux ROS](./env/linux-ros.mdx)
+- [Linux](./env/linux.mdx)
+- [macOS](./env/macos.mdx)
+- [路由器](./env/router.mdx)
+- [服务器](./env/server.mdx)
+- [Windows WSL](./env/windows-wsl.mdx)
+- [Windows](./env/windows.mdx)
 
 ### 硬件
 
-- [Arduino](./hardware/Arduino.md)
+- [Arduino](./hardware/Arduino.mdx)
 - [DGX Spark](./hardware/DGXSpark.md)
-- [FPGA](./hardware/FPGA.md)
-- [Jetson Orin Nano](./hardware/JetsonNano.md)
+- [FPGA](./hardware/FPGA.mdx)
+- [Jetson Orin Nano](./hardware/JetsonNano.mdx)
 - [Jetson Thor](./hardware/JetsonThor.md)
 - [Raspberry Pi](./hardware/RaspberryPi.md)

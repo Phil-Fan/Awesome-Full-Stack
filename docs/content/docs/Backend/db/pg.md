@@ -70,4 +70,4 @@ SELECT * FROM users WHERE meta->>'role' = 'admin';
 ## 生态
 
 - [Neon](https://neon.tech/)：Serverless Postgres
-- [Supabase](./supabase.md)：基于 Postgres 的一体化后端服务
+- [Supabase](./supabase.mdx)：基于 Postgres 的一体化后端服务
