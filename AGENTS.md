@@ -6,7 +6,8 @@
 
 - 项目名：`Phil's Dev Note`
 - 类型：文档/知识库站点（Fumadocs + Next.js）
-- 主要内容：AI、前端、后端、云原生、运维、工具、产品与运营相关笔记与资源
+- 主要内容：AI、前端、后端、云原生、运维、工具、产品发布与内容相关笔记与资源
+- 产品思考 / 产品笔记已迁至个人博客 `~/f/antfu.me/pages/posts/`（按产品一篇：`poco`、`zju-charger`、`token-arena`、`agentero`）
 
 ## 2) 目录结构（以当前仓库为准）
 
@@ -24,7 +25,6 @@
 │   │   ├── Frontend/          # 前端资源
 │   │   ├── Multiplatform/     # 跨平台资源
 │   │   │   └── mobile/        # 移动端资源
-│   │   ├── ProductNotes/      # 产品开发笔记
 │   │   ├── Release/           # 产品发布资源
 │   │   │   └── channels/      # 发布渠道资源
 │   │   ├── Tools/             # 开发工具与运维资源
